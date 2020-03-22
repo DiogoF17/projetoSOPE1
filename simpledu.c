@@ -275,7 +275,6 @@ void sigIntHandler(int signal){
     }
 
     num = atoi(getenv("PIDGROUP"));
-    printf("%d\n",num);
 
     if(num != -1){
         if(kill(-num, SIGSTOP) == -1){
@@ -284,7 +283,7 @@ void sigIntHandler(int signal){
         }
     }
 
-    printf("\n######################################################\n\t\tMenu de Saida\n######################################################\n");
+    printf("\n\n######################################################\n\t\tMenu de Saida\n######################################################\n");
 
     while(1){
         printf("\nTem a certeza que pretende abandonar a execução do programa(s/n)? ");
