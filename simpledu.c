@@ -57,13 +57,19 @@ void validFormat(int argc, char *argv[]){
                     exit(1);
                 }
             }
+            else if(strcmp(argv[i], "group") == 0){
+                if(!isValidNumber(argv[i+1], 1)){
+                    printf("Invalid Format 5!\n");
+                    exit(1);
+                }
+            }
             else {
                 if(!isValidNumber(argv[i], 1) && ((&argv[i])[0][0] != '/') && ((&argv[i])[0][0] != '~') && ((&argv[i])[0][0] != '.')){
-                printf("Invalid Format!1\n");
-                exit(1);
+                    printf("Invalid Format!1\n");
+                    exit(1);
                 }
                 else if(isValidNumber(argv[i], 1) == 1){
-                    if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
+                    if(strcmp(argv[i-1], "group") != 0 && strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
                         printf("Invalid Format!2\n");
                         exit(1);
                     }
@@ -122,11 +128,12 @@ int verifyL(int num, char *arg[]){
 
 int verifyBlocks(int num, char *arg[]){
     for(int i = 1; i < num; i++){
-        if(strcmp(arg[i], "-B") == 0 || strcmp(arg[i], "--block-size") == 0)
+        if(strcmp(arg[i], "-B") == 0 || strcmp(arg[i], "--block-size") == 0){
             if(isValidNumber(arg[i+1], 0))
                 return atoi(arg[i+1]);
             else
                 printf("Next to -B/--block-size has to be a number greater than zero!");
+        }
     }
     return -1;
 }
@@ -169,7 +176,18 @@ int passDir(int num, char *arg[], char *envp[]){
 
 //------------------------------------------------------------------------
 
-int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[]){
+int findGroup(int argc, char *argv[]){
+
+    for(int i = 0; i < argc; i++){
+        if(strcmp(argv[i], "group") == 0){
+            return atoi(argv[i+1]);
+        }
+    }
+
+    return -1;
+}
+
+int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[], int group, int pid){
     int ret = -1;
     arraPass[0] = argv[0];
     for(int i = 1; i <= argc; i++){
@@ -188,10 +206,27 @@ int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[]){
         else{
             if(ind == -1){
                 arraPass[i] = d;
-                arraPass[i+1] = NULL;
+                if(group != pid){
+                    arraPass[i+1] = "group";
+                    char aux[50];
+                    sprintf(aux, "%d", pid);
+                    arraPass[i+2] = aux;
+                    arraPass[i+3] = NULL;
+                }
+                else
+                    arraPass[i+1] = NULL;
             }
-            else    
-                arraPass[i] = NULL;
+            else {
+                if(group != pid){
+                    arraPass[i] = "group";
+                    char aux[50];
+                    sprintf(aux, "%d", pid);
+                    arraPass[i+1] = aux;
+                    arraPass[i+2] = NULL;
+                }
+                else
+                    arraPass[i] = NULL;
+            }
         }
     }
     return ret;
@@ -199,7 +234,7 @@ int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[]){
 
 int soma(FILE * des){
     char *buffer[50];
-    int soma = 0, num, cont = 0;
+    int soma = 0, cont = 0;
     size_t len;
     while(getline(buffer, &len, des)!=-1){
         soma += atoi(buffer[0]);
@@ -217,7 +252,8 @@ void fazWait(){
 
     int val;
 
-    while(val = wait(NULL)){
+    while(1){
+        val = wait(NULL);
         if(val == -1 && errno == ECHILD)
             break;
     }
@@ -231,10 +267,22 @@ void fazWait(){
 void sigIntHandler(int signal){
     char *res;
     size_t len;
-    int num = atoi(getenv("PIDGROUPSON"));
+    int num;
 
-    if(num != 0)
-        kill(0 - num, SIGSTOP);
+    if(getenv("PIDGROUP") == NULL){
+        printf("Erro\n");
+        exit(7);
+    }
+
+    num = atoi(getenv("PIDGROUP"));
+    printf("%d\n",num);
+
+    if(num != -1){
+        if(kill(-num, SIGSTOP) == -1){
+            printf("Error on Kill\n");
+            exit(7);
+        }
+    }
 
     printf("\n######################################################\n\t\tMenu de Saida\n######################################################\n");
 
@@ -247,13 +295,18 @@ void sigIntHandler(int signal){
 
     printf("\n######################################################\n\n");
 
-    if(res[0] == 'n' && num != 0){
-        printf("Entrei\n");
-        kill(0 - num, SIGCONT);
+    if(res[0] == 'n' && num != -1){
+        if(kill(-num, SIGCONT) == -1){
+            printf("Error on Kill\n");
+            exit(7);
+        }
     }
     else if(num != 0){
-        kill(0 - num, SIGTERM);
-        fazWait();
+         if(kill(-num, SIGTERM) == -1){
+            printf("Error on Kill\n");
+            exit(7);
+        }
+        //fazWait();
         exit(5);
     }
 
@@ -268,16 +321,19 @@ int main(int argc, char *argv[], char *envp[]){
     char d[PATH_MAX], fileName[PATH_MAX];
     char directory[PATH_MAX];
     int a, b, S, B, L, m; //opções do comando simpleDu
-    int ind, somaBlocks = 0, contFil = 0, somaSize = 0;
+    int ind, somaBlocks = 0, somaSize = 0;
     char buffer[50],pathcpy[50];
     FILE *f, *regProg;
 
     //---------------------------------------------------
 
-    putenv("PIDGROUPSON=0");
+    int group = findGroup(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
+                                       //ao qual todos vao pertencer menos o processo inicial
 
+    sprintf(buffer, "PIDGROUP=%d", group); //passo o group id dos processos
+    putenv(buffer);
+        
     signal(SIGINT, sigIntHandler);
-
 
     //-----------------------------------------------------
     //      Guarda a informaçao em ficheiro
@@ -288,8 +344,10 @@ int main(int argc, char *argv[], char *envp[]){
     else
         strcpy(fileName, getenv("LOG_FILENAME"));
     
-    regProg = fopen(fileName, "a");
-    fclose(regProg);
+    if(group == -1){
+        regProg = fopen(fileName, "a");
+        fclose(regProg);
+    }
     
     //-------------------------------------------------------
     //                              PASSO 1
@@ -322,9 +380,6 @@ int main(int argc, char *argv[], char *envp[]){
     //Imprime primeiro os ficheiros
     while (1) {
 
-        int inodes[PATH_MAX];
-        int i = 0;
-
         if((dentry = readdir(dir)) == NULL)
             break;
         lstat(dentry->d_name, &stat_entry);
@@ -341,17 +396,22 @@ int main(int argc, char *argv[], char *envp[]){
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") != 0 && strcmp(dentry->d_name, "..") != 0){
             int pid = fork();
 
-            char aux[50];
-            sprintf(aux, "PIDGROUPSON=%d", pid);
-            putenv(aux);
-        
             if(pid < 0){
                 perror("Fork");
                 exit(1);
             }
             else if(pid == 0){
-                char *arraPass[argc+1], string[PATH_MAX];
-                int val = makeArg(ind, argv, argc, d, arraPass);
+                char *arraPass[argc+3], string[PATH_MAX];
+                if(group == -1)
+                    group = getpid();
+
+                if(setpgid(getpid(), group) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
+                    printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
+                    exit(5);
+                }
+
+                int num = findGroup(argc, argv);
+                int val = makeArg(ind, argv, argc, d, arraPass, num, group);
 
                 if(val != -1 && (m > -1) && (strcmp(argv[val-1], "--max-depth") == 0)){
                     sprintf(string, "%d", (m - 1));
@@ -365,6 +425,13 @@ int main(int argc, char *argv[], char *envp[]){
                 execve(strcat(pathcpy,"/simpledu"), arraPass, envp);
                 perror("execvp");
                 exit(2);
+            }
+            else{
+                if(group == -1)
+                    group = pid;
+                
+                sprintf(buffer, "PIDGROUP=%d", group); //passo o group id dos processos
+                putenv(buffer);
             }
         }
         //------------------------------
