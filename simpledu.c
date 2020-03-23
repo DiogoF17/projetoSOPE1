@@ -14,7 +14,7 @@
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
-char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--deference", "-B", "--block-size", "--max-depth"};
+char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size", "--max-depth"};
 
 char path[50] = "/home/diogo/Documentos/SOPE/projetoSOPE1";
 
@@ -120,7 +120,7 @@ int verifyS(int num, char *arg[]){
 int verifyL(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
-        if(strcmp(arg[i], "-L") == 0 || strcmp(arg[i], "--deference") == 0)
+        if(strcmp(arg[i], "-L") == 0 || strcmp(arg[i], "--dereference") == 0)
             return 1;
     }
     return -1;
@@ -314,9 +314,9 @@ void sigIntHandler(int signal){
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
-    DIR *dir;                       //
+    DIR *dir, *aux;                  //
     struct dirent *dentry;          //   Usadas na leitura dos diretorios
-    struct stat stat_entry;         //
+    struct stat stat_entry;        //
     //-------------------------------------------------------
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX],pathcpy[50];  //Usadas na impressao do nome dos diretorios
@@ -453,7 +453,7 @@ int main(int argc, char *argv[], char *envp[]){
             }
         }
          //----------------------------------------------------
-        //Nao imprime ficheiros regulares nem diretorios nem links simbolicos
+        //Ficheiros de um tipo tal que nao sao regulares nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
@@ -467,8 +467,9 @@ int main(int argc, char *argv[], char *envp[]){
             }
         }
          //----------------------------------------------------
-        //imprime links simbolicos se for preciso
-        if(S_ISLNK(stat_entry.st_mode)){
+        //Links simbolicos
+        else if(S_ISLNK(stat_entry.st_mode)){
+            //Nao segue links simbolicos
             if(L != 1){
                 somaBlocks += ((int)stat_entry.st_blocks)/2;
                 somaSize += (int)stat_entry.st_size;
@@ -481,15 +482,30 @@ int main(int argc, char *argv[], char *envp[]){
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
             }
-            //arranjar funcao que siga symbolic link para ver o seu tamanho real
-            /*else{
-                int size, blocks;
-                readlink()
-            }*/
+            //Segue links simbolicos
+            else{
+                char aux1[PATH_MAX], aux2[PATH_MAX];
+                readlink(d, aux1, sizeof(aux1));
+                strcpy(aux2, directory);
+                if(strcmp(&aux2[strlen(d)-1], "/") != 0)
+                    strcat(aux2, "/");
+                strcat(aux2, aux1);
+                lstat(aux2, &stat_entry);
+                somaBlocks += ((int)stat_entry.st_blocks)/2;
+                somaSize += (int)stat_entry.st_size;
+                if((m == -2 || m > 0) &&  a==1){
+                    if(B >= 1)
+                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
+                    else if(b!= 1)
+                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
+                    else if(b == 1)
+                        printf("%-10d%s\n",(int)stat_entry.st_size, d);
+                }
+            }
         }
         //----------------------------------------------------
-        //imprime ficheiros regulares se for preciso
-        if(S_ISREG(stat_entry.st_mode)){
+        //Ficheiros Regulares
+        else if(S_ISREG(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
             if((m == -2 || m > 0) && a == 1){
