@@ -340,8 +340,14 @@ int main(int argc, char *argv[], char *envp[]){
     putenv(buffer);
 
     //-------------------------------------------------------
-        
-    signal(SIGINT, sigIntHandler);      //Instalacao do handler para CTRL+C
+    //Instalacao do handler para CTRL+C
+    struct sigaction action;
+
+    action.sa_handler = sigIntHandler;
+    sigemptyset(&action.sa_mask);
+    action.sa_flags = 0;
+
+    sigaction(SIGINT, &action, NULL);
 
     //-----------------------------------------------------
     //      Guarda a informaçao em ficheiro
