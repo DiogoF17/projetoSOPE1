@@ -358,9 +358,7 @@ int main(int argc, char *argv[], char *envp[]){
         regProg = fopen(fileName, "a");
         fclose(regProg);
     }*/
-    
-    //-------------------------------------------------------
-    //                              PASSO 1
+
     //-------------------------------------------------------
     //Validacao do Formato da String
     //Verificacao se houve passagem de diretorio
