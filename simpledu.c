@@ -324,6 +324,8 @@ int main(int argc, char *argv[], char *envp[]){
     char buffer[50],pathcpy[50];
     FILE *f, *regProg;
 
+    setbuf(stdout, NULL);
+
     //---------------------------------------------------
 
     int group = findGroup(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
