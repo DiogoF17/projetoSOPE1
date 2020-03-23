@@ -11,12 +11,15 @@
 #include <math.h>
 #include <errno.h>
 
+#define READ 0
+#define WRITE 1
+
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
 char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--deference", "-B", "--block-size", "--max-depth"};
 
-char path[50] = "/home/diogo/Documentos/SOPE/projetoSOPE1";
+char path[50] = "/home/marcelo/SOPE/PROJ/projetoSOPE1";
 
 //zero- indica se inclui o zero ou nao
 int isValidNumber(char *string, int zero){
@@ -266,23 +269,31 @@ int main(int argc, char *argv[], char *envp[]){
     struct dirent *dentry;
     struct stat stat_entry;
     char d[PATH_MAX], fileName[PATH_MAX];
-    char directory[PATH_MAX];
+    char directory[PATH_MAX],buffer[PATH_MAX];
     int a, b, S, B, L, m; //opções do comando simpleDu
     int ind, somaBlocks = 0, contFil = 0, somaSize = 0;
-    char buffer[50],pathcpy[50];
+    char pathcpy[50];
     FILE *f, *regProg;
+    int countChilds = 0; // conta o numero de processos filho
+    int fd[2],pid;
+
+
+    // criar um pipe para comunicar com os filhos
+    if (pipe(fd)<0){
+        perror("Pipe");
+        exit(1);
+    }
+
 
     //---------------------------------------------------
 
-    putenv("PIDGROUPSON=0");
-
-    signal(SIGINT, sigIntHandler);
+    //signal(SIGINT, sigIntHandler);
 
 
     //-----------------------------------------------------
     //      Guarda a informaçao em ficheiro
     //-----------------------------------------------------
-    
+    /*
     if(getenv("LOG_FILENAME") == NULL)
         strcpy(fileName, "RegistoProg.txt");
     else
@@ -290,7 +301,7 @@ int main(int argc, char *argv[], char *envp[]){
     
     regProg = fopen(fileName, "a");
     fclose(regProg);
-    
+    */
     //-------------------------------------------------------
     //                              PASSO 1
     //-------------------------------------------------------
@@ -339,17 +350,25 @@ int main(int argc, char *argv[], char *envp[]){
         }
         //se tiver subdiretorios invoca o fork()
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") != 0 && strcmp(dentry->d_name, "..") != 0){
-            int pid = fork();
+            countChilds++;
 
-            char aux[50];
-            sprintf(aux, "PIDGROUPSON=%d", pid);
-            putenv(aux);
-        
+            //char aux[50];
+            //printf(aux, "PIDGROUPSON=%d", pid);
+            //putenv(aux);
+
+            pid=fork();
+
             if(pid < 0){
                 perror("Fork");
                 exit(1);
             }
-            else if(pid == 0){
+            
+            if(pid == 0){
+
+                close(fd[READ]);
+
+                dup2(fd[WRITE],STDOUT_FILENO);
+
                 char *arraPass[argc+1], string[PATH_MAX];
                 int val = makeArg(ind, argv, argc, d, arraPass);
 
@@ -366,6 +385,7 @@ int main(int argc, char *argv[], char *envp[]){
                 perror("execvp");
                 exit(2);
             }
+            
         }
         //------------------------------
         //Nao imprime ficheiros regulares nem diretorios
@@ -416,11 +436,12 @@ int main(int argc, char *argv[], char *envp[]){
         }
     }
 
+    close(fd[WRITE]);
     //------------------------------------------------------
-    
-    fazWait();
-
-    //----------------------------------------------------------------------------
+    if (countChilds != 0){
+        fazWait();
+    }
+        //----------------------------------------------------------------------------
 
     rewinddir(dir);
     
@@ -442,37 +463,49 @@ int main(int argc, char *argv[], char *envp[]){
         //So nos interesssa imprimir o diretorio .
         //----------------------------
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") == 0){
+            
+            if (countChilds!=0 ){
+                FILE *receiver;
+                char *buffer[20];
+                size_t len;
+                receiver =fdopen(fd[READ],"r");                
+                for (int i = 0; i < countChilds; i++)
+                {
+                    getline(buffer,&len,receiver);
+                    somaSize += atoi(buffer[0]);
+                    getline(buffer,&len,receiver);
+                    somaBlocks += atoi(buffer[0]);
+                }
+            }
+            somaSize += (int)stat_entry.st_size;
+            somaBlocks += ((int)stat_entry.st_blocks)/2;
+            
+            /*
             strcpy(buffer, "");
             strcpy(pathcpy,path);
             sprintf(buffer, strcat(pathcpy,"/sizes%d.txt"), getpid());
             FILE *fsize = fopen(buffer, "r");
-            if(fsize != NULL){
-                if(S!=1)
-                    somaSize += ((int)stat_entry.st_size) + soma(fsize);
-                else
-                    somaSize += (int)stat_entry.st_size;
+            if(fsize != NULL && S!=1 ){
+                somaSize +=  soma(fsize);
                 fclose(fsize);
                 remove(buffer);
             }
-            else
-                somaSize += (int)stat_entry.st_size;
+            somaSize += (int)stat_entry.st_size;
     
             
             strcpy(buffer, "");
             strcpy(pathcpy,path);
             sprintf(buffer, strcat(pathcpy,"/blocks%d.txt"), getpid());
             FILE *fblock = fopen(buffer, "r");
-            if(fblock != NULL){ //se tiver subdiretorios
-                if(S != 1)
-                    somaBlocks += ((int)stat_entry.st_blocks / 2) + soma(fblock);
-                else
-                    somaBlocks += ((int)stat_entry.st_blocks)/2;
-
+            if(fblock != NULL && S!=1){ //se tiver subdiretorios
+                somaBlocks +=  soma(fblock);
                 fclose(fblock);
                 remove(buffer);
             }
-            else  //se nao tiver sido criado ficheiro ou seja se nao tiver subdiretorios  
-               somaBlocks += ((int)stat_entry.st_blocks)/2; 
+         //se nao tiver sido criado ficheiro ou seja se nao tiver subdiretorios  
+            somaBlocks += ((int)stat_entry.st_blocks)/2; 
+            
+            
             if(m != -1){
                 if(B >= 1)
                     printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / B), d);
@@ -481,12 +514,20 @@ int main(int argc, char *argv[], char *envp[]){
                 else if(b == 1)
                     printf("%-10d%s\n",somaSize, d);
             }
+            */
         }
 
     }
-
+    
+    char msg[50];
+    size_t len;
+    sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
+    len = strlen(msg);
+    write(STDOUT_FILENO,msg,len); 
+    
     //------------------------------------------------------
     //Guarda em ficheiros com o pid do pai os valores atuais dos subdirectorios em relacao ao tamanho em bytes   
+    /*
     strcpy(buffer, "");
     strcpy(pathcpy,path);
     sprintf(buffer, strcat(pathcpy,"/sizes%d.txt"), getppid());
@@ -506,8 +547,8 @@ int main(int argc, char *argv[], char *envp[]){
     sprintf(buffer, "%d\n", somaBlocks);
     fwrite(buffer, sizeof(char), strlen(buffer), f);
     fclose(f);
-
+    */
     //---------------------------------------------
-
+    
     return 0; 
 }
