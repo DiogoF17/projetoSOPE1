@@ -314,48 +314,62 @@ void sigIntHandler(int signal){
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
-    DIR *dir;
-    struct dirent *dentry;
-    struct stat stat_entry;
-    char d[PATH_MAX], fileName[PATH_MAX];
-    char directory[PATH_MAX];
+    DIR *dir;                       //
+    struct dirent *dentry;          //   Usadas na leitura dos diretorios
+    struct stat stat_entry;         //
+    //-------------------------------------------------------
+    char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
+    char d[PATH_MAX], directory[PATH_MAX],pathcpy[50];  //Usadas na impressao do nome dos diretorios
+    //-------------------------------------------------------
     int a, b, S, B, L, m; //opções do comando simpleDu
-    int ind, somaBlocks = 0, somaSize = 0;
-    char buffer[50],pathcpy[50];
+    int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
+    //-------------------------------------------------------
+    char buffer[50];  //Variavel auxiliar
+    //-------------------------------------------------------
     FILE *f, *regProg;
+    //-------------------------------------------------------
 
     setbuf(stdout, NULL);
 
     //---------------------------------------------------
 
     int group = findGroup(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
-                                       //ao qual todos vao pertencer menos o processo inicial
+                                        //ao qual todos vao pertencer menos o processo inicial
 
     sprintf(buffer, "PIDGROUP=%d", group); //passo o group id dos processos
     putenv(buffer);
+
+    //-------------------------------------------------------
         
-    signal(SIGINT, sigIntHandler);
+    signal(SIGINT, sigIntHandler);      //Instalacao do handler para CTRL+C
 
     //-----------------------------------------------------
     //      Guarda a informaçao em ficheiro
     //-----------------------------------------------------
-    
+
+    strcpy(fileName, path);
+    strcat(fileName, "/");
     if(getenv("LOG_FILENAME") == NULL)
-        strcpy(fileName, "RegistoProg.txt");
+        strcat(fileName, "RegistoProg.txt");
     else
-        strcpy(fileName, getenv("LOG_FILENAME"));
+        strcat(fileName, getenv("LOG_FILENAME"));
     
-    if(group == -1){
+    /*if(group == -1){
         regProg = fopen(fileName, "a");
         fclose(regProg);
-    }
+    }*/
     
     //-------------------------------------------------------
     //                              PASSO 1
     //-------------------------------------------------------
+    //Validacao do Formato da String
+    //Verificacao se houve passagem de diretorio
+    //Verificacao das opcoes utilizadas
 
+    //1
     validFormat(argc, argv);  //verifica se está num formato válido
 
+    //2
     //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
     if((ind = passDir(argc, argv, envp)) == -1)
         strcpy(directory, getenv("PWD"));
@@ -367,6 +381,7 @@ int main(int argc, char *argv[], char *envp[]){
         return 2;
     }
 
+    //3
     //Verifica as opcoes do utilizador
     a = verifyA(argc, argv);  //verifica se colocou -a ou --all
     b = verifyB(argc, argv);  //verifica se colocou -b ou --bytes
@@ -387,12 +402,14 @@ int main(int argc, char *argv[], char *envp[]){
         //------------------------------
         //      Imprimir Diretorio 
         //------------------------------
+        //Forma a string com o nome do diretorio
         strcpy(d, directory);
         if(!(strcmp(dentry->d_name, ".") == 0 || strcmp(dentry->d_name, "..") == 0)){
             if(strcmp(&d[strlen(d)-1], "/") != 0)
                 strcat(d, "/");
             strcat(d, dentry->d_name);
         }
+         //----------------------------------------------------
         //se tiver subdiretorios invoca o fork()
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") != 0 && strcmp(dentry->d_name, "..") != 0){
             int pid = fork();
@@ -435,8 +452,8 @@ int main(int argc, char *argv[], char *envp[]){
                 putenv(buffer);
             }
         }
-        //------------------------------
-        //Nao imprime ficheiros regulares nem diretorios
+         //----------------------------------------------------
+        //Nao imprime ficheiros regulares nem diretorios nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
@@ -449,6 +466,7 @@ int main(int argc, char *argv[], char *envp[]){
                     printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
+         //----------------------------------------------------
         //imprime links simbolicos se for preciso
         if(S_ISLNK(stat_entry.st_mode)){
             if(L != 1){
@@ -469,6 +487,7 @@ int main(int argc, char *argv[], char *envp[]){
                 readlink()
             }*/
         }
+        //----------------------------------------------------
         //imprime ficheiros regulares se for preciso
         if(S_ISREG(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
