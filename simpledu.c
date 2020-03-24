@@ -11,6 +11,9 @@
 #include <math.h>
 #include <errno.h>
 
+#define READ 0
+#define WRITE 1
+
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
@@ -232,18 +235,6 @@ int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[], int grou
     return ret;
 }
 
-int soma(FILE * des){
-    char *buffer[50];
-    int soma = 0, cont = 0;
-    size_t len;
-    while(getline(buffer, &len, des)!=-1){
-        soma += atoi(buffer[0]);
-        cont++;
-    }
-    return soma;
-
-}
-
 //---------------------------------------------
 //      INVOCADA PARA FAZER WAITS DOS FILHOS
 //---------------------------------------------
@@ -314,6 +305,7 @@ void sigIntHandler(int signal){
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
+
     DIR *dir, *aux;                  //
     struct dirent *dentry;          //   Usadas na leitura dos diretorios
     struct stat stat_entry;        //
@@ -323,6 +315,9 @@ int main(int argc, char *argv[], char *envp[]){
     //-------------------------------------------------------
     int a, b, S, B, L, m; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
+    int countChilds = 0; // conta o numero de processos filho
+    pid_t pid;  // guarda o pid quando for executado o fork()
+    int fd[2]; //
     //-------------------------------------------------------
     char buffer[50];  //Variavel auxiliar
     //-------------------------------------------------------
@@ -331,7 +326,11 @@ int main(int argc, char *argv[], char *envp[]){
 
     setbuf(stdout, NULL);
 
-    //---------------------------------------------------
+    // criar um pipe para comunicar com os filhos
+    if (pipe(fd)<0){
+        perror("Pipe");
+        exit(1);
+    }
 
     int group = findGroup(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
                                         //ao qual todos vao pertencer menos o processo inicial
@@ -347,18 +346,22 @@ int main(int argc, char *argv[], char *envp[]){
     sigemptyset(&action.sa_mask);
     action.sa_flags = 0;
 
+
     sigaction(SIGINT, &action, NULL);
 
     //-----------------------------------------------------
     //      Guarda a informaçao em ficheiro
     //-----------------------------------------------------
-
+    /*
     strcpy(fileName, path);
     strcat(fileName, "/");
+
+
     if(getenv("LOG_FILENAME") == NULL)
         strcat(fileName, "RegistoProg.txt");
     else
         strcat(fileName, getenv("LOG_FILENAME"));
+    
     
 
     // Ações a ser realizadas apenas pelo processo original
@@ -366,7 +369,10 @@ int main(int argc, char *argv[], char *envp[]){
         //regProg = fopen(fileName, "a");
         //fclose(regProg);
     }
+    */
 
+    //-------------------------------------------------------
+    //                              PASSO 1
     //-------------------------------------------------------
     //Validacao do Formato da String
     //Verificacao se houve passagem de diretorio
@@ -418,13 +424,24 @@ int main(int argc, char *argv[], char *envp[]){
          //----------------------------------------------------
         //se tiver subdiretorios invoca o fork()
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") != 0 && strcmp(dentry->d_name, "..") != 0){
-            int pid = fork();
+            countChilds++;
+
+            //char aux[50];
+            //printf(aux, "PIDGROUPSON=%d", pid);
+            //putenv(aux);
+
+            pid=fork();
 
             if(pid < 0){
                 perror("Fork");
                 exit(1);
             }
-            else if(pid == 0){
+            if(pid == 0){
+
+                close(fd[READ]);
+
+                dup2(fd[WRITE],STDOUT_FILENO);
+
                 char *arraPass[argc+3], string[PATH_MAX];
                 if(group == -1)
                     group = getpid();
@@ -436,7 +453,6 @@ int main(int argc, char *argv[], char *envp[]){
 
                 int num = findGroup(argc, argv);
                 int val = makeArg(ind, argv, argc, d, arraPass, num, group);
-
                 if(val != -1 && (m > -1) && (strcmp(argv[val-1], "--max-depth") == 0)){
                     sprintf(string, "%d", (m - 1));
                     arraPass[val] = string;
@@ -458,6 +474,7 @@ int main(int argc, char *argv[], char *envp[]){
                 putenv(buffer);
             }
         }
+
          //----------------------------------------------------
         //Ficheiros de um tipo tal que nao sao regulares nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
@@ -525,10 +542,11 @@ int main(int argc, char *argv[], char *envp[]){
         }
     }
 
+    close(fd[WRITE]);
     //------------------------------------------------------
-    
-    fazWait();
-
+    if (countChilds != 0){
+        fazWait();
+    }
     //----------------------------------------------------------------------------
 
     rewinddir(dir);
@@ -551,37 +569,24 @@ int main(int argc, char *argv[], char *envp[]){
         //So nos interesssa imprimir o diretorio .
         //----------------------------
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") == 0){
-            strcpy(buffer, "");
-            strcpy(pathcpy,path);
-            sprintf(buffer, strcat(pathcpy,"/sizes%d.txt"), getpid());
-            FILE *fsize = fopen(buffer, "r");
-            if(fsize != NULL){
-                if(S!=1)
-                    somaSize += ((int)stat_entry.st_size) + soma(fsize);
-                else
-                    somaSize += (int)stat_entry.st_size;
-                fclose(fsize);
-                remove(buffer);
-            }
-            else
-                somaSize += (int)stat_entry.st_size;
-    
             
-            strcpy(buffer, "");
-            strcpy(pathcpy,path);
-            sprintf(buffer, strcat(pathcpy,"/blocks%d.txt"), getpid());
-            FILE *fblock = fopen(buffer, "r");
-            if(fblock != NULL){ //se tiver subdiretorios
-                if(S != 1)
-                    somaBlocks += ((int)stat_entry.st_blocks / 2) + soma(fblock);
-                else
-                    somaBlocks += ((int)stat_entry.st_blocks)/2;
-
-                fclose(fblock);
-                remove(buffer);
+            if (countChilds!=0 ){
+                FILE *receiver;
+                char *buffer[20];
+                size_t len;
+                receiver =fdopen(fd[READ],"r");                
+                for (int i = 0; i < countChilds; i++)
+                {
+                    getline(buffer,&len,receiver);
+                    somaSize += atoi(buffer[0]);
+                    getline(buffer,&len,receiver);
+                    somaBlocks += atoi(buffer[0]);
+                }
             }
-            else  //se nao tiver sido criado ficheiro ou seja se nao tiver subdiretorios  
-               somaBlocks += ((int)stat_entry.st_blocks)/2; 
+            somaSize += (int)stat_entry.st_size;
+            somaBlocks += ((int)stat_entry.st_blocks)/2;
+            
+            /* 
             if(m != -1){
                 if(B >= 1)
                     printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / B), d);
@@ -590,33 +595,16 @@ int main(int argc, char *argv[], char *envp[]){
                 else if(b == 1)
                     printf("%-10d%s\n",somaSize, d);
             }
+            */
         }
 
     }
-
-    //------------------------------------------------------
-    //Guarda em ficheiros com o pid do pai os valores atuais dos subdirectorios em relacao ao tamanho em bytes   
-    strcpy(buffer, "");
-    strcpy(pathcpy,path);
-    sprintf(buffer, strcat(pathcpy,"/sizes%d.txt"), getppid());
-    f = fopen(buffer, "a");
-    strcpy(buffer, "");
-    sprintf(buffer, "%d\n", somaSize);
-    fwrite(buffer, sizeof(char), strlen(buffer), f);
-    fclose(f);
-
-    //------------------------------------------------------
-    //Guarda em ficheiros com o pid do pai os valores atuais dos subdirectorios em relacao ao tamanho em blocks de 1024 
-    strcpy(buffer, "");
-    strcpy(pathcpy,path);
-    sprintf(buffer, strcat(pathcpy,"/blocks%d.txt"), getppid());
-    f = fopen(buffer, "a");
-    strcpy(buffer, "");
-    sprintf(buffer, "%d\n", somaBlocks);
-    fwrite(buffer, sizeof(char), strlen(buffer), f);
-    fclose(f);
-
-    //---------------------------------------------
+    
+    char msg[50];
+    size_t len;
+    sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
+    len = strlen(msg);
+    write(STDOUT_FILENO,msg,len); 
 
     return 0; 
 }
