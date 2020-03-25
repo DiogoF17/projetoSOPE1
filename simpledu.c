@@ -19,8 +19,6 @@
 //--------------------------------------------------------------
 char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size", "--max-depth"};
 
-char path[50] = "/home/marcelo/SOPE/PROJ/projetoSOPE1";
-
 //zero- indica se inclui o zero ou nao
 int isValidNumber(char *string, int zero){
 
@@ -60,19 +58,13 @@ void validFormat(int argc, char *argv[]){
                     exit(1);
                 }
             }
-            else if(strcmp(argv[i], "group") == 0){
-                if(!isValidNumber(argv[i+1], 1)){
-                    printf("Invalid Format 5!\n");
-                    exit(1);
-                }
-            }
             else {
                 if(!isValidNumber(argv[i], 1) && ((&argv[i])[0][0] != '/') && ((&argv[i])[0][0] != '~') && ((&argv[i])[0][0] != '.')){
                     printf("Invalid Format!1\n");
                     exit(1);
                 }
                 else if(isValidNumber(argv[i], 1) == 1){
-                    if(strcmp(argv[i-1], "group") != 0 && strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
+                    if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
                         printf("Invalid Format!2\n");
                         exit(1);
                     }
@@ -306,23 +298,28 @@ void sigIntHandler(int signal){
 
 int main(int argc, char *argv[], char *envp[]){
 
-    DIR *dir, *aux;                  //
+    DIR *dir;                  //
     struct dirent *dentry;          //   Usadas na leitura dos diretorios
     struct stat stat_entry;        //
     //-------------------------------------------------------
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
-    char d[PATH_MAX], directory[PATH_MAX],pathcpy[50];  //Usadas na impressao do nome dos diretorios
+    char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
+    char path[PATH_MAX];
     //-------------------------------------------------------
     int a, b, S, B, L, m; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
     int countChilds = 0; // conta o numero de processos filho
     pid_t pid;  // guarda o pid quando for executado o fork()
-    int fd[2]; //
+    int fd[2]; // array de inteiros utilizado para o pipe()
+    int original = 0;
+    int pipeFather;
     //-------------------------------------------------------
     char buffer[50];  //Variavel auxiliar
     //-------------------------------------------------------
     FILE *f, *regProg;
     //-------------------------------------------------------
+
+    strcpy(path,getenv("PWD"));
 
     setbuf(stdout, NULL);
 
@@ -362,14 +359,21 @@ int main(int argc, char *argv[], char *envp[]){
     else
         strcat(fileName, getenv("LOG_FILENAME"));
     
+    */
     
 
     // Ações a ser realizadas apenas pelo processo original
     if(group == -1){
+        original = 1;
+        validFormat(argc, argv);
         //regProg = fopen(fileName, "a");
         //fclose(regProg);
+    }else
+    {
+        pipeFather = dup(STDOUT_FILENO);
     }
-    */
+    
+    
 
     //-------------------------------------------------------
     //                              PASSO 1
@@ -379,7 +383,7 @@ int main(int argc, char *argv[], char *envp[]){
     //Verificacao das opcoes utilizadas
 
     //1
-    validFormat(argc, argv);  //verifica se está num formato válido
+    //validFormat(argc, argv);  //verifica se está num formato válido
 
     //2
     //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
@@ -426,10 +430,6 @@ int main(int argc, char *argv[], char *envp[]){
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") != 0 && strcmp(dentry->d_name, "..") != 0){
             countChilds++;
 
-            //char aux[50];
-            //printf(aux, "PIDGROUPSON=%d", pid);
-            //putenv(aux);
-
             pid=fork();
 
             if(pid < 0){
@@ -439,7 +439,7 @@ int main(int argc, char *argv[], char *envp[]){
             if(pid == 0){
 
                 close(fd[READ]);
-
+              
                 dup2(fd[WRITE],STDOUT_FILENO);
 
                 char *arraPass[argc+3], string[PATH_MAX];
@@ -461,8 +461,7 @@ int main(int argc, char *argv[], char *envp[]){
                     arraPass[val] = string;
                 }
 
-                strcpy(pathcpy,path);
-                execve(strcat(pathcpy,"/simpledu"), arraPass, envp);
+                execve(strcat(path,"/simpledu"), arraPass, envp);
                 perror("execvp");
                 exit(2);
             }
@@ -474,7 +473,9 @@ int main(int argc, char *argv[], char *envp[]){
                 putenv(buffer);
             }
         }
-
+        if (!original){
+            dup2(STDERR_FILENO,STDOUT_FILENO);
+        }
          //----------------------------------------------------
         //Ficheiros de um tipo tal que nao sao regulares nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
@@ -586,7 +587,6 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             
-            /* 
             if(m != -1){
                 if(B >= 1)
                     printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / B), d);
@@ -595,16 +595,17 @@ int main(int argc, char *argv[], char *envp[]){
                 else if(b == 1)
                     printf("%-10d%s\n",somaSize, d);
             }
-            */
+            
         }
 
     }
-    
-    char msg[50];
-    size_t len;
-    sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
-    len = strlen(msg);
-    write(STDOUT_FILENO,msg,len); 
-
+    if (!original){
+        dup2(pipeFather,STDOUT_FILENO);
+        char msg[50];
+        size_t len;
+        sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
+        len = strlen(msg);
+        write(STDOUT_FILENO,msg,len); 
+    }
     return 0; 
 }
