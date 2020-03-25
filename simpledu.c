@@ -17,7 +17,23 @@
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
-char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size", "--max-depth"};
+char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size"};
+
+//|||||||||||||||||||||||||||||||||||
+//arg = {..., ..., ..., ..., ..., ..., ..., ..., ...}
+//       func, dir, -a, -b , -B , -L , -S, -max, groupS
+//|||||||||||||||||||||||||||||||||||
+
+#define FUNC 0
+#define DIRE 1
+#define a 2
+#define b 3
+#define B 4
+#define L 5
+#define S 6
+#define m 7
+#define g 8
+#define ORIG 9
 
 //zero- indica se inclui o zero ou nao
 int isValidNumber(char *string, int zero){
@@ -51,6 +67,7 @@ int inValidWords(char *string){
 
 void validFormat(int argc, char *argv[], int ind){
    for(int i = 1; i < argc; i++){
+       //printf("%s\n", argv[i]);
        if(i != ind){
             if(inValidWords(argv[i]) == 0){
                 if (strncmp(argv[i], "--max-depth=", 12) == 0) {
@@ -65,7 +82,7 @@ void validFormat(int argc, char *argv[], int ind){
                         exit(1);
                     }
                     else if(isValidNumber(argv[i], 1) == 1){
-                        if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
+                        if(strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
                             printf("Invalid Format!2\n");
                             exit(1);
                         }
@@ -73,7 +90,7 @@ void validFormat(int argc, char *argv[], int ind){
                 }
 
             }
-            else if(strcmp(argv[i], "--max-depth") == 0 || strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
+            else if(strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
                 if(argv[i+1] == NULL){
                     printf("Invalid Format 3!\n");
                     exit(1);
@@ -87,74 +104,68 @@ void validFormat(int argc, char *argv[], int ind){
    }
 }
 
-int verifyA(int num, char *arg[]){
+char* verifyA(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-a") == 0 || strcmp(arg[i], "--all") == 0)
-            return 1;
+            return "1";
     }
-    return -1;
+    return "-1";
 }
 
-int verifyB(int num, char *arg[]){
+char* verifyB(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-b") == 0 || strcmp(arg[i], "--bytes") == 0)
-            return 1;
+            return "1";
     }
-    return 0;
+    return "-1";
 }
 
-int verifyS(int num, char *arg[]){
+char* verifyS(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-S") == 0 || strcmp(arg[i], "--separate-dirs") == 0)
-            return 1;
+            return "1";
     }
-    return -1;
+    return "-1";
 }
 
-int verifyL(int num, char *arg[]){
+char* verifyL(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-L") == 0 || strcmp(arg[i], "--dereference") == 0)
-            return 1;
+            return "1";
     }
-    return -1;
+    return "-1";
 }
 
-int verifyBlocks(int num, char *arg[]){
+char* verifyBlocks(int num, char *arg[]){
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-B") == 0 || strcmp(arg[i], "--block-size") == 0){
             if(isValidNumber(arg[i+1], 0))
-                return atoi(arg[i+1]);
+                return arg[i+1];
             else
                 printf("Next to -B/--block-size has to be a number greater than zero!");
         }
     }
-    return -1;
+    return "-1";
 }
 
-int verifyMax(int num, char *arg[]){
+char* verifyMax(int num, char *arg[]){
      for(int i = 1; i < num; i++){
-        if(strcmp(arg[i], "--max-depth") == 0) {
-            if (isValidNumber(arg[i + 1], 1)) {
-                return atoi(arg[i + 1]);
-            }
-            else
-                printf("Next to --max-depth has to be a number!");
-        }else  if (strncmp(arg[i], "--max-depth=", 12) == 0) {
+        if (strncmp(arg[i], "--max-depth=", 12) == 0) {
             char size[10];
             strcpy(size, &(arg[i])[12]);
-            if (isValidNumber(size, 1)) {
-                return atoi(size);
+            if (isValidNumber(&(arg[i])[12], 1)) {
+                return &(arg[i])[12];
             }
             else
                 printf("Should have a number(SIZE) in --max-depth=SIZE!");
 
         }
     }
-    return -2;
+    return "-2";
 }
 
 int passDir(int num, char *arg[], char *envp[]){
@@ -173,60 +184,15 @@ int passDir(int num, char *arg[], char *envp[]){
 
 //------------------------------------------------------------------------
 
-int findGroup(int argc, char *argv[]){
+int findNotOrig(int argc, char *argv[]){
 
     for(int i = 0; i < argc; i++){
-        if(strcmp(argv[i], "group") == 0){
-            return atoi(argv[i+1]);
+        if(strcmp(argv[i], "notOrig") == 0){
+            return 1;
         }
     }
 
-    return -1;
-}
-
-int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[], int group, int pid){
-    int ret = -1;
-    arraPass[0] = argv[0];
-    for(int i = 1; i <= argc; i++){
-        if(i == ind)
-            arraPass[i] = d;
-        else if(i != argc){
-            if(strcmp(argv[i], "--max-depth") == 0)
-                ret = i + 1;
-            else if (strncmp(argv[i], "--max-depth=", 12) == 0)
-            {
-                ret = i;
-            }
-            
-            arraPass[i] = argv[i];
-        }
-        else{
-            if(ind == -1){
-                arraPass[i] = d;
-                if(group != pid){
-                    arraPass[i+1] = "group";
-                    char aux[50];
-                    sprintf(aux, "%d", pid);
-                    arraPass[i+2] = aux;
-                    arraPass[i+3] = NULL;
-                }
-                else
-                    arraPass[i+1] = NULL;
-            }
-            else {
-                if(group != pid){
-                    arraPass[i] = "group";
-                    char aux[50];
-                    sprintf(aux, "%d", pid);
-                    arraPass[i+1] = aux;
-                    arraPass[i+2] = NULL;
-                }
-                else
-                    arraPass[i] = NULL;
-            }
-        }
-    }
-    return ret;
+    return 0;
 }
 
 //---------------------------------------------
@@ -270,14 +236,18 @@ void sigIntHandler(int signal){
 
     printf("\n\n######################################################\n\t\tMenu de Saida\n######################################################\n");
 
-    while(1){
+   while(1){
         printf("\nTem a certeza que pretende abandonar a execução do programa(s/n)? ");
-        getline(&res, &len, stdin);
-        if(res[0] == 's' || res[0] == 'n')
+        scanf("%s", res);
+        if(res[0] == 's' || res[0] == 'n'){
+            //printf("in\n");
             break;
+        }
     }
 
     printf("\n######################################################\n\n");
+
+    sleep(3);
 
     if(res[0] == 'n' && num != -1){
         if(kill(-num, SIGCONT) == -1){
@@ -295,6 +265,21 @@ void sigIntHandler(int signal){
     }
 
 }
+/*
+void printfArraPass(char *arraPass[]){
+    printf("func: %s\n", arraPass[FUNC]);
+    printf("dire: %s\n", arraPass[DIRE]);
+    printf("a: %s\n", arraPass[a]);
+    printf("b: %s\n", arraPass[b]);
+    printf("B: %s\n", arraPass[B]);
+    printf("L: %s\n", arraPass[L]);
+    printf("S: %s\n", arraPass[S]);
+    printf("m: %s\n", arraPass[m]);
+    printf("g: %s\n", arraPass[g]);
+    printf("Ori: %s\n", arraPass[ORIG]);
+    printf("ultimo: %s\n", arraPass[10]);
+
+}*/
 
 //-----------------------------------------------------------------------
 
@@ -307,8 +292,9 @@ int main(int argc, char *argv[], char *envp[]){
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
     char path[PATH_MAX];
+    char *arraPass[11];
     //-------------------------------------------------------
-    int a, b, S, B, L, m; //opções do comando simpleDu
+    char *a1, *b1, *S1, *B1, *L1, *m1; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
     int countChilds = 0; // conta o numero de processos filho
     pid_t pid;  // guarda o pid quando for executado o fork()
@@ -323,19 +309,19 @@ int main(int argc, char *argv[], char *envp[]){
 
     strcpy(path,getenv("PWD"));
 
+    //printf("%s\n", path);
+
     setbuf(stdout, NULL);
 
+    //----------------------------------------------------
     // criar um pipe para comunicar com os filhos
     if (pipe(fd)<0){
         perror("Pipe");
         exit(1);
     }
 
-    int group = findGroup(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
+    int group = findNotOrig(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
                                         //ao qual todos vao pertencer menos o processo inicial
-
-    sprintf(buffer, "PIDGROUP=%d", group); //passo o group id dos processos
-    putenv(buffer);
 
     //-------------------------------------------------------
     //Instalacao do handler para CTRL+C
@@ -348,21 +334,7 @@ int main(int argc, char *argv[], char *envp[]){
 
     sigaction(SIGINT, &action, NULL);
 
-    //-----------------------------------------------------
-    //      Guarda a informaçao em ficheiro
-    //-----------------------------------------------------
-    /*
-    strcpy(fileName, path);
-    strcat(fileName, "/");
-
-
-    if(getenv("LOG_FILENAME") == NULL)
-        strcat(fileName, "RegistoProg.txt");
-    else
-        strcat(fileName, getenv("LOG_FILENAME"));
-    
-    */
-
+    //----------------------------------------------------
     //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
     if((ind = passDir(argc, argv, envp)) == -1)
         strcpy(directory, getenv("PWD"));
@@ -374,42 +346,59 @@ int main(int argc, char *argv[], char *envp[]){
         return 2;
     }
     
-
+    //----------------------------------------------------
     // Ações a ser realizadas apenas pelo processo original
-    if(group == -1){
+    if(group == 0){
         original = 1;
         validFormat(argc, argv, ind);
-        //regProg = fopen(fileName, "a");
-        //fclose(regProg);
-    }else
-    {
+
+        //Verifica as opcoes do utilizador
+        a1 = verifyA(argc, argv);  //verifica se colocou -a ou --all
+        b1 = verifyB(argc, argv);  //verifica se colocou -b ou --bytes
+        S1 = verifyS(argc, argv);  //verifica se colocou -S ou --separate-dirs
+        L1 = verifyL(argc, argv);  //verifica se colocou -L ou --deference
+        B1 = verifyBlocks(argc, argv);  //verifica se colocou -B ou --block-size
+        m1 = verifyMax(argc, argv);  //verifica se colocou --max-depth
+        
+        arraPass[FUNC] = argv[0];
+        arraPass[DIRE] = directory;
+        arraPass[a] = a1;
+        arraPass[b] = b1;
+        arraPass[B] = B1;
+        arraPass[L] = L1;
+        arraPass[S] = S1;
+        arraPass[m] = m1;
+        arraPass[g] = "-1";
+        arraPass[ORIG] = "notOrig";
+        arraPass[10] = NULL;
+    }else{
+        arraPass[FUNC] = argv[0];
+        arraPass[DIRE] = argv[1];
+        arraPass[a] = argv[2];
+        arraPass[b] = argv[3];
+        arraPass[B] = argv[4];
+        arraPass[L] = argv[5];
+        arraPass[S] = argv[6];
+        arraPass[m] = argv[7];
+        arraPass[g] = argv[8];
+        arraPass[ORIG] = argv[9];
+        arraPass[10] = NULL;
         pipeFather = dup(STDOUT_FILENO);
     }
+
+    sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
+    putenv(buffer);
+
+
+    //printfArraPass(arraPass);
     
+    //----------------------------------------------------
     
-
-    //-------------------------------------------------------
-    //                              PASSO 1
-    //-------------------------------------------------------
-    //Validacao do Formato da String
-    //Verificacao se houve passagem de diretorio
-    //Verificacao das opcoes utilizadas
-
-    //1
-    //validFormat(argc, argv);  //verifica se está num formato válido
-
-    //3
-    //Verifica as opcoes do utilizador
-    a = verifyA(argc, argv);  //verifica se colocou -a ou --all
-    b = verifyB(argc, argv);  //verifica se colocou -b ou --bytes
-    S = verifyS(argc, argv);  //verifica se colocou -S ou --separate-dirs
-    L = verifyL(argc, argv);  //verifica se colocou -L ou --deference
-    B = verifyBlocks(argc, argv);  //verifica se colocou -B ou --block-size
-    m = verifyMax(argc, argv);  //verifica se colocou --max-depth
     //----------------------------------------------------
 
     chdir(directory);
 
+    //----------------------------------------------------
     //Imprime primeiro os ficheiros
     while (1) {
 
@@ -442,35 +431,39 @@ int main(int argc, char *argv[], char *envp[]){
                 close(fd[READ]);
               
                 dup2(fd[WRITE],STDOUT_FILENO);
-
-                char *arraPass[argc+3], string[PATH_MAX];
-                if(group == -1)
-                    group = getpid();
-
-                if(setpgid(getpid(), group) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
+                //printfArraPass(arraPass);
+                if(atoi(arraPass[g]) == -1){
+                    char string[PATH_MAX];
+                    sprintf(string, "%d", getpid());
+                    arraPass[g] = string;
+                }
+                //printf("PID: %s\n", arraPass[g]);
+                if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
                     printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
                     exit(5);
                 }
 
-                int num = findGroup(argc, argv);
-                int val = makeArg(ind, argv, argc, d, arraPass, num, group);
-                if(val != -1 && (m > -1) && (strcmp(argv[val-1], "--max-depth") == 0)){
-                    sprintf(string, "%d", (m - 1));
-                    arraPass[val] = string;
-                }else if (val!=-1 && m >-1){
-                    sprintf(string, "--max-depth=%d", (m - 1));
-                    arraPass[val] = string;
-                }
+                arraPass[DIRE] = d;
+
+                if(atoi(arraPass[m])>-1)
+                    sprintf(arraPass[m], "%d", atoi(arraPass[m])-1);
+                char *arge[10];
+
+                //printfArraPass(arraPass);
 
                 execve(strcat(path,"/simpledu"), arraPass, envp);
+                //printfArraPass(arraPass);
                 perror("execvp");
                 exit(2);
             }
             else{
-                if(group == -1)
-                    group = pid;
+                if(atoi(arraPass[g]) == -1){
+                    char string[PATH_MAX];
+                    sprintf(string, "%d", pid);
+                    arraPass[g] = string;
+                }
                 
-                sprintf(buffer, "PIDGROUP=%d", group); //passo o group id dos processos
+                sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
                 putenv(buffer);
             }
         }
@@ -482,12 +475,12 @@ int main(int argc, char *argv[], char *envp[]){
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
-            if(m == -2 || m > 0){
-                if(B >= 1)
+            if(atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0){
+                if(atoi(arraPass[B]) >= 1)
                     printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
-                else if(b != 1)
+                else if(atoi(arraPass[b]) != 1)
                     printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
-                else if(b == 1)
+                else if(atoi(arraPass[b]) == 1)
                     printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
@@ -495,15 +488,15 @@ int main(int argc, char *argv[], char *envp[]){
         //Links simbolicos
         else if(S_ISLNK(stat_entry.st_mode)){
             //Nao segue links simbolicos
-            if(L != 1){
+            if(atoi(arraPass[L]) != 1){
                 somaBlocks += ((int)stat_entry.st_blocks)/2;
                 somaSize += (int)stat_entry.st_size;
-                if((m == -2 || m > 0) &&  a==1){
-                    if(B >= 1)
+                if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
+                    if(atoi(arraPass[B]) >= 1)
                         printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
-                    else if(b!= 1)
+                    else if(atoi(arraPass[b])!= 1)
                         printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
-                    else if(b == 1)
+                    else if(atoi(arraPass[b]) == 1)
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
             }
@@ -518,12 +511,12 @@ int main(int argc, char *argv[], char *envp[]){
                 lstat(aux2, &stat_entry);
                 somaBlocks += ((int)stat_entry.st_blocks)/2;
                 somaSize += (int)stat_entry.st_size;
-                if((m == -2 || m > 0) &&  a==1){
-                    if(B >= 1)
+                if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
+                    if(atoi(arraPass[B]) >= 1)
                         printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
-                    else if(b!= 1)
+                    else if(atoi(arraPass[b])!= 1)
                         printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
-                    else if(b == 1)
+                    else if(atoi(arraPass[b]) == 1)
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
             }
@@ -533,12 +526,12 @@ int main(int argc, char *argv[], char *envp[]){
         else if(S_ISREG(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
-            if((m == -2 || m > 0) && a == 1){
-                if(B >= 1)
+            if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) && atoi(arraPass[a]) == 1){
+                if(atoi(arraPass[B]) >= 1)
                     printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
-                else if(b!= 1)
+                else if(atoi(arraPass[b])!= 1)
                     printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
-                else if(b == 1)
+                else if(atoi(arraPass[b]) == 1)
                     printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
@@ -588,12 +581,12 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             
-            if(m != -1){
-                if(B >= 1)
+            if(atoi(arraPass[m]) != -1){
+                if(atoi(arraPass[B]) >= 1)
                     printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / B), d);
-                else if(b != 1)
+                else if(atoi(arraPass[b]) != 1)
                     printf("%-10d%s\n",somaBlocks, d);
-                else if(b == 1)
+                else if(atoi(arraPass[b]) == 1)
                     printf("%-10d%s\n",somaSize, d);
             }
             
