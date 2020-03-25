@@ -565,7 +565,7 @@ int main(int argc, char *argv[], char *envp[]){
         //----------------------------
         if(S_ISDIR(stat_entry.st_mode) && strcmp(dentry->d_name, ".") == 0){
             
-            if (countChilds!=0 ){
+            if (countChilds!=0 && atoi(arraPass[S]) != 1){
                 FILE *receiver;
                 char *buffer[20];
                 size_t len;
