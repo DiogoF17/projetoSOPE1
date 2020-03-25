@@ -49,40 +49,42 @@ int inValidWords(char *string){
     return 0;
 }
 
-void validFormat(int argc, char *argv[]){
+void validFormat(int argc, char *argv[], int ind){
    for(int i = 1; i < argc; i++){
-        if(inValidWords(argv[i]) == 0){
-            if (strncmp(argv[i], "--max-depth=", 12) == 0) {
-                if (!isValidNumber(&(argv[i])[12], 1)) {
-                    printf("Invalid Format 0!\n");
-                    exit(1);
-                }
-            }
-            else {
-                if(!isValidNumber(argv[i], 1) && ((&argv[i])[0][0] != '/') && ((&argv[i])[0][0] != '~') && ((&argv[i])[0][0] != '.')){
-                    printf("Invalid Format!1\n");
-                    exit(1);
-                }
-                else if(isValidNumber(argv[i], 1) == 1){
-                    if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
-                        printf("Invalid Format!2\n");
+       if(i != ind){
+            if(inValidWords(argv[i]) == 0){
+                if (strncmp(argv[i], "--max-depth=", 12) == 0) {
+                    if (!isValidNumber(&(argv[i])[12], 1)) {
+                        printf("Invalid Format 0!\n");
                         exit(1);
                     }
                 }
-            }
+                else {
+                    if(!isValidNumber(argv[i], 1)){
+                        printf("Invalid Format!1\n");
+                        exit(1);
+                    }
+                    else if(isValidNumber(argv[i], 1) == 1){
+                        if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
+                            printf("Invalid Format!2\n");
+                            exit(1);
+                        }
+                    }
+                }
 
-        }
-        else if(strcmp(argv[i], "--max-depth") == 0 || strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
-            if(argv[i+1] == NULL){
-                printf("Invalid Format 3!\n");
-                exit(1);
             }
-            else if(!isValidNumber(argv[i + 1],1)){
-                printf("Invalid Format 4!\n");
-                exit(1);
+            else if(strcmp(argv[i], "--max-depth") == 0 || strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
+                if(argv[i+1] == NULL){
+                    printf("Invalid Format 3!\n");
+                    exit(1);
+                }
+                else if(!isValidNumber(argv[i + 1],1)){
+                    printf("Invalid Format 4!\n");
+                    exit(1);
+                }
             }
         }
-    }
+   }
 }
 
 int verifyA(int num, char *arg[]){
@@ -360,12 +362,23 @@ int main(int argc, char *argv[], char *envp[]){
         strcat(fileName, getenv("LOG_FILENAME"));
     
     */
+
+    //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
+    if((ind = passDir(argc, argv, envp)) == -1)
+        strcpy(directory, getenv("PWD"));
+    else
+        strcpy(directory, argv[ind]);
+
+    if ((dir = opendir(directory)) == NULL) {
+        perror(directory);
+        return 2;
+    }
     
 
     // Ações a ser realizadas apenas pelo processo original
     if(group == -1){
         original = 1;
-        validFormat(argc, argv);
+        validFormat(argc, argv, ind);
         //regProg = fopen(fileName, "a");
         //fclose(regProg);
     }else
@@ -384,18 +397,6 @@ int main(int argc, char *argv[], char *envp[]){
 
     //1
     //validFormat(argc, argv);  //verifica se está num formato válido
-
-    //2
-    //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
-    if((ind = passDir(argc, argv, envp)) == -1)
-        strcpy(directory, getenv("PWD"));
-    else
-        strcpy(directory, argv[ind]);
-
-    if ((dir = opendir(directory)) == NULL) {
-        perror(directory);
-        return 2;
-    }
 
     //3
     //Verifica as opcoes do utilizador
