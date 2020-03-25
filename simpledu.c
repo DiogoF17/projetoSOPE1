@@ -505,9 +505,7 @@ int main(int argc, char *argv[], char *envp[]){
                     else if(b == 1)
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
-            }
-            //Segue links simbolicos
-            else{
+            }else{//Segue links simbolicos
                 char aux1[PATH_MAX], aux2[PATH_MAX];
                 readlink(d, aux1, sizeof(aux1));
                 strcpy(aux2, directory);
