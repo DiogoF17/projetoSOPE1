@@ -492,7 +492,7 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if(atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b]) != 1)
                     printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
@@ -508,7 +508,7 @@ int main(int argc, char *argv[], char *envp[]){
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                     if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
+                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                     else if(atoi(arraPass[b])!= 1)
                         printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                     else if(atoi(arraPass[b]) == 1)
@@ -528,7 +528,7 @@ int main(int argc, char *argv[], char *envp[]){
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                     if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
+                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                     else if(atoi(arraPass[b])!= 1)
                         printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                     else if(atoi(arraPass[b]) == 1)
@@ -543,7 +543,7 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) && atoi(arraPass[a]) == 1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b])!= 1)
                     printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
@@ -598,7 +598,7 @@ int main(int argc, char *argv[], char *envp[]){
             
             if(atoi(arraPass[m]) != -1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / B), d);
+                    printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b]) != 1)
                     printf("%-10d%s\n",somaBlocks, d);
                 else if(atoi(arraPass[b]) == 1)
