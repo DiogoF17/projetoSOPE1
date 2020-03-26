@@ -215,8 +215,18 @@ void fazWait(){
 //      FUNÇÃO DE PROTEÇÃO CONTRA CTRL + C
 //--------------------------------------------------------
 
+/*
+Limpa o InputBuffer
+*/
+void cleanInputBuffer(){
+    while(1){
+        if(getchar() == '\n')
+            break;
+    }
+}
+
 void sigIntHandler(int signal){
-    char *res;
+    char res;
     size_t len;
     int num;
 
@@ -238,18 +248,18 @@ void sigIntHandler(int signal){
 
    while(1){
         printf("\nTem a certeza que pretende abandonar a execução do programa(s/n)? ");
-        scanf("%s", res);
-        if(res[0] == 's' || res[0] == 'n'){
-            //printf("in\n");
+        res = getchar();
+        cleanInputBuffer();
+        if(res == 's' || res == 'n'){
             break;
         }
     }
 
     printf("\n######################################################\n\n");
 
-    sleep(3);
+    //sleep(3);
 
-    if(res[0] == 'n' && num != -1){
+    if(res == 'n' && num != -1){
         if(kill(-num, SIGCONT) == -1){
             printf("Error on Kill\n");
             exit(7);
@@ -265,7 +275,7 @@ void sigIntHandler(int signal){
     }
 
 }
-/*
+
 void printfArraPass(char *arraPass[]){
     printf("func: %s\n", arraPass[FUNC]);
     printf("dire: %s\n", arraPass[DIRE]);
@@ -279,7 +289,7 @@ void printfArraPass(char *arraPass[]){
     printf("Ori: %s\n", arraPass[ORIG]);
     printf("ultimo: %s\n", arraPass[10]);
 
-}*/
+}
 
 //-----------------------------------------------------------------------
 
@@ -308,6 +318,7 @@ int main(int argc, char *argv[], char *envp[]){
     //-------------------------------------------------------
 
     strcpy(path,getenv("PWD"));
+    //printf("Path: %s\n", path);
 
     //printf("%s\n", path);
 
@@ -320,7 +331,9 @@ int main(int argc, char *argv[], char *envp[]){
         exit(1);
     }
 
-    int group = findNotOrig(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
+    //----------------------------------------------------
+    //Verifica se e o ficheiro original
+    int notOrig = findNotOrig(argc, argv);  //junta aos argumentos do programa um pid que vou definir para criar um grupo
                                         //ao qual todos vao pertencer menos o processo inicial
 
     //-------------------------------------------------------
@@ -348,8 +361,10 @@ int main(int argc, char *argv[], char *envp[]){
     
     //----------------------------------------------------
     // Ações a ser realizadas apenas pelo processo original
-    if(group == 0){
+    if(notOrig == 0){
         original = 1;
+
+        //Verifica se esta num formato valido
         validFormat(argc, argv, ind);
 
         //Verifica as opcoes do utilizador
@@ -360,6 +375,7 @@ int main(int argc, char *argv[], char *envp[]){
         B1 = verifyBlocks(argc, argv);  //verifica se colocou -B ou --block-size
         m1 = verifyMax(argc, argv);  //verifica se colocou --max-depth
         
+        //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
         arraPass[DIRE] = directory;
         arraPass[a] = a1;
@@ -370,8 +386,9 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = m1;
         arraPass[g] = "-1";
         arraPass[ORIG] = "notOrig";
-        arraPass[10] = NULL;
+        //arraPass[10] = NULL;
     }else{
+        //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
         arraPass[DIRE] = argv[1];
         arraPass[a] = argv[2];
@@ -382,22 +399,19 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = argv[7];
         arraPass[g] = argv[8];
         arraPass[ORIG] = argv[9];
-        arraPass[10] = NULL;
+        //arraPass[10] = NULL;
         pipeFather = dup(STDOUT_FILENO);
     }
 
-    sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
-    putenv(buffer);
-
-
     //printfArraPass(arraPass);
-    
-    //----------------------------------------------------
-    
-    //----------------------------------------------------
 
+    //cria uma variavel de ambiente com o pid do group definido
+    sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
+    //printf("Buffer: %s\n", buffer);
+    putenv(buffer);
+    //----------------------------------------------------
+    
     chdir(directory);
-
     //----------------------------------------------------
     //Imprime primeiro os ficheiros
     while (1) {
@@ -429,30 +443,31 @@ int main(int argc, char *argv[], char *envp[]){
             if(pid == 0){
 
                 close(fd[READ]);
-              
                 dup2(fd[WRITE],STDOUT_FILENO);
-                //printfArraPass(arraPass);
+
                 if(atoi(arraPass[g]) == -1){
                     char string[PATH_MAX];
                     sprintf(string, "%d", getpid());
                     arraPass[g] = string;
                 }
-                //printf("PID: %s\n", arraPass[g]);
+                
                 if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
                     printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
                     exit(5);
                 }
 
+                //coloca o novo diretorio na array
                 arraPass[DIRE] = d;
 
+                //printfArraPass(arraPass);
+
+                //se tiver sido passado --max-depthdecrementa
                 if(atoi(arraPass[m])>-1)
                     sprintf(arraPass[m], "%d", atoi(arraPass[m])-1);
-                char *arge[10];
 
                 //printfArraPass(arraPass);
 
                 execve(strcat(path,"/simpledu"), arraPass, envp);
-                //printfArraPass(arraPass);
                 perror("execvp");
                 exit(2);
             }
