@@ -11,31 +11,43 @@
 #include <math.h>
 #include <errno.h>
 
-#define READ 0
-#define WRITE 1
-
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
+/*
+Palavras que poderao ser introduzidas pelo utilizador mas falta aqui o --max-depth=.
+*/
 char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size"};
 
 //|||||||||||||||||||||||||||||||||||
-//arg = {..., ..., ..., ..., ..., ..., ..., ..., ...}
-//       func, dir, -a, -b , -B , -L , -S, -max, groupS
+//arraPass = {..., ..., ..., ..., ..., ..., ..., ..., ..., ...}
+//            func, dir, -a, -b , -B , -L , -S, -max, groupS, Orig
 //|||||||||||||||||||||||||||||||||||
 
-#define FUNC 0
-#define DIRE 1
-#define a 2
-#define b 3
-#define B 4
-#define L 5
-#define S 6
-#define m 7
-#define g 8
-#define ORIG 9
+/*
+Macros usadas na passagem do array.
+*/
+#define FUNC 0   //nome da funcao.
+#define DIRE 1   //nome do diretorio.   
+#define a 2      //-a
+#define b 3      //-b   
+#define B 4      //-B x 
+#define L 5      //-L  
+#define S 6      //-S  
+#define m 7      //--max-depth=x
+#define g 8      //contem o groupid necessario para fazer o set do group.   
+#define ORIG 9   //string que nos indica se e o processo original.
 
-//zero- indica se inclui o zero ou nao
+/*
+Macros usadas nos pipes.
+*/
+#define READ 0
+#define WRITE 1
+
+/*
+Verifica se e um numero valido.
+zero - indica se inclui o zero ou nao na verificacao se e um numero.
+*/
 int isValidNumber(char *string, int zero){
 
     if(string == NULL || strcmp("", string) == 0){
@@ -56,7 +68,9 @@ int isValidNumber(char *string, int zero){
    return 1;
 }
 
-
+/*
+Verifica se a palavra introduzida pelo utilizador esta nas palavras validas.
+*/
 int inValidWords(char *string){
     for(int i = 0; i < 13; i++){
         if(strcmp(string, validWords[i]) == 0)
@@ -65,9 +79,11 @@ int inValidWords(char *string){
     return 0;
 }
 
+/*
+Verifica se o comando introduzido esta num formato valido.
+*/
 void validFormat(int argc, char *argv[], int ind){
    for(int i = 1; i < argc; i++){
-       //printf("%s\n", argv[i]);
        if(i != ind){
             if(inValidWords(argv[i]) == 0){
                 if (strncmp(argv[i], "--max-depth=", 12) == 0) {
@@ -104,6 +120,9 @@ void validFormat(int argc, char *argv[], int ind){
    }
 }
 
+/*
+Verifica se foi introduzido -a.
+*/
 char* verifyA(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
@@ -113,6 +132,9 @@ char* verifyA(int num, char *arg[]){
     return "-1";
 }
 
+/*
+Verifica se foi introduzido -b.
+*/
 char* verifyB(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
@@ -122,6 +144,9 @@ char* verifyB(int num, char *arg[]){
     return "-1";
 }
 
+/*
+Verifica se foi introduzido -S.
+*/
 char* verifyS(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
@@ -131,6 +156,9 @@ char* verifyS(int num, char *arg[]){
     return "-1";
 }
 
+/*
+Verifica se foi introduzido -L.
+*/
 char* verifyL(int num, char *arg[]){
 
     for(int i = 1; i < num; i++){
@@ -140,6 +168,9 @@ char* verifyL(int num, char *arg[]){
     return "-1";
 }
 
+/*
+Verifica qual o valor de -B se introduzido.
+*/
 char* verifyBlocks(int num, char *arg[]){
     for(int i = 1; i < num; i++){
         if(strcmp(arg[i], "-B") == 0 || strcmp(arg[i], "--block-size") == 0){
@@ -152,6 +183,9 @@ char* verifyBlocks(int num, char *arg[]){
     return "-1";
 }
 
+/*
+Verifica qual o valor de --max-depth se introduzido.
+*/
 char* verifyMax(int num, char *arg[]){
      for(int i = 1; i < num; i++){
         if (strncmp(arg[i], "--max-depth=", 12) == 0) {
@@ -168,6 +202,9 @@ char* verifyMax(int num, char *arg[]){
     return "-2";
 }
 
+/*
+Verifica se foi passado algum diretorio pelo utilizador.
+*/
 int passDir(int num, char *arg[], char *envp[]){
     for(int i = 1; i < num; i++){
         if((&arg[i])[0][0] == '/' || (&arg[i])[0][0] == '~')
@@ -184,6 +221,9 @@ int passDir(int num, char *arg[], char *envp[]){
 
 //------------------------------------------------------------------------
 
+/*
+Atraves de uma string que eu adiciono verifica se e o processo original.
+*/
 int findNotOrig(int argc, char *argv[]){
 
     for(int i = 0; i < argc; i++){
@@ -199,6 +239,9 @@ int findNotOrig(int argc, char *argv[]){
 //      INVOCADA PARA FAZER WAITS DOS FILHOS
 //---------------------------------------------
 
+/*
+Faz wait pelos filhos do processo.
+*/
 void fazWait(){
 
     int val;
@@ -225,6 +268,9 @@ void cleanInputBuffer(){
     }
 }
 
+/*
+Handler para o sinal CTRL+C.
+*/
 void sigIntHandler(int signal){
     char res;
     size_t len;
@@ -257,8 +303,6 @@ void sigIntHandler(int signal){
 
     printf("\n######################################################\n\n");
 
-    //sleep(3);
-
     if(res == 'n' && num != -1){
         if(kill(-num, SIGCONT) == -1){
             printf("Error on Kill\n");
@@ -270,12 +314,12 @@ void sigIntHandler(int signal){
             printf("Error on Kill\n");
             exit(7);
         }
-        //fazWait();
         exit(5);
     }
 
 }
 
+/*
 void printfArraPass(char *arraPass[]){
     printf("func: %s\n", arraPass[FUNC]);
     printf("dire: %s\n", arraPass[DIRE]);
@@ -289,7 +333,7 @@ void printfArraPass(char *arraPass[]){
     printf("Ori: %s\n", arraPass[ORIG]);
     printf("ultimo: %s\n", arraPass[10]);
 
-}
+}*/
 
 //-----------------------------------------------------------------------
 
@@ -517,13 +561,9 @@ int main(int argc, char *argv[], char *envp[]){
             }
             //Segue links simbolicos
             else{
-                char aux1[PATH_MAX], aux2[PATH_MAX];
-                readlink(d, aux1, sizeof(aux1));
-                strcpy(aux2, directory);
-                if(strcmp(&aux2[strlen(d)-1], "/") != 0)
-                    strcat(aux2, "/");
-                strcat(aux2, aux1);
-                lstat(aux2, &stat_entry);
+                char aux1[PATH_MAX];
+                realpath(d, aux1);
+                lstat(aux1, &stat_entry);
                 somaBlocks += ((int)stat_entry.st_blocks)/2;
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
