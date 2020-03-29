@@ -10,6 +10,7 @@
 #include <fcntl.h> 
 #include <math.h>
 #include <errno.h>
+#include <time.h>
 
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
@@ -221,6 +222,144 @@ int passDir(int num, char *arg[], char *envp[]){
 
 //------------------------------------------------------------------------
 
+ FILE *regProg;
+clock_t begin;
+
+int file_open(){
+    char fileName[PATH_MAX];
+    if (getenv("LOG_FILENAME") == NULL){
+        sprintf(fileName, "%s/Registos.txt", getenv("PWD"));
+    }
+    else
+        strcpy(fileName, getenv("LOG_FILENAME"));
+    if((regProg = fopen(fileName, "a"))==NULL){
+        perror("fopen");
+        exit(4);
+    }
+
+}
+
+void create_file(char *arraPass[11], int pid){
+    clock_t end = clock();
+    
+    file_open();
+    
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    
+    //os argumentos da linha de comandos
+    char str_pid[PATH_MAX];
+    sprintf(str_pid, "time: %.2f - pid: %d - action: CREATE - info: %s | %s | %s | %s | %s | %s | %s | %s | %s | %s \n", 
+            time_spent, pid, arraPass[0], arraPass[1], arraPass[2], arraPass[3], arraPass[4], 
+            arraPass[5], arraPass[6], arraPass[7], arraPass[8], arraPass[9]);
+
+    if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void exit_file(int exit_number, int pid){
+    //TODO:EXIT
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //o código de saída (exit status)
+    sprintf(str_pid, "time: %.2f - pid: %d - action: EXIT - info: %d\n", time_spent,pid, WEXITSTATUS(exit_number));
+    
+    if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void recv_signal_file(int number){
+    //TODO:RECV_SIGNAL
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //sinal recebido(por exemplo, SIGINT)
+    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_SIGNAL - info: %d\n", time_spent,getpid(), number);
+    if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void send_signal_file(int number, int pid){
+    //TODO:SEND_SIGNAL
+    //TODO:RECV_SIGNAL
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //sinal recebido(por exemplo, SIGINT)
+    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_SIGNAL - info: %d | %d\n", time_spent,getpid(), number, pid);
+    if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void recv_pipe_file(int number){
+    //TODO:RECV_PIPE
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //a mensagem enviada
+    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %d\n", time_spent,getpid(),number);
+     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void send_pipe_file(FILE *file){
+    //TODO:SEND_PIPE
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //a mensagem recebida
+    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: \n", time_spent,getpid());
+     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+void entry_file(char *d, int val){
+    //TODO:ENTRY
+    file_open();
+    char str_pid[PATH_MAX];
+    clock_t end = clock();
+    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+    //número de bytes(ou blocos)seguido do caminho.
+    sprintf(str_pid, "time: %.2f - pid: %d - action: ENTRY - info: %d | %s\n", time_spent,getpid(), val, d);
+     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+            perror("fwrite");
+            exit(6);
+    }
+
+    fclose(regProg);
+}
+
+//------------------------------------------------------------------------
+
 /*
 Atraves de uma string que eu adiciono verifica se e o processo original.
 */
@@ -244,12 +383,14 @@ Faz wait pelos filhos do processo.
 */
 void fazWait(){
 
-    int val;
+    int val, exit_status;
 
     while(1){
-        val = wait(NULL);
+        val = wait(&exit_status);
         if(val == -1 && errno == ECHILD)
             break;
+        else
+            exit_file(exit_status, val);
     }
 
 }
@@ -276,6 +417,8 @@ void sigIntHandler(int signal){
     size_t len;
     int num;
 
+    recv_signal_file(SIGINT);
+
     if(getenv("PIDGROUP") == NULL){
         printf("Erro\n");
         exit(7);
@@ -288,6 +431,7 @@ void sigIntHandler(int signal){
             printf("Error on Kill\n");
             exit(7);
         }
+        send_signal_file(SIGSTOP, -num);
     }
 
     printf("\n\n######################################################\n\t\tMenu de Saida\n######################################################\n");
@@ -308,12 +452,14 @@ void sigIntHandler(int signal){
             printf("Error on Kill\n");
             exit(7);
         }
+        send_signal_file(SIGCONT, -num);
     }
     else if(num != 0){
          if(kill(-num, SIGTERM) == -1){
             printf("Error on Kill\n");
             exit(7);
         }
+        send_signal_file(SIGTERM, -num);
         exit(5);
     }
 
@@ -357,8 +503,6 @@ int main(int argc, char *argv[], char *envp[]){
     int pipeFather;
     //-------------------------------------------------------
     char buffer[50];  //Variavel auxiliar
-    //-------------------------------------------------------
-    FILE *f, *regProg;
     //-------------------------------------------------------
 
     strcpy(path,getenv("PWD"));
@@ -407,6 +551,9 @@ int main(int argc, char *argv[], char *envp[]){
     // Ações a ser realizadas apenas pelo processo original
     if(notOrig == 0){
         original = 1;
+
+        //file_open();
+        begin = clock();
 
         //Verifica se esta num formato valido
         validFormat(argc, argv, ind);
@@ -511,6 +658,8 @@ int main(int argc, char *argv[], char *envp[]){
 
                 //printfArraPass(arraPass);
 
+                create_file(arraPass, getpid());
+
                 execve(strcat(path,"/simpledu"), arraPass, envp);
                 perror("execvp");
                 exit(2);
@@ -524,6 +673,8 @@ int main(int argc, char *argv[], char *envp[]){
                 
                 sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
                 putenv(buffer);
+
+                //create_file(arraPass);
             }
         }
         if (!original){
@@ -637,24 +788,32 @@ int main(int argc, char *argv[], char *envp[]){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             
             if(atoi(arraPass[m]) != -1){
-                if(atoi(arraPass[B]) >= 1)
+                if(atoi(arraPass[B]) >= 1){
                     printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), d);
-                else if(atoi(arraPass[b]) != 1)
+                    entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
+                }
+                else if(atoi(arraPass[b]) != 1){
                     printf("%-10d%s\n",somaBlocks, d);
-                else if(atoi(arraPass[b]) == 1)
+                    entry_file(directory, somaBlocks);
+                }
+                else if(atoi(arraPass[b]) == 1){
                     printf("%-10d%s\n",somaSize, d);
+                    entry_file(directory, somaSize);
+                }
             }
             
         }
 
     }
+
     if (!original){
         dup2(pipeFather,STDOUT_FILENO);
         char msg[50];
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
-        write(STDOUT_FILENO,msg,len); 
+        write(STDOUT_FILENO,msg,len);
     }
+
     return 0; 
 }
