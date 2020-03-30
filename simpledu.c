@@ -310,14 +310,14 @@ void send_signal_file(int number, int pid){
     fclose(regProg);
 }
 
-void recv_pipe_file(char msg[50]){
+void recv_pipe_file(int ms1, int ms2){
     //TODO:RECV_PIPE
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem enviada
-    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %s\n", time_spent,getpid(),msg);
+    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %d | %d\n", time_spent,getpid(),ms1, ms2);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -326,16 +326,14 @@ void recv_pipe_file(char msg[50]){
     fclose(regProg);
 }
 
-void send_pipe_file(FILE *file){
+void send_pipe_file(int ms1, int ms2){
     //TODO:SEND_PIPE
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem recebida
-    char msg[50];
-    fread(msg,50,1,file);
-    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: %s\n", time_spent,getpid(),msg);
+    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: %d | %d\n", time_spent,getpid(),ms1, ms2);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -778,13 +776,17 @@ int main(int argc, char *argv[], char *envp[]){
                 char *buffer[20];
                 size_t len;
                 receiver =fdopen(fd[READ],"r");
-                send_pipe_file(receiver);
+                //send_pipe_file(receiver);
                 for (int i = 0; i < countChilds; i++)
                 {
+                    int num1, num2;
                     getline(buffer,&len,receiver);
-                    somaSize += atoi(buffer[0]);
+                    num1 = atoi(buffer[0]); 
+                    somaSize += num1;
                     getline(buffer,&len,receiver);
-                    somaBlocks += atoi(buffer[0]);
+                    num2 = atoi(buffer[0]);
+                    somaBlocks += num2;
+                    send_pipe_file(num1, num2);
                 }
             }
             somaSize += (int)stat_entry.st_size;
@@ -815,7 +817,7 @@ int main(int argc, char *argv[], char *envp[]){
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
-        recv_pipe_file(msg);
+        recv_pipe_file(somaSize, somaBlocks);
         write(STDOUT_FILENO,msg,len);
     }
 
