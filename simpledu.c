@@ -310,14 +310,14 @@ void send_signal_file(int number, int pid){
     fclose(regProg);
 }
 
-void recv_pipe_file(int number){
+void recv_pipe_file(char msg[50]){
     //TODO:RECV_PIPE
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem enviada
-    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %d\n", time_spent,getpid(),number);
+    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %s\n", time_spent,getpid(),msg);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -333,8 +333,10 @@ void send_pipe_file(FILE *file){
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem recebida
-    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: \n", time_spent,getpid());
-     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
+    char msg[50];
+    fread(msg,50,1,file);
+    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: %s\n", time_spent,getpid(),msg);
+    if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
     }
@@ -775,7 +777,8 @@ int main(int argc, char *argv[], char *envp[]){
                 FILE *receiver;
                 char *buffer[20];
                 size_t len;
-                receiver =fdopen(fd[READ],"r");                
+                receiver =fdopen(fd[READ],"r");
+                send_pipe_file(receiver);
                 for (int i = 0; i < countChilds; i++)
                 {
                     getline(buffer,&len,receiver);
@@ -812,6 +815,7 @@ int main(int argc, char *argv[], char *envp[]){
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
+        recv_pipe_file(msg);
         write(STDOUT_FILENO,msg,len);
     }
 
