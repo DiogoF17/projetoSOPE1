@@ -1655,3 +1655,86 @@ time: 0.46 - pid: 3206 - action: EXIT - info: 0
 time: 0.52 - pid: 3204 - action: SEND_PIPE - info: 4179 | 12
 time: 0.54 - pid: 3204 - action: SEND_PIPE - info: 4096 | 4
 time: 0.56 - pid: 3204 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.95 - pid: 6413 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 6413 | notOrig 
+time: -1.00 - pid: 6414 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 6413 | notOrig 
+time: 1.07 - pid: 6413 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.10 - pid: 6413 - action: RECV_PIPE - info: 4179 | 12
+time: 0.29 - pid: 6413 - action: EXIT - info: 0
+time: 1.95 - pid: 6414 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.98 - pid: 6414 - action: RECV_PIPE - info: 4096 | 4
+time: 0.34 - pid: 6414 - action: EXIT - info: 0
+time: 0.43 - pid: 6412 - action: SEND_PIPE - info: 4179 | 12
+time: 0.45 - pid: 6412 - action: SEND_PIPE - info: 4096 | 4
+time: 0.48 - pid: 6412 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.91 - pid: 6416 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | 1 | -1 | -2 | 6416 | notOrig 
+time: -1.04 - pid: 6417 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | 1 | -1 | -2 | 6416 | notOrig 
+time: 1.21 - pid: 6416 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.88 - pid: 6417 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.26 - pid: 6416 - action: RECV_PIPE - info: 4198 | 16
+time: 0.92 - pid: 6417 - action: RECV_PIPE - info: 4096 | 4
+time: 0.43 - pid: 6416 - action: EXIT - info: 0
+time: 0.47 - pid: 6417 - action: EXIT - info: 0
+time: 0.67 - pid: 6418 - action: EXIT - info: 5
+time: 0.76 - pid: 6415 - action: SEND_PIPE - info: 4198 | 16
+time: 0.79 - pid: 6415 - action: SEND_PIPE - info: 4096 | 4
+time: 0.81 - pid: 6415 - action: SEND_PIPE - info: 0 | 0
+time: 0.91 - pid: 6415 - action: ENTRY - info: 32 | /home/diogo/Documentos/Pasta/
+time: -0.68 - pid: 6463 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | 1 | -1 | -1 | 1 | -1 | -2 | 6463 | notOrig 
+time: -0.78 - pid: 6464 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | 1 | -1 | -1 | 1 | -1 | -2 | 6463 | notOrig 
+time: 1.49 - pid: 6463 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.54 - pid: 6463 - action: RECV_PIPE - info: 4198 | 16
+time: 0.60 - pid: 6463 - action: EXIT - info: 0
+time: -0.78 - pid: 6465 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPastSymLink | 1 | -1 | -1 | 1 | -1 | -2 | 6463 | notOrig 
+time: 1.19 - pid: 6464 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.23 - pid: 6464 - action: RECV_PIPE - info: 4096 | 4
+time: 0.66 - pid: 6464 - action: EXIT - info: 0
+time: 1.02 - pid: 6465 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPastSymLink
+time: 1.05 - pid: 6465 - action: RECV_PIPE - info: 4198 | 16
+time: 0.71 - pid: 6465 - action: EXIT - info: 0
+time: 0.76 - pid: 6462 - action: SEND_PIPE - info: 4198 | 16
+time: 0.78 - pid: 6462 - action: SEND_PIPE - info: 4096 | 4
+time: 0.80 - pid: 6462 - action: SEND_PIPE - info: 4198 | 16
+time: 0.82 - pid: 6462 - action: ENTRY - info: 48 | /home/diogo/Documentos/Pasta/
+time: -0.79 - pid: 6528 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | 1 | -1 | -2 | 6528 | notOrig 
+time: -0.87 - pid: 6529 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | 1 | -1 | -2 | 6528 | notOrig 
+time: -0.85 - pid: 6530 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPastSymLink | -1 | -1 | -1 | 1 | -1 | -2 | 6528 | notOrig 
+time: 0.91 - pid: 6528 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.95 - pid: 6528 - action: RECV_PIPE - info: 4198 | 16
+time: 0.38 - pid: 6528 - action: EXIT - info: 0
+time: 0.92 - pid: 6530 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPastSymLink
+time: 0.95 - pid: 6530 - action: RECV_PIPE - info: 4198 | 16
+time: 0.84 - pid: 6529 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.87 - pid: 6529 - action: RECV_PIPE - info: 4096 | 4
+time: 0.43 - pid: 6529 - action: EXIT - info: 0
+time: 0.48 - pid: 6530 - action: EXIT - info: 0
+time: 0.54 - pid: 6527 - action: SEND_PIPE - info: 4198 | 16
+time: 0.56 - pid: 6527 - action: SEND_PIPE - info: 4198 | 16
+time: 0.60 - pid: 6527 - action: SEND_PIPE - info: 4096 | 4
+time: 0.67 - pid: 6527 - action: ENTRY - info: 48 | /home/diogo/Documentos/Pasta/
+time: -0.60 - pid: 6558 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 6558 | notOrig 
+time: -0.70 - pid: 6559 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 6558 | notOrig 
+time: 2.57 - pid: 6558 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 2.64 - pid: 6558 - action: RECV_PIPE - info: 4179 | 12
+time: 0.27 - pid: 6558 - action: EXIT - info: 0
+time: 2.55 - pid: 6559 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 2.61 - pid: 6559 - action: RECV_PIPE - info: 4096 | 4
+time: 0.31 - pid: 6559 - action: EXIT - info: 0
+time: 0.35 - pid: 6557 - action: SEND_PIPE - info: 4179 | 12
+time: 0.37 - pid: 6557 - action: SEND_PIPE - info: 4096 | 4
+time: 0.39 - pid: 6557 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.65 - pid: 6562 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | 1 | -1 | -1 | 1 | -1 | -2 | 6562 | notOrig 
+time: -0.76 - pid: 6563 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | 1 | -1 | -1 | 1 | -1 | -2 | 6562 | notOrig 
+time: 0.82 - pid: 6562 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.84 - pid: 6562 - action: RECV_PIPE - info: 4198 | 16
+time: 0.64 - pid: 6563 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.67 - pid: 6563 - action: RECV_PIPE - info: 4096 | 4
+time: 0.35 - pid: 6562 - action: EXIT - info: 0
+time: 0.40 - pid: 6563 - action: EXIT - info: 0
+time: -0.74 - pid: 6564 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPastSymLink | 1 | -1 | -1 | 1 | -1 | -2 | 6562 | notOrig 
+time: 1.01 - pid: 6564 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPastSymLink
+time: 1.06 - pid: 6564 - action: RECV_PIPE - info: 4198 | 16
+time: 0.47 - pid: 6564 - action: EXIT - info: 0
+time: 0.77 - pid: 6561 - action: SEND_PIPE - info: 4198 | 16
+time: 0.90 - pid: 6561 - action: SEND_PIPE - info: 4096 | 4
+time: 0.94 - pid: 6561 - action: SEND_PIPE - info: 4198 | 16
+time: 1.04 - pid: 6561 - action: ENTRY - info: 48 | /home/diogo/Documentos/Pasta/

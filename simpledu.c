@@ -748,15 +748,77 @@ int main(int argc, char *argv[], char *envp[]){
                 char aux1[PATH_MAX];
                 realpath(d, aux1);
                 lstat(aux1, &stat_entry);
-                somaBlocks += ((int)stat_entry.st_blocks)/2;
-                somaSize += (int)stat_entry.st_size;
-                if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
-                    if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
-                    else if(atoi(arraPass[b])!= 1)
-                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
-                    else if(atoi(arraPass[b]) == 1)
-                        printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                if(S_ISDIR(stat_entry.st_mode)){
+                    countChilds++;
+
+                    pid=fork();
+
+                    if(pid < 0){
+                        perror("Fork");
+                        exit(1);
+                    }
+                    if(pid == 0){
+
+                        close(fd[READ]);
+                        dup2(fd[WRITE],STDOUT_FILENO);
+
+                        if(atoi(arraPass[g]) == -1){
+                            char string[PATH_MAX];
+                            sprintf(string, "%d", getpid());
+                            arraPass[g] = string;
+                        }
+                        
+                        if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
+                            printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
+                            exit(5);
+                        }
+
+                        //coloca o novo diretorio na array
+                        arraPass[DIRE] = d;
+
+                        //printfArraPass(arraPass);
+
+                        //se tiver sido passado --max-depthdecrementa
+                        if(atoi(arraPass[m])>-1)
+                            sprintf(arraPass[m], "%d", atoi(arraPass[m])-1);
+
+                        if(strcmp(arraPass[DIRSYMB], "-1") != 0){
+                            if(countBar(d)>countBar(arraPass[DIRSYMB]))
+                                arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
+                        }
+
+                        //printfArraPass(arraPass);
+
+                        create_file(arraPass, getpid());
+
+                        execve(strcat(path,"/simpledu"), arraPass, envp);
+                        perror("execvp");
+                        exit(2);
+                    }
+                    else{
+                        if(atoi(arraPass[g]) == -1){
+                            char string[PATH_MAX];
+                            sprintf(string, "%d", pid);
+                            arraPass[g] = string;
+                        }
+                        
+                        sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
+                        putenv(buffer);
+
+                        //create_file(arraPass);
+                    }
+                }
+                else{
+                    somaBlocks += ((int)stat_entry.st_blocks)/2;
+                    somaSize += (int)stat_entry.st_size;
+                    if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
+                        if(atoi(arraPass[B]) >= 1)
+                            printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                        else if(atoi(arraPass[b])!= 1)
+                            printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                        else if(atoi(arraPass[b]) == 1)
+                            printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                    }
                 }
             }
         }
