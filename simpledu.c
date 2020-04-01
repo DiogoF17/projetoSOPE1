@@ -222,10 +222,25 @@ int passDir(int num, char *arg[], char *envp[]){
 
 //------------------------------------------------------------------------
 
- FILE *regProg;
+FILE *regProg;
 clock_t begin;
 
-int file_open(){
+int file_open_new_empty(){
+    char fileName[PATH_MAX];
+    if (getenv("LOG_FILENAME") == NULL){
+        sprintf(fileName, "%s/Registos.txt", getenv("PWD"));
+    }
+    else
+        strcpy(fileName, getenv("LOG_FILENAME"));
+    if((regProg = fopen(fileName, "w"))==NULL){
+        perror("fopen");
+        exit(4);
+    }
+    fclose(regProg);
+
+}
+
+int file_open_append(){
     char fileName[PATH_MAX];
     if (getenv("LOG_FILENAME") == NULL){
         sprintf(fileName, "%s/Registos.txt", getenv("PWD"));
@@ -242,7 +257,7 @@ int file_open(){
 void create_file(char *arraPass[11], int pid){
     clock_t end = clock();
     
-    file_open();
+    file_open_append();
     
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     
@@ -262,7 +277,7 @@ void create_file(char *arraPass[11], int pid){
 
 void exit_file(int exit_number, int pid){
     //TODO:EXIT
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -279,7 +294,7 @@ void exit_file(int exit_number, int pid){
 
 void recv_signal_file(int number){
     //TODO:RECV_SIGNAL
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -296,7 +311,7 @@ void recv_signal_file(int number){
 void send_signal_file(int number, int pid){
     //TODO:SEND_SIGNAL
     //TODO:RECV_SIGNAL
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -312,7 +327,7 @@ void send_signal_file(int number, int pid){
 
 void recv_pipe_file(int ms1, int ms2){
     //TODO:RECV_PIPE
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -328,7 +343,7 @@ void recv_pipe_file(int ms1, int ms2){
 
 void send_pipe_file(int ms1, int ms2){
     //TODO:SEND_PIPE
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -344,7 +359,7 @@ void send_pipe_file(int ms1, int ms2){
 
 void entry_file(char *d, int val){
     //TODO:ENTRY
-    file_open();
+    file_open_append();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
@@ -552,7 +567,8 @@ int main(int argc, char *argv[], char *envp[]){
     if(notOrig == 0){
         original = 1;
 
-        //file_open();
+        file_open_new_empty();
+        
         begin = clock();
 
         //Verifica se esta num formato valido

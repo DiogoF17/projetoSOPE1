@@ -1,0 +1,71 @@
+time: -0.70 - pid: 3256 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3256 | notOrig 
+time: 0.27 - pid: 3257 - action: EXIT - info: 5
+time: 0.93 - pid: 3256 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.97 - pid: 3256 - action: RECV_PIPE - info: 4179 | 12
+time: 0.34 - pid: 3256 - action: EXIT - info: 0
+time: 0.46 - pid: 3255 - action: SEND_PIPE - info: 0 | 4179
+time: 0.49 - pid: 3255 - action: SEND_PIPE - info: 12 | 12
+time: 0.54 - pid: 3255 - action: ENTRY - info: 4199 | /home/diogo/Documentos/Pasta/
+time: -0.73 - pid: 3275 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3275 | notOrig 
+time: -0.76 - pid: 3276 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3275 | notOrig 
+time: 0.76 - pid: 3276 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.79 - pid: 3276 - action: RECV_PIPE - info: 4096 | 4
+time: 0.86 - pid: 3275 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.92 - pid: 3275 - action: RECV_PIPE - info: 4179 | 12
+time: 0.34 - pid: 3276 - action: EXIT - info: 0
+time: 0.38 - pid: 3275 - action: EXIT - info: 0
+time: 0.47 - pid: 3274 - action: SEND_PIPE - info: 4096 | 4
+time: 0.50 - pid: 3274 - action: SEND_PIPE - info: 4179 | 12
+time: 0.53 - pid: 3274 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.77 - pid: 3284 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3284 | notOrig 
+time: -0.88 - pid: 3285 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3284 | notOrig 
+time: 0.78 - pid: 3285 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.81 - pid: 3285 - action: RECV_PIPE - info: 4096 | 4
+time: 0.96 - pid: 3284 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.99 - pid: 3284 - action: RECV_PIPE - info: 4179 | 12
+time: 0.25 - pid: 3285 - action: EXIT - info: 0
+time: 0.28 - pid: 3284 - action: EXIT - info: 0
+time: 0.32 - pid: 3283 - action: SEND_PIPE - info: 4096 | 4
+time: 0.34 - pid: 3283 - action: SEND_PIPE - info: 4179 | 12
+time: 0.37 - pid: 3283 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.88 - pid: 3309 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3309 | notOrig 
+time: -0.95 - pid: 3310 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3309 | notOrig 
+time: 1.18 - pid: 3309 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.23 - pid: 3309 - action: RECV_PIPE - info: 4179 | 12
+time: 1.09 - pid: 3310 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.18 - pid: 3310 - action: RECV_PIPE - info: 4096 | 4
+time: 0.27 - pid: 3309 - action: EXIT - info: 0
+time: 0.30 - pid: 3310 - action: EXIT - info: 0
+time: 0.36 - pid: 3308 - action: SEND_PIPE - info: 4179 | 12
+time: 0.38 - pid: 3308 - action: SEND_PIPE - info: 4096 | 4
+time: 0.41 - pid: 3308 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.73 - pid: 3326 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3326 | notOrig 
+time: -0.94 - pid: 3327 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3326 | notOrig 
+time: 0.70 - pid: 3327 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.74 - pid: 3327 - action: RECV_PIPE - info: 4096 | 4
+time: 1.08 - pid: 3326 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.14 - pid: 3326 - action: RECV_PIPE - info: 4179 | 12
+time: 0.33 - pid: 3327 - action: EXIT - info: 0
+time: 0.38 - pid: 3326 - action: EXIT - info: 0
+time: 0.43 - pid: 3325 - action: SEND_PIPE - info: 4096 | 4
+time: 0.45 - pid: 3325 - action: SEND_PIPE - info: 4179 | 12
+time: 0.48 - pid: 3325 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.69 - pid: 3344 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3344 | notOrig 
+time: 0.25 - pid: 3345 - action: EXIT - info: 5
+time: 1.10 - pid: 3344 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.13 - pid: 3344 - action: RECV_PIPE - info: 4179 | 12
+time: 0.32 - pid: 3344 - action: EXIT - info: 0
+time: 0.39 - pid: 3343 - action: SEND_PIPE - info: 0 | 4179
+time: 0.42 - pid: 3343 - action: SEND_PIPE - info: 12 | 12
+time: 0.44 - pid: 3343 - action: ENTRY - info: 4199 | /home/diogo/Documentos/Pasta/
+time: -4.87 - pid: 3363 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3363 | notOrig 
+time: -5.00 - pid: 3364 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3363 | notOrig 
+time: 1.26 - pid: 3363 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.30 - pid: 3363 - action: RECV_PIPE - info: 4179 | 12
+time: 1.07 - pid: 3364 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.11 - pid: 3364 - action: RECV_PIPE - info: 4096 | 4
+time: 0.62 - pid: 3363 - action: EXIT - info: 0
+time: 0.67 - pid: 3364 - action: EXIT - info: 0
+time: 0.75 - pid: 3362 - action: SEND_PIPE - info: 4179 | 12
+time: 0.78 - pid: 3362 - action: SEND_PIPE - info: 4096 | 4
+time: 0.82 - pid: 3362 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
