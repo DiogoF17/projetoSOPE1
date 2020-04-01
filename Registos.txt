@@ -1,0 +1,1657 @@
+time: -0.66 - pid: 2486 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.12 - pid: 2487 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.05 - pid: 2492 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.94 - pid: 2487 - action: ENTRY - info: 52 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks
+time: 0.96 - pid: 2487 - action: RECV_PIPE - info: 22944 | 52
+time: 1.45 - pid: 2487 - action: EXIT - info: 0
+time: 0.08 - pid: 2490 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2491 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2510 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2500 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2501 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2489 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.08 - pid: 2503 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.47 - pid: 2501 - action: ENTRY - info: 112 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack
+time: 1.51 - pid: 2501 - action: RECV_PIPE - info: 110180 | 112
+time: 0.08 - pid: 2504 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.08 - pid: 2502 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2495 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2505 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2496 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.07 - pid: 2506 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2497 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.12 - pid: 2507 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2513 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.05 - pid: 2514 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2499 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2515 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.10 - pid: 2509 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2511 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.08 - pid: 2512 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.11 - pid: 2508 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.19 - pid: 2489 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info
+time: 1.25 - pid: 2489 - action: RECV_PIPE - info: 4336 | 8
+time: 1.52 - pid: 2489 - action: EXIT - info: 0
+time: 1.03 - pid: 2490 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches
+time: 1.07 - pid: 2490 - action: RECV_PIPE - info: 4096 | 4
+time: 0.08 - pid: 2516 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.57 - pid: 2490 - action: EXIT - info: 0
+time: 0.06 - pid: 2488 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.08 - pid: 2498 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.90 - pid: 2500 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9
+time: 0.96 - pid: 2500 - action: RECV_PIPE - info: 4277 | 8
+time: 0.96 - pid: 2512 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info
+time: 1.00 - pid: 2512 - action: RECV_PIPE - info: 4096 | 4
+time: 1.03 - pid: 2507 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22
+time: 1.21 - pid: 2507 - action: RECV_PIPE - info: 4299 | 8
+time: 1.07 - pid: 2506 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9
+time: 1.12 - pid: 2506 - action: RECV_PIPE - info: 4273 | 8
+time: 1.06 - pid: 2511 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9
+time: 1.10 - pid: 2511 - action: RECV_PIPE - info: 4444 | 12
+time: 0.06 - pid: 2517 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.12 - pid: 2519 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2520 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.07 - pid: 2521 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2529 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2526 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.18 - pid: 2514 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50
+time: 1.21 - pid: 2514 - action: RECV_PIPE - info: 12548 | 16
+time: 0.15 - pid: 2518 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2523 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2546 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2547 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2545 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.07 - pid: 2534 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.07 - pid: 2536 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.10 - pid: 2522 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2494 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.06 - pid: 2535 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.95 - pid: 2545 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads
+time: 1.06 - pid: 2545 - action: RECV_PIPE - info: 4178 | 12
+time: 1.09 - pid: 2545 - action: EXIT - info: 0
+time: 1.70 - pid: 2497 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad
+time: 1.76 - pid: 2497 - action: RECV_PIPE - info: 12356 | 16
+time: 0.08 - pid: 2544 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.11 - pid: 2524 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.08 - pid: 2525 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.36 - pid: 2534 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea
+time: 1.40 - pid: 2534 - action: RECV_PIPE - info: 4180 | 8
+time: 0.06 - pid: 2527 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2528 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.35 - pid: 2536 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac
+time: 1.43 - pid: 2536 - action: RECV_PIPE - info: 12322 | 16
+time: 1.40 - pid: 2522 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f
+time: 1.43 - pid: 2522 - action: RECV_PIPE - info: 9263 | 12
+time: 1.86 - pid: 2544 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16
+time: 1.89 - pid: 2544 - action: RECV_PIPE - info: 4180 | 8
+time: 0.06 - pid: 2530 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.07 - pid: 2531 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.11 - pid: 2532 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.11 - pid: 2503 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0
+time: 1.16 - pid: 2503 - action: RECV_PIPE - info: 4180 | 8
+time: 0.07 - pid: 2533 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.61 - pid: 2509 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66
+time: 1.65 - pid: 2509 - action: RECV_PIPE - info: 12375 | 16
+time: 0.14 - pid: 2493 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.08 - pid: 2547 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags
+time: 1.12 - pid: 2547 - action: RECV_PIPE - info: 4096 | 4
+time: 1.19 - pid: 2547 - action: EXIT - info: 0
+time: 0.16 - pid: 2537 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.11 - pid: 2538 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.12 - pid: 2539 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.09 - pid: 2540 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.34 - pid: 2541 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 0.87 - pid: 2519 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18
+time: 0.93 - pid: 2519 - action: RECV_PIPE - info: 13967 | 16
+time: 1.36 - pid: 2524 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65
+time: 1.42 - pid: 2524 - action: RECV_PIPE - info: 4265 | 8
+time: 0.18 - pid: 2542 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.19 - pid: 2493 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5
+time: 1.22 - pid: 2493 - action: RECV_PIPE - info: 8596 | 12
+time: 1.20 - pid: 2539 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b
+time: 1.22 - pid: 2539 - action: RECV_PIPE - info: 4259 | 8
+time: 1.39 - pid: 2540 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55
+time: 1.42 - pid: 2540 - action: RECV_PIPE - info: 4179 | 8
+time: 2.34 - pid: 2537 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25
+time: 2.38 - pid: 2537 - action: RECV_PIPE - info: 4284 | 8
+time: 0.09 - pid: 2548 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.07 - pid: 2516 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7
+time: 1.13 - pid: 2516 - action: RECV_PIPE - info: 10698 | 16
+time: 1.27 - pid: 2495 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b
+time: 1.31 - pid: 2495 - action: RECV_PIPE - info: 12407 | 16
+time: 0.99 - pid: 2517 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a
+time: 1.03 - pid: 2517 - action: RECV_PIPE - info: 4209 | 8
+time: 1.01 - pid: 2513 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da
+time: 1.05 - pid: 2513 - action: RECV_PIPE - info: 9070 | 12
+time: 1.01 - pid: 2499 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f
+time: 1.05 - pid: 2499 - action: RECV_PIPE - info: 4180 | 8
+time: 1.06 - pid: 2535 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc
+time: 1.11 - pid: 2535 - action: RECV_PIPE - info: 4282 | 8
+time: 0.88 - pid: 2531 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3
+time: 0.92 - pid: 2531 - action: RECV_PIPE - info: 4180 | 8
+time: 1.92 - pid: 2494 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67
+time: 1.98 - pid: 2494 - action: RECV_PIPE - info: 10814 | 16
+time: 1.33 - pid: 2542 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e
+time: 1.37 - pid: 2542 - action: RECV_PIPE - info: 4209 | 8
+time: 0.93 - pid: 2520 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9
+time: 0.98 - pid: 2520 - action: RECV_PIPE - info: 4282 | 8
+time: 0.92 - pid: 2515 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4
+time: 0.97 - pid: 2515 - action: RECV_PIPE - info: 4275 | 8
+time: 0.99 - pid: 2527 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1
+time: 1.02 - pid: 2527 - action: RECV_PIPE - info: 12149 | 12
+time: 0.96 - pid: 2530 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2
+time: 1.01 - pid: 2530 - action: RECV_PIPE - info: 9342 | 12
+time: 1.42 - pid: 2508 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82
+time: 1.46 - pid: 2508 - action: RECV_PIPE - info: 9147 | 12
+time: 1.29 - pid: 2526 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads
+time: 1.33 - pid: 2526 - action: RECV_PIPE - info: 5959 | 12
+time: 1.03 - pid: 2526 - action: EXIT - info: 0
+time: 0.08 - pid: 2543 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57 | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 4.99 - pid: 2493 - action: EXIT - info: 0
+time: 5.04 - pid: 2494 - action: EXIT - info: 0
+time: 5.06 - pid: 2495 - action: EXIT - info: 0
+time: 5.08 - pid: 2497 - action: EXIT - info: 0
+time: 5.10 - pid: 2499 - action: EXIT - info: 0
+time: 5.12 - pid: 2500 - action: EXIT - info: 0
+time: 5.14 - pid: 2501 - action: EXIT - info: 0
+time: 5.16 - pid: 2503 - action: EXIT - info: 0
+time: 5.18 - pid: 2506 - action: EXIT - info: 0
+time: 5.20 - pid: 2507 - action: EXIT - info: 0
+time: 5.22 - pid: 2508 - action: EXIT - info: 0
+time: 5.24 - pid: 2509 - action: EXIT - info: 0
+time: 5.29 - pid: 2511 - action: EXIT - info: 0
+time: 5.32 - pid: 2512 - action: EXIT - info: 0
+time: 5.34 - pid: 2513 - action: EXIT - info: 0
+time: 5.36 - pid: 2514 - action: EXIT - info: 0
+time: 5.38 - pid: 2515 - action: EXIT - info: 0
+time: 5.40 - pid: 2516 - action: EXIT - info: 0
+time: 5.42 - pid: 2517 - action: EXIT - info: 0
+time: 5.44 - pid: 2519 - action: EXIT - info: 0
+time: 5.46 - pid: 2520 - action: EXIT - info: 0
+time: 5.48 - pid: 2522 - action: EXIT - info: 0
+time: 5.50 - pid: 2524 - action: EXIT - info: 0
+time: 5.52 - pid: 2527 - action: EXIT - info: 0
+time: 5.54 - pid: 2530 - action: EXIT - info: 0
+time: 5.56 - pid: 2531 - action: EXIT - info: 0
+time: 5.58 - pid: 2534 - action: EXIT - info: 0
+time: 5.60 - pid: 2535 - action: EXIT - info: 0
+time: 5.62 - pid: 2536 - action: EXIT - info: 0
+time: 5.64 - pid: 2537 - action: EXIT - info: 0
+time: 5.66 - pid: 2539 - action: EXIT - info: 0
+time: 5.68 - pid: 2540 - action: EXIT - info: 0
+time: 5.70 - pid: 2542 - action: EXIT - info: 0
+time: 5.71 - pid: 2544 - action: EXIT - info: 0
+time: 0.10 - pid: 2549 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2486 | notOrig 
+time: 1.15 - pid: 2502 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93
+time: 1.20 - pid: 2502 - action: RECV_PIPE - info: 14041 | 16
+time: 1.38 - pid: 2548 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin
+time: 1.41 - pid: 2548 - action: RECV_PIPE - info: 4169 | 12
+time: 1.21 - pid: 2505 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5
+time: 1.25 - pid: 2505 - action: RECV_PIPE - info: 10572 | 12
+time: 1.14 - pid: 2528 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27
+time: 1.18 - pid: 2528 - action: RECV_PIPE - info: 9074 | 12
+time: 1.27 - pid: 2532 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39
+time: 1.30 - pid: 2532 - action: RECV_PIPE - info: 4180 | 8
+time: 1.58 - pid: 2538 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7
+time: 1.62 - pid: 2538 - action: RECV_PIPE - info: 9265 | 12
+time: 1.09 - pid: 2518 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e
+time: 1.13 - pid: 2518 - action: RECV_PIPE - info: 10460 | 12
+time: 0.98 - pid: 2523 - action: ENTRY - info: 24 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba
+time: 1.03 - pid: 2523 - action: RECV_PIPE - info: 21465 | 24
+time: 1.05 - pid: 2521 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6
+time: 1.09 - pid: 2521 - action: RECV_PIPE - info: 9324 | 12
+time: 5.76 - pid: 2502 - action: EXIT - info: 0
+time: 5.79 - pid: 2505 - action: EXIT - info: 0
+time: 5.81 - pid: 2518 - action: EXIT - info: 0
+time: 5.83 - pid: 2521 - action: EXIT - info: 0
+time: 5.84 - pid: 2523 - action: EXIT - info: 0
+time: 5.86 - pid: 2528 - action: EXIT - info: 0
+time: 5.88 - pid: 2532 - action: EXIT - info: 0
+time: 5.90 - pid: 2538 - action: EXIT - info: 0
+time: 0.93 - pid: 2496 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc
+time: 0.97 - pid: 2496 - action: RECV_PIPE - info: 4180 | 8
+time: 1.08 - pid: 2548 - action: EXIT - info: 0
+time: 1.17 - pid: 2546 - action: SEND_PIPE - info: 4169 | 12
+time: 1.22 - pid: 2546 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes
+time: 1.25 - pid: 2546 - action: RECV_PIPE - info: 9184 | 20
+time: 1.27 - pid: 2546 - action: EXIT - info: 0
+time: 1.33 - pid: 2488 - action: SEND_PIPE - info: 4178 | 12
+time: 1.35 - pid: 2488 - action: SEND_PIPE - info: 4096 | 4
+time: 1.37 - pid: 2488 - action: SEND_PIPE - info: 9184 | 20
+time: 1.46 - pid: 2488 - action: ENTRY - info: 44 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs
+time: 1.49 - pid: 2488 - action: RECV_PIPE - info: 24311 | 44
+time: 1.57 - pid: 2533 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68
+time: 1.63 - pid: 2533 - action: RECV_PIPE - info: 9558 | 12
+time: 6.10 - pid: 2496 - action: EXIT - info: 0
+time: 6.13 - pid: 2533 - action: EXIT - info: 0
+time: 1.57 - pid: 2525 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98
+time: 1.61 - pid: 2525 - action: RECV_PIPE - info: 13965 | 16
+time: 6.18 - pid: 2525 - action: EXIT - info: 0
+time: 2.92 - pid: 2504 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c
+time: 2.97 - pid: 2504 - action: RECV_PIPE - info: 4208 | 8
+time: 6.22 - pid: 2504 - action: EXIT - info: 0
+time: 1.66 - pid: 2488 - action: EXIT - info: 0
+time: 1.55 - pid: 2543 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57
+time: 1.60 - pid: 2543 - action: RECV_PIPE - info: 12191 | 12
+time: 6.29 - pid: 2543 - action: EXIT - info: 0
+time: 1.78 - pid: 2498 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2
+time: 1.82 - pid: 2498 - action: RECV_PIPE - info: 4278 | 8
+time: 6.37 - pid: 2498 - action: EXIT - info: 0
+time: 1.80 - pid: 2541 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e
+time: 1.86 - pid: 2541 - action: RECV_PIPE - info: 4246 | 8
+time: 6.41 - pid: 2541 - action: EXIT - info: 0
+time: 6.58 - pid: 2492 - action: SEND_PIPE - info: 110180 | 112
+time: 6.59 - pid: 2492 - action: SEND_PIPE - info: 4277 | 8
+time: 6.61 - pid: 2492 - action: SEND_PIPE - info: 4096 | 4
+time: 6.62 - pid: 2492 - action: SEND_PIPE - info: 4299 | 8
+time: 6.63 - pid: 2492 - action: SEND_PIPE - info: 4273 | 8
+time: 6.64 - pid: 2492 - action: SEND_PIPE - info: 4444 | 12
+time: 1.17 - pid: 2549 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin
+time: 1.21 - pid: 2549 - action: RECV_PIPE - info: 5748 | 12
+time: 1.40 - pid: 2549 - action: EXIT - info: 0
+time: 1.46 - pid: 2529 - action: SEND_PIPE - info: 5748 | 12
+time: 1.50 - pid: 2529 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes
+time: 1.52 - pid: 2529 - action: RECV_PIPE - info: 10763 | 20
+time: 1.08 - pid: 2529 - action: EXIT - info: 0
+time: 1.14 - pid: 2510 - action: SEND_PIPE - info: 5959 | 12
+time: 1.16 - pid: 2510 - action: SEND_PIPE - info: 10763 | 20
+time: 1.20 - pid: 2510 - action: ENTRY - info: 40 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs
+time: 1.23 - pid: 2510 - action: RECV_PIPE - info: 22656 | 40
+time: 1.11 - pid: 2510 - action: EXIT - info: 0
+time: 1.17 - pid: 2491 - action: SEND_PIPE - info: 22656 | 40
+time: 1.22 - pid: 2491 - action: ENTRY - info: 56 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs
+time: 1.25 - pid: 2491 - action: RECV_PIPE - info: 34458 | 56
+time: 2.03 - pid: 2491 - action: EXIT - info: 0
+time: 6.66 - pid: 2492 - action: SEND_PIPE - info: 12548 | 16
+time: 6.77 - pid: 2492 - action: SEND_PIPE - info: 12356 | 16
+time: 6.78 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 6.80 - pid: 2492 - action: SEND_PIPE - info: 12322 | 16
+time: 6.81 - pid: 2492 - action: SEND_PIPE - info: 9263 | 12
+time: 6.83 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 6.84 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 6.85 - pid: 2492 - action: SEND_PIPE - info: 12375 | 16
+time: 6.87 - pid: 2492 - action: SEND_PIPE - info: 13967 | 16
+time: 6.88 - pid: 2492 - action: SEND_PIPE - info: 4265 | 8
+time: 6.89 - pid: 2492 - action: SEND_PIPE - info: 8596 | 12
+time: 6.90 - pid: 2492 - action: SEND_PIPE - info: 4259 | 8
+time: 6.92 - pid: 2492 - action: SEND_PIPE - info: 4179 | 8
+time: 6.94 - pid: 2492 - action: SEND_PIPE - info: 4284 | 8
+time: 6.95 - pid: 2492 - action: SEND_PIPE - info: 10698 | 16
+time: 6.97 - pid: 2492 - action: SEND_PIPE - info: 12407 | 16
+time: 6.98 - pid: 2492 - action: SEND_PIPE - info: 4209 | 8
+time: 6.99 - pid: 2492 - action: SEND_PIPE - info: 9070 | 12
+time: 7.08 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 7.10 - pid: 2492 - action: SEND_PIPE - info: 4282 | 8
+time: 7.12 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 7.13 - pid: 2492 - action: SEND_PIPE - info: 10814 | 16
+time: 7.15 - pid: 2492 - action: SEND_PIPE - info: 4209 | 8
+time: 7.17 - pid: 2492 - action: SEND_PIPE - info: 4282 | 8
+time: 7.19 - pid: 2492 - action: SEND_PIPE - info: 4275 | 8
+time: 7.21 - pid: 2492 - action: SEND_PIPE - info: 12149 | 12
+time: 7.24 - pid: 2492 - action: SEND_PIPE - info: 9342 | 12
+time: 7.26 - pid: 2492 - action: SEND_PIPE - info: 9147 | 12
+time: 7.28 - pid: 2492 - action: SEND_PIPE - info: 14041 | 16
+time: 7.30 - pid: 2492 - action: SEND_PIPE - info: 10572 | 12
+time: 7.31 - pid: 2492 - action: SEND_PIPE - info: 9074 | 12
+time: 7.32 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 7.33 - pid: 2492 - action: SEND_PIPE - info: 9265 | 12
+time: 7.35 - pid: 2492 - action: SEND_PIPE - info: 10460 | 12
+time: 7.37 - pid: 2492 - action: SEND_PIPE - info: 21465 | 24
+time: 7.38 - pid: 2492 - action: SEND_PIPE - info: 9324 | 12
+time: 7.40 - pid: 2492 - action: SEND_PIPE - info: 4180 | 8
+time: 7.41 - pid: 2492 - action: SEND_PIPE - info: 9558 | 12
+time: 7.42 - pid: 2492 - action: SEND_PIPE - info: 13965 | 16
+time: 7.43 - pid: 2492 - action: SEND_PIPE - info: 4208 | 8
+time: 7.44 - pid: 2492 - action: SEND_PIPE - info: 12191 | 12
+time: 7.46 - pid: 2492 - action: SEND_PIPE - info: 4278 | 8
+time: 7.47 - pid: 2492 - action: SEND_PIPE - info: 4246 | 8
+time: 7.51 - pid: 2492 - action: ENTRY - info: 688 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects
+time: 7.54 - pid: 2492 - action: RECV_PIPE - info: 526711 | 688
+time: 2.08 - pid: 2492 - action: EXIT - info: 0
+time: 2.15 - pid: 2486 - action: SEND_PIPE - info: 22944 | 52
+time: 2.17 - pid: 2486 - action: SEND_PIPE - info: 4336 | 8
+time: 2.19 - pid: 2486 - action: SEND_PIPE - info: 4096 | 4
+time: 2.20 - pid: 2486 - action: SEND_PIPE - info: 24311 | 44
+time: 2.21 - pid: 2486 - action: SEND_PIPE - info: 34458 | 56
+time: 2.23 - pid: 2486 - action: SEND_PIPE - info: 526711 | 688
+time: 2.26 - pid: 2486 - action: ENTRY - info: 896 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git
+time: 2.29 - pid: 2486 - action: RECV_PIPE - info: 627330 | 896
+time: 0.18 - pid: 2486 - action: EXIT - info: 0
+time: 0.23 - pid: 2485 - action: SEND_PIPE - info: 627330 | 896
+time: 0.30 - pid: 2485 - action: ENTRY - info: 956 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1
+time: -0.74 - pid: 2687 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.16 - pid: 2688 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2693 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.96 - pid: 2688 - action: ENTRY - info: 52 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks
+time: 0.99 - pid: 2688 - action: RECV_PIPE - info: 22944 | 52
+time: 1.32 - pid: 2688 - action: EXIT - info: 0
+time: 0.06 - pid: 2691 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2692 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2690 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.76 - pid: 2691 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches
+time: 0.79 - pid: 2691 - action: RECV_PIPE - info: 4096 | 4
+time: 1.38 - pid: 2691 - action: EXIT - info: 0
+time: 0.05 - pid: 2695 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2696 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2697 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.78 - pid: 2695 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67
+time: 0.81 - pid: 2695 - action: RECV_PIPE - info: 10814 | 16
+time: 0.05 - pid: 2700 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2701 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.10 - pid: 2702 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2689 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2704 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.78 - pid: 2696 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b
+time: 0.82 - pid: 2696 - action: RECV_PIPE - info: 12407 | 16
+time: 0.77 - pid: 2690 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info
+time: 0.81 - pid: 2690 - action: RECV_PIPE - info: 4336 | 8
+time: 1.01 - pid: 2700 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2
+time: 1.04 - pid: 2700 - action: RECV_PIPE - info: 4278 | 8
+time: 0.76 - pid: 2702 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9
+time: 0.80 - pid: 2702 - action: RECV_PIPE - info: 4277 | 8
+time: 1.43 - pid: 2690 - action: EXIT - info: 0
+time: 0.86 - pid: 2701 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f
+time: 0.90 - pid: 2701 - action: RECV_PIPE - info: 4180 | 8
+time: 0.07 - pid: 2694 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.14 - pid: 2707 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.21 - pid: 2707 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads
+time: 1.25 - pid: 2707 - action: RECV_PIPE - info: 5959 | 12
+time: 0.08 - pid: 2708 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2706 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.94 - pid: 2706 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c
+time: 0.97 - pid: 2706 - action: RECV_PIPE - info: 4208 | 8
+time: 0.13 - pid: 2705 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.95 - pid: 2705 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0
+time: 0.99 - pid: 2705 - action: RECV_PIPE - info: 4180 | 8
+time: 0.07 - pid: 2703 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2699 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.12 - pid: 2699 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad
+time: 1.06 - pid: 2707 - action: EXIT - info: 0
+time: 0.06 - pid: 2711 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2710 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.93 - pid: 2694 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5
+time: 1.96 - pid: 2694 - action: RECV_PIPE - info: 8596 | 12
+time: 0.76 - pid: 2711 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags
+time: 0.86 - pid: 2711 - action: RECV_PIPE - info: 4096 | 4
+time: 0.09 - pid: 2698 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.84 - pid: 2698 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc
+time: 1.29 - pid: 2711 - action: EXIT - info: 0
+time: 0.05 - pid: 2709 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2712 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.26 - pid: 2699 - action: RECV_PIPE - info: 12356 | 16
+time: 0.92 - pid: 2698 - action: RECV_PIPE - info: 4180 | 8
+time: 0.95 - pid: 2712 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin
+time: 0.94 - pid: 2709 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads
+time: 1.01 - pid: 2709 - action: RECV_PIPE - info: 4178 | 12
+time: 1.03 - pid: 2712 - action: RECV_PIPE - info: 5748 | 12
+time: 1.09 - pid: 2712 - action: EXIT - info: 0
+time: 1.15 - pid: 2708 - action: SEND_PIPE - info: 5748 | 12
+time: 1.20 - pid: 2708 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes
+time: 1.23 - pid: 2708 - action: RECV_PIPE - info: 10763 | 20
+time: 1.08 - pid: 2704 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93
+time: 1.14 - pid: 2704 - action: RECV_PIPE - info: 14041 | 16
+time: 0.06 - pid: 2726 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.39 - pid: 2709 - action: EXIT - info: 0
+time: 1.11 - pid: 2708 - action: EXIT - info: 0
+time: 1.23 - pid: 2697 - action: SEND_PIPE - info: 5959 | 12
+time: 1.25 - pid: 2697 - action: SEND_PIPE - info: 10763 | 20
+time: 1.28 - pid: 2697 - action: ENTRY - info: 40 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs
+time: 1.30 - pid: 2697 - action: RECV_PIPE - info: 22656 | 40
+time: 0.82 - pid: 2697 - action: EXIT - info: 0
+time: 0.86 - pid: 2692 - action: SEND_PIPE - info: 22656 | 40
+time: 0.12 - pid: 2727 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2728 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2729 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2730 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2731 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2725 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2713 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.10 - pid: 2716 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2723 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.94 - pid: 2703 - action: ENTRY - info: 112 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack
+time: 0.99 - pid: 2703 - action: RECV_PIPE - info: 110180 | 112
+time: 0.05 - pid: 2721 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2722 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2724 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2715 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2720 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2733 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2739 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.08 - pid: 2717 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.13 - pid: 2718 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.09 - pid: 2719 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2740 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2742 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2741 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2743 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2744 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.07 - pid: 2734 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2735 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.06 - pid: 2732 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.80 - pid: 2729 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6
+time: 0.83 - pid: 2729 - action: RECV_PIPE - info: 9324 | 12
+time: 0.91 - pid: 2728 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9
+time: 0.94 - pid: 2728 - action: RECV_PIPE - info: 4282 | 8
+time: 0.06 - pid: 2736 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.76 - pid: 2731 - action: ENTRY - info: 24 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba
+time: 0.80 - pid: 2731 - action: RECV_PIPE - info: 21465 | 24
+time: 0.96 - pid: 2692 - action: ENTRY - info: 56 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs
+time: 0.98 - pid: 2692 - action: RECV_PIPE - info: 34458 | 56
+time: 0.72 - pid: 2736 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2
+time: 0.75 - pid: 2736 - action: RECV_PIPE - info: 9342 | 12
+time: 1.48 - pid: 2692 - action: EXIT - info: 0
+time: 0.12 - pid: 2737 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.06 - pid: 2713 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin
+time: 1.10 - pid: 2713 - action: RECV_PIPE - info: 4169 | 12
+time: 0.98 - pid: 2713 - action: EXIT - info: 0
+time: 1.04 - pid: 2710 - action: SEND_PIPE - info: 4169 | 12
+time: 1.08 - pid: 2710 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes
+time: 1.15 - pid: 2710 - action: RECV_PIPE - info: 9184 | 20
+time: 0.81 - pid: 2737 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3
+time: 1.45 - pid: 2710 - action: EXIT - info: 0
+time: 1.50 - pid: 2689 - action: SEND_PIPE - info: 4096 | 4
+time: 0.87 - pid: 2725 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a
+time: 1.51 - pid: 2689 - action: SEND_PIPE - info: 4178 | 12
+time: 1.53 - pid: 2689 - action: SEND_PIPE - info: 9184 | 20
+time: 0.90 - pid: 2725 - action: RECV_PIPE - info: 4209 | 8
+time: 1.55 - pid: 2689 - action: ENTRY - info: 44 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs
+time: 1.57 - pid: 2689 - action: RECV_PIPE - info: 24311 | 44
+time: 0.95 - pid: 2730 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f
+time: 0.99 - pid: 2730 - action: RECV_PIPE - info: 9263 | 12
+time: 1.57 - pid: 2689 - action: EXIT - info: 0
+time: 0.06 - pid: 2738 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 1.04 - pid: 2726 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e
+time: 1.11 - pid: 2726 - action: RECV_PIPE - info: 10460 | 12
+time: 1.20 - pid: 2727 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18
+time: 1.23 - pid: 2727 - action: RECV_PIPE - info: 13967 | 16
+time: 0.05 - pid: 2714 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.81 - pid: 2723 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4
+time: 0.96 - pid: 2723 - action: RECV_PIPE - info: 4275 | 8
+time: 9.06 - pid: 2694 - action: EXIT - info: 0
+time: 9.12 - pid: 2695 - action: EXIT - info: 0
+time: 9.15 - pid: 2696 - action: EXIT - info: 0
+time: 9.17 - pid: 2698 - action: EXIT - info: 0
+time: 9.19 - pid: 2699 - action: EXIT - info: 0
+time: 9.20 - pid: 2700 - action: EXIT - info: 0
+time: 9.21 - pid: 2701 - action: EXIT - info: 0
+time: 9.23 - pid: 2702 - action: EXIT - info: 0
+time: 0.84 - pid: 2737 - action: RECV_PIPE - info: 4180 | 8
+time: 1.13 - pid: 2732 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65
+time: 1.16 - pid: 2732 - action: RECV_PIPE - info: 4265 | 8
+time: 9.32 - pid: 2703 - action: EXIT - info: 0
+time: 9.34 - pid: 2704 - action: EXIT - info: 0
+time: 9.36 - pid: 2705 - action: EXIT - info: 0
+time: 9.38 - pid: 2706 - action: EXIT - info: 0
+time: 9.40 - pid: 2723 - action: EXIT - info: 0
+time: 9.41 - pid: 2725 - action: EXIT - info: 0
+time: 9.43 - pid: 2726 - action: EXIT - info: 0
+time: 9.44 - pid: 2727 - action: EXIT - info: 0
+time: 9.46 - pid: 2728 - action: EXIT - info: 0
+time: 9.47 - pid: 2729 - action: EXIT - info: 0
+time: 0.86 - pid: 2721 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da
+time: 0.92 - pid: 2721 - action: RECV_PIPE - info: 9070 | 12
+time: 0.74 - pid: 2724 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7
+time: 0.78 - pid: 2724 - action: RECV_PIPE - info: 10698 | 16
+time: 0.81 - pid: 2716 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22
+time: 0.84 - pid: 2716 - action: RECV_PIPE - info: 4299 | 8
+time: 1.08 - pid: 2714 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5
+time: 1.12 - pid: 2714 - action: RECV_PIPE - info: 10572 | 12
+time: 1.46 - pid: 2738 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39
+time: 1.50 - pid: 2738 - action: RECV_PIPE - info: 4180 | 8
+time: 0.06 - pid: 2749 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2748 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2747 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2746 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.05 - pid: 2745 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.91 - pid: 2745 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b
+time: 0.95 - pid: 2745 - action: RECV_PIPE - info: 4259 | 8
+time: 0.70 - pid: 2720 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info
+time: 0.73 - pid: 2720 - action: RECV_PIPE - info: 4096 | 4
+time: 0.85 - pid: 2715 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9
+time: 0.88 - pid: 2715 - action: RECV_PIPE - info: 4273 | 8
+time: 9.56 - pid: 2714 - action: EXIT - info: 0
+time: 9.59 - pid: 2715 - action: EXIT - info: 0
+time: 9.60 - pid: 2716 - action: EXIT - info: 0
+time: 9.62 - pid: 2720 - action: EXIT - info: 0
+time: 9.63 - pid: 2721 - action: EXIT - info: 0
+time: 9.64 - pid: 2724 - action: EXIT - info: 0
+time: 9.66 - pid: 2730 - action: EXIT - info: 0
+time: 9.67 - pid: 2731 - action: EXIT - info: 0
+time: 9.69 - pid: 2732 - action: EXIT - info: 0
+time: 9.70 - pid: 2736 - action: EXIT - info: 0
+time: 9.71 - pid: 2737 - action: EXIT - info: 0
+time: 9.73 - pid: 2738 - action: EXIT - info: 0
+time: 9.74 - pid: 2745 - action: EXIT - info: 0
+time: 0.05 - pid: 2750 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16 | -1 | -1 | -1 | -1 | -1 | -2 | 2687 | notOrig 
+time: 0.93 - pid: 2749 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57
+time: 0.97 - pid: 2749 - action: RECV_PIPE - info: 12191 | 12
+time: 9.78 - pid: 2749 - action: EXIT - info: 0
+time: 0.72 - pid: 2750 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16
+time: 0.74 - pid: 2750 - action: RECV_PIPE - info: 4180 | 8
+time: 9.82 - pid: 2750 - action: EXIT - info: 0
+time: 0.80 - pid: 2722 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50
+time: 0.85 - pid: 2722 - action: RECV_PIPE - info: 12548 | 16
+time: 0.80 - pid: 2741 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc
+time: 0.83 - pid: 2741 - action: RECV_PIPE - info: 4282 | 8
+time: 0.71 - pid: 2743 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25
+time: 0.76 - pid: 2743 - action: RECV_PIPE - info: 4284 | 8
+time: 0.85 - pid: 2740 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea
+time: 0.90 - pid: 2740 - action: RECV_PIPE - info: 4180 | 8
+time: 0.76 - pid: 2744 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7
+time: 0.80 - pid: 2744 - action: RECV_PIPE - info: 9265 | 12
+time: 0.92 - pid: 2742 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac
+time: 0.95 - pid: 2742 - action: RECV_PIPE - info: 12322 | 16
+time: 0.96 - pid: 2739 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68
+time: 1.01 - pid: 2739 - action: RECV_PIPE - info: 9558 | 12
+time: 1.18 - pid: 2717 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82
+time: 1.25 - pid: 2717 - action: RECV_PIPE - info: 9147 | 12
+time: 0.92 - pid: 2735 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27
+time: 1.20 - pid: 2718 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66
+time: 0.97 - pid: 2735 - action: RECV_PIPE - info: 9074 | 12
+time: 1.24 - pid: 2718 - action: RECV_PIPE - info: 12375 | 16
+time: 1.74 - pid: 2719 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9
+time: 1.78 - pid: 2719 - action: RECV_PIPE - info: 4444 | 12
+time: 1.18 - pid: 2734 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1
+time: 1.22 - pid: 2734 - action: RECV_PIPE - info: 12149 | 12
+time: 0.80 - pid: 2733 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98
+time: 0.85 - pid: 2733 - action: RECV_PIPE - info: 13965 | 16
+time: 0.75 - pid: 2748 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e
+time: 0.78 - pid: 2748 - action: RECV_PIPE - info: 4209 | 8
+time: 9.93 - pid: 2717 - action: EXIT - info: 0
+time: 9.96 - pid: 2718 - action: EXIT - info: 0
+time: 9.97 - pid: 2719 - action: EXIT - info: 0
+time: 9.99 - pid: 2722 - action: EXIT - info: 0
+time: 10.01 - pid: 2733 - action: EXIT - info: 0
+time: 10.03 - pid: 2734 - action: EXIT - info: 0
+time: 1.39 - pid: 2747 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e
+time: 10.10 - pid: 2735 - action: EXIT - info: 0
+time: 1.43 - pid: 2747 - action: RECV_PIPE - info: 4246 | 8
+time: 10.13 - pid: 2739 - action: EXIT - info: 0
+time: 10.15 - pid: 2740 - action: EXIT - info: 0
+time: 10.19 - pid: 2741 - action: EXIT - info: 0
+time: 10.25 - pid: 2742 - action: EXIT - info: 0
+time: 10.27 - pid: 2743 - action: EXIT - info: 0
+time: 10.29 - pid: 2744 - action: EXIT - info: 0
+time: 10.31 - pid: 2747 - action: EXIT - info: 0
+time: 10.33 - pid: 2748 - action: EXIT - info: 0
+time: 1.03 - pid: 2746 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55
+time: 1.05 - pid: 2746 - action: RECV_PIPE - info: 4179 | 8
+time: 10.37 - pid: 2746 - action: EXIT - info: 0
+time: 10.49 - pid: 2693 - action: SEND_PIPE - info: 10814 | 16
+time: 10.51 - pid: 2693 - action: SEND_PIPE - info: 12407 | 16
+time: 10.51 - pid: 2693 - action: SEND_PIPE - info: 4278 | 8
+time: 10.52 - pid: 2693 - action: SEND_PIPE - info: 4277 | 8
+time: 10.53 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.54 - pid: 2693 - action: SEND_PIPE - info: 4208 | 8
+time: 10.55 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.55 - pid: 2693 - action: SEND_PIPE - info: 8596 | 12
+time: 10.56 - pid: 2693 - action: SEND_PIPE - info: 12356 | 16
+time: 10.57 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.58 - pid: 2693 - action: SEND_PIPE - info: 14041 | 16
+time: 10.59 - pid: 2693 - action: SEND_PIPE - info: 110180 | 112
+time: 10.59 - pid: 2693 - action: SEND_PIPE - info: 9324 | 12
+time: 10.60 - pid: 2693 - action: SEND_PIPE - info: 4282 | 8
+time: 10.62 - pid: 2693 - action: SEND_PIPE - info: 21465 | 24
+time: 10.62 - pid: 2693 - action: SEND_PIPE - info: 9342 | 12
+time: 10.63 - pid: 2693 - action: SEND_PIPE - info: 4209 | 8
+time: 10.64 - pid: 2693 - action: SEND_PIPE - info: 9263 | 12
+time: 10.65 - pid: 2693 - action: SEND_PIPE - info: 10460 | 12
+time: 10.65 - pid: 2693 - action: SEND_PIPE - info: 13967 | 16
+time: 10.66 - pid: 2693 - action: SEND_PIPE - info: 4275 | 8
+time: 10.67 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.68 - pid: 2693 - action: SEND_PIPE - info: 4265 | 8
+time: 10.69 - pid: 2693 - action: SEND_PIPE - info: 9070 | 12
+time: 10.69 - pid: 2693 - action: SEND_PIPE - info: 10698 | 16
+time: 10.70 - pid: 2693 - action: SEND_PIPE - info: 4299 | 8
+time: 10.71 - pid: 2693 - action: SEND_PIPE - info: 10572 | 12
+time: 10.72 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.72 - pid: 2693 - action: SEND_PIPE - info: 4259 | 8
+time: 10.73 - pid: 2693 - action: SEND_PIPE - info: 4096 | 4
+time: 10.74 - pid: 2693 - action: SEND_PIPE - info: 4273 | 8
+time: 10.75 - pid: 2693 - action: SEND_PIPE - info: 12191 | 12
+time: 10.76 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.76 - pid: 2693 - action: SEND_PIPE - info: 12548 | 16
+time: 10.77 - pid: 2693 - action: SEND_PIPE - info: 4282 | 8
+time: 10.78 - pid: 2693 - action: SEND_PIPE - info: 4284 | 8
+time: 10.79 - pid: 2693 - action: SEND_PIPE - info: 4180 | 8
+time: 10.80 - pid: 2693 - action: SEND_PIPE - info: 9265 | 12
+time: 10.80 - pid: 2693 - action: SEND_PIPE - info: 12322 | 16
+time: 10.81 - pid: 2693 - action: SEND_PIPE - info: 9558 | 12
+time: 10.82 - pid: 2693 - action: SEND_PIPE - info: 9147 | 12
+time: 10.83 - pid: 2693 - action: SEND_PIPE - info: 9074 | 12
+time: 10.83 - pid: 2693 - action: SEND_PIPE - info: 12375 | 16
+time: 10.84 - pid: 2693 - action: SEND_PIPE - info: 4444 | 12
+time: 10.85 - pid: 2693 - action: SEND_PIPE - info: 12149 | 12
+time: 10.86 - pid: 2693 - action: SEND_PIPE - info: 13965 | 16
+time: 10.87 - pid: 2693 - action: SEND_PIPE - info: 4209 | 8
+time: 10.87 - pid: 2693 - action: SEND_PIPE - info: 4246 | 8
+time: 10.88 - pid: 2693 - action: SEND_PIPE - info: 4179 | 8
+time: 10.91 - pid: 2693 - action: ENTRY - info: 688 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects
+time: 10.92 - pid: 2693 - action: RECV_PIPE - info: 526711 | 688
+time: 1.62 - pid: 2693 - action: EXIT - info: 0
+time: 1.70 - pid: 2687 - action: SEND_PIPE - info: 22944 | 52
+time: 1.72 - pid: 2687 - action: SEND_PIPE - info: 4096 | 4
+time: 1.73 - pid: 2687 - action: SEND_PIPE - info: 4336 | 8
+time: 1.74 - pid: 2687 - action: SEND_PIPE - info: 34458 | 56
+time: 1.75 - pid: 2687 - action: SEND_PIPE - info: 24311 | 44
+time: 1.76 - pid: 2687 - action: SEND_PIPE - info: 526711 | 688
+time: 1.78 - pid: 2687 - action: ENTRY - info: 896 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git
+time: 1.80 - pid: 2687 - action: RECV_PIPE - info: 627330 | 896
+time: 0.18 - pid: 2687 - action: EXIT - info: 0
+time: 0.24 - pid: 2686 - action: SEND_PIPE - info: 627330 | 896
+time: 0.28 - pid: 2686 - action: ENTRY - info: 988 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1
+time: -0.80 - pid: 2785 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.19 - pid: 2786 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2791 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.16 - pid: 2786 - action: ENTRY - info: 52 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks
+time: 1.20 - pid: 2786 - action: RECV_PIPE - info: 22944 | 52
+time: 1.66 - pid: 2786 - action: EXIT - info: 0
+time: 0.09 - pid: 2789 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2790 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.12 - pid: 2788 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.31 - pid: 2789 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches
+time: 1.38 - pid: 2789 - action: RECV_PIPE - info: 4096 | 4
+time: 1.72 - pid: 2789 - action: EXIT - info: 0
+time: 0.07 - pid: 2787 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.12 - pid: 2793 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2794 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.10 - pid: 2795 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2792 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.10 - pid: 2796 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.17 - pid: 2788 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info
+time: 1.23 - pid: 2788 - action: RECV_PIPE - info: 4336 | 8
+time: 0.96 - pid: 2796 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad
+time: 1.00 - pid: 2796 - action: RECV_PIPE - info: 12356 | 16
+time: 0.98 - pid: 2795 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc
+time: 1.01 - pid: 2795 - action: RECV_PIPE - info: 4180 | 8
+time: 1.00 - pid: 2793 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67
+time: 1.04 - pid: 2793 - action: RECV_PIPE - info: 10814 | 16
+time: 1.01 - pid: 2794 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b
+time: 1.13 - pid: 2794 - action: RECV_PIPE - info: 12407 | 16
+time: 0.07 - pid: 2807 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.10 - pid: 2808 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2809 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2810 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.81 - pid: 2788 - action: EXIT - info: 0
+time: 0.06 - pid: 2811 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2812 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2813 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.13 - pid: 2800 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.11 - pid: 2802 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2815 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2806 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.10 - pid: 2797 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2803 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2801 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2805 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2822 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2799 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2804 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2798 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2816 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2820 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.12 - pid: 2814 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2823 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2824 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2829 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2821 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2817 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2819 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2828 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2830 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2818 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.05 - pid: 2831 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 7.14 - pid: 2793 - action: EXIT - info: 0
+time: 7.18 - pid: 2794 - action: EXIT - info: 0
+time: 7.20 - pid: 2795 - action: EXIT - info: 0
+time: 7.21 - pid: 2796 - action: EXIT - info: 0
+time: 0.06 - pid: 2838 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2839 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2837 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2840 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2836 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2841 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2842 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2843 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2844 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.12 - pid: 2835 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.08 - pid: 2834 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2833 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2845 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2832 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2825 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.07 - pid: 2826 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.06 - pid: 2827 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98 | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.13 - pid: 2807 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c
+time: 1.18 - pid: 2807 - action: RECV_PIPE - info: 4208 | 8
+time: 7.26 - pid: 2807 - action: EXIT - info: 0
+time: 1.33 - pid: 2808 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5
+time: 1.61 - pid: 2808 - action: RECV_PIPE - info: 10572 | 12
+time: 7.32 - pid: 2808 - action: EXIT - info: 0
+time: 0.85 - pid: 2792 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5
+time: 0.72 - pid: 2822 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9
+time: 0.93 - pid: 2792 - action: RECV_PIPE - info: 8596 | 12
+time: 0.78 - pid: 2822 - action: RECV_PIPE - info: 4282 | 8
+time: 7.37 - pid: 2792 - action: EXIT - info: 0
+time: 0.76 - pid: 2798 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads
+time: 0.80 - pid: 2798 - action: RECV_PIPE - info: 4178 | 12
+time: 7.47 - pid: 2822 - action: EXIT - info: 0
+time: 0.90 - pid: 2809 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9
+time: 0.93 - pid: 2809 - action: RECV_PIPE - info: 4273 | 8
+time: 0.78 - pid: 2804 - action: ENTRY - info: 112 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack
+time: 0.83 - pid: 2804 - action: RECV_PIPE - info: 110180 | 112
+time: 1.27 - pid: 2798 - action: EXIT - info: 0
+time: 0.94 - pid: 2843 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57
+time: 1.00 - pid: 2843 - action: RECV_PIPE - info: 12191 | 12
+time: 7.51 - pid: 2804 - action: EXIT - info: 0
+time: 0.81 - pid: 2814 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info
+time: 0.84 - pid: 2814 - action: RECV_PIPE - info: 4096 | 4
+time: 7.55 - pid: 2809 - action: EXIT - info: 0
+time: 7.59 - pid: 2814 - action: EXIT - info: 0
+time: 0.93 - pid: 2806 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0
+time: 0.99 - pid: 2806 - action: RECV_PIPE - info: 4180 | 8
+time: 7.62 - pid: 2843 - action: EXIT - info: 0
+time: 1.14 - pid: 2812 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66
+time: 1.18 - pid: 2812 - action: RECV_PIPE - info: 12375 | 16
+time: 1.17 - pid: 2801 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2
+time: 1.20 - pid: 2801 - action: RECV_PIPE - info: 4278 | 8
+time: 0.91 - pid: 2816 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50
+time: 0.99 - pid: 2816 - action: RECV_PIPE - info: 12548 | 16
+time: 1.05 - pid: 2805 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93
+time: 1.09 - pid: 2805 - action: RECV_PIPE - info: 14041 | 16
+time: 0.75 - pid: 2820 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e
+time: 0.80 - pid: 2820 - action: RECV_PIPE - info: 10460 | 12
+time: 7.69 - pid: 2806 - action: EXIT - info: 0
+time: 0.79 - pid: 2830 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2
+time: 0.86 - pid: 2830 - action: RECV_PIPE - info: 9342 | 12
+time: 0.81 - pid: 2823 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6
+time: 0.86 - pid: 2823 - action: RECV_PIPE - info: 9324 | 12
+time: 0.80 - pid: 2829 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27
+time: 0.84 - pid: 2829 - action: RECV_PIPE - info: 9074 | 12
+time: 0.82 - pid: 2819 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a
+time: 0.86 - pid: 2819 - action: RECV_PIPE - info: 4209 | 8
+time: 0.88 - pid: 2828 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1
+time: 0.92 - pid: 2828 - action: RECV_PIPE - info: 12149 | 12
+time: 1.03 - pid: 2821 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18
+time: 1.08 - pid: 2821 - action: RECV_PIPE - info: 13967 | 16
+time: 1.05 - pid: 2817 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4
+time: 1.08 - pid: 2817 - action: RECV_PIPE - info: 4275 | 8
+time: 1.00 - pid: 2824 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f
+time: 1.04 - pid: 2824 - action: RECV_PIPE - info: 9263 | 12
+time: 1.07 - pid: 2835 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc
+time: 1.14 - pid: 2835 - action: RECV_PIPE - info: 4282 | 8
+time: 1.01 - pid: 2831 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3
+time: 1.04 - pid: 2831 - action: RECV_PIPE - info: 4180 | 8
+time: 0.91 - pid: 2832 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39
+time: 0.95 - pid: 2832 - action: RECV_PIPE - info: 4180 | 8
+time: 0.90 - pid: 2842 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e
+time: 0.93 - pid: 2842 - action: RECV_PIPE - info: 4209 | 8
+time: 0.96 - pid: 2838 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7
+time: 1.00 - pid: 2838 - action: RECV_PIPE - info: 9265 | 12
+time: 1.02 - pid: 2834 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea
+time: 1.05 - pid: 2834 - action: RECV_PIPE - info: 4180 | 8
+time: 0.90 - pid: 2818 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7
+time: 0.93 - pid: 2818 - action: RECV_PIPE - info: 10698 | 16
+time: 0.89 - pid: 2811 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82
+time: 0.92 - pid: 2811 - action: RECV_PIPE - info: 9147 | 12
+time: 1.15 - pid: 2813 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9
+time: 1.22 - pid: 2813 - action: RECV_PIPE - info: 4444 | 12
+time: 7.85 - pid: 2801 - action: EXIT - info: 0
+time: 7.89 - pid: 2805 - action: EXIT - info: 0
+time: 7.92 - pid: 2811 - action: EXIT - info: 0
+time: 7.94 - pid: 2812 - action: EXIT - info: 0
+time: 7.96 - pid: 2816 - action: EXIT - info: 0
+time: 7.98 - pid: 2813 - action: EXIT - info: 0
+time: 8.00 - pid: 2817 - action: EXIT - info: 0
+time: 8.02 - pid: 2818 - action: EXIT - info: 0
+time: 0.94 - pid: 2836 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac
+time: 8.04 - pid: 2819 - action: EXIT - info: 0
+time: 1.03 - pid: 2836 - action: RECV_PIPE - info: 12322 | 16
+time: 8.14 - pid: 2820 - action: EXIT - info: 0
+time: 8.16 - pid: 2821 - action: EXIT - info: 0
+time: 8.18 - pid: 2823 - action: EXIT - info: 0
+time: 8.20 - pid: 2824 - action: EXIT - info: 0
+time: 8.22 - pid: 2828 - action: EXIT - info: 0
+time: 8.24 - pid: 2829 - action: EXIT - info: 0
+time: 8.26 - pid: 2830 - action: EXIT - info: 0
+time: 8.28 - pid: 2831 - action: EXIT - info: 0
+time: 8.30 - pid: 2832 - action: EXIT - info: 0
+time: 1.06 - pid: 2845 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads
+time: 8.32 - pid: 2834 - action: EXIT - info: 0
+time: 1.10 - pid: 2845 - action: RECV_PIPE - info: 5959 | 12
+time: 8.34 - pid: 2835 - action: EXIT - info: 0
+time: 8.36 - pid: 2836 - action: EXIT - info: 0
+time: 8.38 - pid: 2838 - action: EXIT - info: 0
+time: 8.49 - pid: 2842 - action: EXIT - info: 0
+time: 1.12 - pid: 2800 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags
+time: 1.15 - pid: 2800 - action: RECV_PIPE - info: 4096 | 4
+time: 1.97 - pid: 2845 - action: EXIT - info: 0
+time: 1.03 - pid: 2840 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55
+time: 1.06 - pid: 2840 - action: RECV_PIPE - info: 4179 | 8
+time: 1.09 - pid: 2837 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25
+time: 1.12 - pid: 2837 - action: RECV_PIPE - info: 4284 | 8
+time: 1.29 - pid: 2802 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f
+time: 1.32 - pid: 2802 - action: RECV_PIPE - info: 4180 | 8
+time: 1.60 - pid: 2803 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9
+time: 1.62 - pid: 2803 - action: RECV_PIPE - info: 4277 | 8
+time: 0.06 - pid: 2847 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 0.78 - pid: 2847 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin
+time: 0.80 - pid: 2847 - action: RECV_PIPE - info: 4169 | 12
+time: 1.28 - pid: 2847 - action: EXIT - info: 0
+time: 1.32 - pid: 2799 - action: SEND_PIPE - info: 4169 | 12
+time: 1.35 - pid: 2799 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes
+time: 1.37 - pid: 2799 - action: RECV_PIPE - info: 9184 | 20
+time: 1.31 - pid: 2799 - action: EXIT - info: 0
+time: 1.33 - pid: 2800 - action: EXIT - info: 0
+time: 1.38 - pid: 2787 - action: SEND_PIPE - info: 4178 | 12
+time: 1.39 - pid: 2787 - action: SEND_PIPE - info: 4096 | 4
+time: 1.41 - pid: 2787 - action: SEND_PIPE - info: 9184 | 20
+time: 8.58 - pid: 2802 - action: EXIT - info: 0
+time: 8.69 - pid: 2803 - action: EXIT - info: 0
+time: 8.71 - pid: 2837 - action: EXIT - info: 0
+time: 8.73 - pid: 2840 - action: EXIT - info: 0
+time: 1.46 - pid: 2787 - action: ENTRY - info: 44 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs
+time: 1.50 - pid: 2787 - action: RECV_PIPE - info: 24311 | 44
+time: 1.04 - pid: 2810 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22
+time: 1.21 - pid: 2810 - action: RECV_PIPE - info: 4299 | 8
+time: 1.89 - pid: 2787 - action: EXIT - info: 0
+time: 8.78 - pid: 2810 - action: EXIT - info: 0
+time: 1.34 - pid: 2841 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e
+time: 1.39 - pid: 2841 - action: RECV_PIPE - info: 4246 | 8
+time: 1.01 - pid: 2825 - action: ENTRY - info: 24 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba
+time: 1.04 - pid: 2825 - action: RECV_PIPE - info: 21465 | 24
+time: 8.84 - pid: 2825 - action: EXIT - info: 0
+time: 1.40 - pid: 2833 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68
+time: 1.44 - pid: 2833 - action: RECV_PIPE - info: 9558 | 12
+time: 1.64 - pid: 2815 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da
+time: 1.78 - pid: 2815 - action: RECV_PIPE - info: 9070 | 12
+time: 8.88 - pid: 2833 - action: EXIT - info: 0
+time: 8.92 - pid: 2815 - action: EXIT - info: 0
+time: 8.95 - pid: 2841 - action: EXIT - info: 0
+time: 1.68 - pid: 2844 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16
+time: 1.72 - pid: 2844 - action: RECV_PIPE - info: 4180 | 8
+time: 8.99 - pid: 2844 - action: EXIT - info: 0
+time: 0.92 - pid: 2827 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98
+time: 0.95 - pid: 2827 - action: RECV_PIPE - info: 13965 | 16
+time: 9.03 - pid: 2827 - action: EXIT - info: 0
+time: 1.30 - pid: 2839 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b
+time: 1.33 - pid: 2839 - action: RECV_PIPE - info: 4259 | 8
+time: 9.06 - pid: 2839 - action: EXIT - info: 0
+time: 3.32 - pid: 2826 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65
+time: 3.34 - pid: 2826 - action: RECV_PIPE - info: 4265 | 8
+time: 9.09 - pid: 2826 - action: EXIT - info: 0
+time: 9.24 - pid: 2791 - action: SEND_PIPE - info: 12356 | 16
+time: 9.26 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.27 - pid: 2791 - action: SEND_PIPE - info: 10814 | 16
+time: 9.28 - pid: 2791 - action: SEND_PIPE - info: 12407 | 16
+time: 9.29 - pid: 2791 - action: SEND_PIPE - info: 4208 | 8
+time: 9.30 - pid: 2791 - action: SEND_PIPE - info: 10572 | 12
+time: 9.32 - pid: 2791 - action: SEND_PIPE - info: 8596 | 12
+time: 9.33 - pid: 2791 - action: SEND_PIPE - info: 4282 | 8
+time: 9.34 - pid: 2791 - action: SEND_PIPE - info: 4273 | 8
+time: 9.36 - pid: 2791 - action: SEND_PIPE - info: 110180 | 112
+time: 9.37 - pid: 2791 - action: SEND_PIPE - info: 12191 | 12
+time: 9.42 - pid: 2791 - action: SEND_PIPE - info: 4096 | 4
+time: 9.43 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.44 - pid: 2791 - action: SEND_PIPE - info: 12375 | 16
+time: 9.47 - pid: 2791 - action: SEND_PIPE - info: 4278 | 8
+time: 9.48 - pid: 2791 - action: SEND_PIPE - info: 12548 | 16
+time: 9.49 - pid: 2791 - action: SEND_PIPE - info: 14041 | 16
+time: 9.50 - pid: 2791 - action: SEND_PIPE - info: 10460 | 12
+time: 9.51 - pid: 2791 - action: SEND_PIPE - info: 9342 | 12
+time: 9.53 - pid: 2791 - action: SEND_PIPE - info: 9324 | 12
+time: 9.54 - pid: 2791 - action: SEND_PIPE - info: 9074 | 12
+time: 9.55 - pid: 2791 - action: SEND_PIPE - info: 4209 | 8
+time: 9.56 - pid: 2791 - action: SEND_PIPE - info: 12149 | 12
+time: 9.57 - pid: 2791 - action: SEND_PIPE - info: 13967 | 16
+time: 9.58 - pid: 2791 - action: SEND_PIPE - info: 4275 | 8
+time: 9.59 - pid: 2791 - action: SEND_PIPE - info: 9263 | 12
+time: 9.61 - pid: 2791 - action: SEND_PIPE - info: 4282 | 8
+time: 9.62 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.63 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.64 - pid: 2791 - action: SEND_PIPE - info: 4209 | 8
+time: 9.65 - pid: 2791 - action: SEND_PIPE - info: 9265 | 12
+time: 9.66 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.68 - pid: 2791 - action: SEND_PIPE - info: 10698 | 16
+time: 9.69 - pid: 2791 - action: SEND_PIPE - info: 9147 | 12
+time: 9.70 - pid: 2791 - action: SEND_PIPE - info: 4444 | 12
+time: 9.71 - pid: 2791 - action: SEND_PIPE - info: 12322 | 16
+time: 9.72 - pid: 2791 - action: SEND_PIPE - info: 4179 | 8
+time: 9.74 - pid: 2791 - action: SEND_PIPE - info: 4284 | 8
+time: 9.75 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.76 - pid: 2791 - action: SEND_PIPE - info: 4277 | 8
+time: 9.77 - pid: 2791 - action: SEND_PIPE - info: 4299 | 8
+time: 9.78 - pid: 2791 - action: SEND_PIPE - info: 4246 | 8
+time: 9.79 - pid: 2791 - action: SEND_PIPE - info: 21465 | 24
+time: 9.86 - pid: 2791 - action: SEND_PIPE - info: 9558 | 12
+time: 9.91 - pid: 2791 - action: SEND_PIPE - info: 9070 | 12
+time: 9.92 - pid: 2791 - action: SEND_PIPE - info: 4180 | 8
+time: 9.93 - pid: 2791 - action: SEND_PIPE - info: 13965 | 16
+time: 0.06 - pid: 2846 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 9.95 - pid: 2791 - action: SEND_PIPE - info: 4259 | 8
+time: 9.96 - pid: 2791 - action: SEND_PIPE - info: 4265 | 8
+time: 9.98 - pid: 2791 - action: ENTRY - info: 688 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects
+time: 10.01 - pid: 2791 - action: RECV_PIPE - info: 526711 | 688
+time: 0.06 - pid: 2848 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2785 | notOrig 
+time: 1.23 - pid: 2848 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin
+time: 1.30 - pid: 2848 - action: RECV_PIPE - info: 5748 | 12
+time: 1.95 - pid: 2791 - action: EXIT - info: 0
+time: 1.08 - pid: 2848 - action: EXIT - info: 0
+time: 1.15 - pid: 2846 - action: SEND_PIPE - info: 5748 | 12
+time: 1.19 - pid: 2846 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes
+time: 1.22 - pid: 2846 - action: RECV_PIPE - info: 10763 | 20
+time: 2.03 - pid: 2846 - action: EXIT - info: 0
+time: 2.08 - pid: 2797 - action: SEND_PIPE - info: 5959 | 12
+time: 2.12 - pid: 2797 - action: SEND_PIPE - info: 10763 | 20
+time: 2.21 - pid: 2797 - action: ENTRY - info: 40 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs
+time: 2.29 - pid: 2797 - action: RECV_PIPE - info: 22656 | 40
+time: 1.78 - pid: 2797 - action: EXIT - info: 0
+time: 1.84 - pid: 2790 - action: SEND_PIPE - info: 22656 | 40
+time: 1.87 - pid: 2790 - action: ENTRY - info: 56 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs
+time: 1.98 - pid: 2790 - action: RECV_PIPE - info: 34458 | 56
+time: 2.00 - pid: 2790 - action: EXIT - info: 0
+time: 2.08 - pid: 2785 - action: SEND_PIPE - info: 22944 | 52
+time: 2.10 - pid: 2785 - action: SEND_PIPE - info: 4096 | 4
+time: 2.13 - pid: 2785 - action: SEND_PIPE - info: 4336 | 8
+time: 2.14 - pid: 2785 - action: SEND_PIPE - info: 24311 | 44
+time: 2.15 - pid: 2785 - action: SEND_PIPE - info: 526711 | 688
+time: 2.16 - pid: 2785 - action: SEND_PIPE - info: 34458 | 56
+time: 2.23 - pid: 2785 - action: ENTRY - info: 896 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git
+time: 2.25 - pid: 2785 - action: RECV_PIPE - info: 627330 | 896
+time: 0.26 - pid: 2785 - action: EXIT - info: 0
+time: 0.33 - pid: 2784 - action: SEND_PIPE - info: 627330 | 896
+time: 0.37 - pid: 2784 - action: ENTRY - info: 1016 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1
+time: -0.81 - pid: 2864 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.14 - pid: 2865 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.97 - pid: 2865 - action: ENTRY - info: 52 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks
+time: 1.00 - pid: 2865 - action: RECV_PIPE - info: 22944 | 52
+time: 0.06 - pid: 2868 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 2.19 - pid: 2865 - action: EXIT - info: 0
+time: 0.07 - pid: 2867 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.08 - pid: 2869 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.10 - pid: 2866 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2870 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 1.02 - pid: 2868 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches
+time: 1.07 - pid: 2868 - action: RECV_PIPE - info: 4096 | 4
+time: 1.16 - pid: 2867 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info
+time: 2.25 - pid: 2868 - action: EXIT - info: 0
+time: 1.25 - pid: 2867 - action: RECV_PIPE - info: 4336 | 8
+time: 0.06 - pid: 2878 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 2.28 - pid: 2867 - action: EXIT - info: 0
+time: 0.07 - pid: 2877 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2872 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2873 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2879 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.93 - pid: 2879 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad
+time: 0.96 - pid: 2879 - action: RECV_PIPE - info: 12356 | 16
+time: 0.06 - pid: 2881 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2882 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.08 - pid: 2883 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2880 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2884 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.12 - pid: 2885 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2886 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2887 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.12 - pid: 2888 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.91 - pid: 2882 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9
+time: 0.95 - pid: 2882 - action: RECV_PIPE - info: 4277 | 8
+time: 0.76 - pid: 2884 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93
+time: 0.79 - pid: 2884 - action: RECV_PIPE - info: 14041 | 16
+time: 1.03 - pid: 2872 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5
+time: 1.07 - pid: 2872 - action: RECV_PIPE - info: 8596 | 12
+time: 1.19 - pid: 2887 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5
+time: 0.77 - pid: 2883 - action: ENTRY - info: 112 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack
+time: 0.80 - pid: 2883 - action: RECV_PIPE - info: 110180 | 112
+time: 0.76 - pid: 2880 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2
+time: 0.79 - pid: 2880 - action: RECV_PIPE - info: 4278 | 8
+time: 0.80 - pid: 2873 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads
+time: 0.88 - pid: 2873 - action: RECV_PIPE - info: 4178 | 12
+time: 0.94 - pid: 2886 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c
+time: 0.98 - pid: 2886 - action: RECV_PIPE - info: 4208 | 8
+time: 0.92 - pid: 2881 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f
+time: 1.26 - pid: 2887 - action: RECV_PIPE - info: 10572 | 12
+time: 1.28 - pid: 2873 - action: EXIT - info: 0
+time: 1.21 - pid: 2878 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc
+time: 1.33 - pid: 2888 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9
+time: 1.30 - pid: 2878 - action: RECV_PIPE - info: 4180 | 8
+time: 1.41 - pid: 2888 - action: RECV_PIPE - info: 4273 | 8
+time: 1.24 - pid: 2885 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0
+time: 1.30 - pid: 2885 - action: RECV_PIPE - info: 4180 | 8
+time: 0.08 - pid: 2894 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.99 - pid: 2881 - action: RECV_PIPE - info: 4180 | 8
+time: 0.12 - pid: 2895 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 1.14 - pid: 2877 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags
+time: 1.21 - pid: 2877 - action: RECV_PIPE - info: 4096 | 4
+time: 1.33 - pid: 2877 - action: EXIT - info: 0
+time: 0.06 - pid: 2892 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.89 - pid: 2894 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da
+time: 0.92 - pid: 2894 - action: RECV_PIPE - info: 9070 | 12
+time: 0.87 - pid: 2895 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50
+time: 0.89 - pid: 2895 - action: RECV_PIPE - info: 12548 | 16
+time: 0.06 - pid: 2890 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2897 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2891 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2893 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2889 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2871 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2898 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2875 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.30 - pid: 2899 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2876 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.30 - pid: 2900 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.09 - pid: 2901 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2902 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.09 - pid: 2903 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.13 - pid: 2904 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2905 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2906 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2896 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.80 - pid: 2897 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7
+time: 0.85 - pid: 2897 - action: RECV_PIPE - info: 10698 | 16
+time: 0.86 - pid: 2892 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9
+time: 0.96 - pid: 2892 - action: RECV_PIPE - info: 4444 | 12
+time: 0.76 - pid: 2898 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a
+time: 0.82 - pid: 2898 - action: RECV_PIPE - info: 4209 | 8
+time: 0.06 - pid: 2874 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2910 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.08 - pid: 2907 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2922 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2923 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.11 - pid: 2924 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.10 - pid: 2911 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2912 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2913 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.06 - pid: 2909 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 1.05 - pid: 2899 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e
+time: 1.11 - pid: 2899 - action: RECV_PIPE - info: 10460 | 12
+time: 0.79 - pid: 2903 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f
+time: 0.82 - pid: 2903 - action: RECV_PIPE - info: 9263 | 12
+time: 0.82 - pid: 2902 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6
+time: 0.85 - pid: 2902 - action: RECV_PIPE - info: 9324 | 12
+time: 0.74 - pid: 2905 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65
+time: 0.77 - pid: 2905 - action: RECV_PIPE - info: 4265 | 8
+time: 0.76 - pid: 2889 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22
+time: 0.79 - pid: 2889 - action: RECV_PIPE - info: 4299 | 8
+time: 0.75 - pid: 2876 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b
+time: 0.79 - pid: 2876 - action: RECV_PIPE - info: 12407 | 16
+time: 0.81 - pid: 2893 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info
+time: 0.86 - pid: 2893 - action: RECV_PIPE - info: 4096 | 4
+time: 0.77 - pid: 2896 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4
+time: 0.82 - pid: 2896 - action: RECV_PIPE - info: 4275 | 8
+time: 0.81 - pid: 2906 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98
+time: 0.85 - pid: 2906 - action: RECV_PIPE - info: 13965 | 16
+time: 0.89 - pid: 2891 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66
+time: 0.93 - pid: 2891 - action: RECV_PIPE - info: 12375 | 16
+time: 1.15 - pid: 2890 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82
+time: 1.19 - pid: 2890 - action: RECV_PIPE - info: 9147 | 12
+time: 1.19 - pid: 2904 - action: ENTRY - info: 24 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba
+time: 1.24 - pid: 2904 - action: RECV_PIPE - info: 21465 | 24
+time: 0.09 - pid: 2914 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 1.32 - pid: 2901 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9
+time: 1.35 - pid: 2901 - action: RECV_PIPE - info: 4282 | 8
+time: 1.06 - pid: 2910 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1
+time: 1.13 - pid: 2910 - action: RECV_PIPE - info: 12149 | 12
+time: 1.76 - pid: 2900 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18
+time: 1.82 - pid: 2900 - action: RECV_PIPE - info: 13967 | 16
+time: 0.98 - pid: 2874 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67
+time: 1.03 - pid: 2874 - action: RECV_PIPE - info: 10814 | 16
+time: 1.46 - pid: 2922 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55
+time: 1.54 - pid: 2922 - action: RECV_PIPE - info: 4179 | 8
+time: 0.08 - pid: 2926 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.07 - pid: 2927 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.09 - pid: 2915 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 6.46 - pid: 2872 - action: EXIT - info: 0
+time: 6.51 - pid: 2874 - action: EXIT - info: 0
+time: 6.53 - pid: 2876 - action: EXIT - info: 0
+time: 6.55 - pid: 2878 - action: EXIT - info: 0
+time: 6.56 - pid: 2879 - action: EXIT - info: 0
+time: 6.58 - pid: 2880 - action: EXIT - info: 0
+time: 6.59 - pid: 2881 - action: EXIT - info: 0
+time: 6.61 - pid: 2882 - action: EXIT - info: 0
+time: 6.62 - pid: 2883 - action: EXIT - info: 0
+time: 6.63 - pid: 2884 - action: EXIT - info: 0
+time: 6.65 - pid: 2885 - action: EXIT - info: 0
+time: 6.66 - pid: 2886 - action: EXIT - info: 0
+time: 6.68 - pid: 2887 - action: EXIT - info: 0
+time: 6.69 - pid: 2888 - action: EXIT - info: 0
+time: 6.71 - pid: 2889 - action: EXIT - info: 0
+time: 6.72 - pid: 2890 - action: EXIT - info: 0
+time: 6.73 - pid: 2891 - action: EXIT - info: 0
+time: 6.75 - pid: 2892 - action: EXIT - info: 0
+time: 6.76 - pid: 2893 - action: EXIT - info: 0
+time: 6.78 - pid: 2894 - action: EXIT - info: 0
+time: 6.79 - pid: 2895 - action: EXIT - info: 0
+time: 6.80 - pid: 2896 - action: EXIT - info: 0
+time: 6.82 - pid: 2897 - action: EXIT - info: 0
+time: 6.87 - pid: 2898 - action: EXIT - info: 0
+time: 6.92 - pid: 2899 - action: EXIT - info: 0
+time: 6.94 - pid: 2900 - action: EXIT - info: 0
+time: 6.95 - pid: 2901 - action: EXIT - info: 0
+time: 6.96 - pid: 2902 - action: EXIT - info: 0
+time: 6.97 - pid: 2903 - action: EXIT - info: 0
+time: 6.99 - pid: 2904 - action: EXIT - info: 0
+time: 7.00 - pid: 2905 - action: EXIT - info: 0
+time: 7.01 - pid: 2906 - action: EXIT - info: 0
+time: 7.02 - pid: 2910 - action: EXIT - info: 0
+time: 7.04 - pid: 2922 - action: EXIT - info: 0
+time: 0.06 - pid: 2916 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2917 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.08 - pid: 2908 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.10 - pid: 2918 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2919 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2920 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7 | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.05 - pid: 2921 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.76 - pid: 2916 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea
+time: 0.79 - pid: 2916 - action: RECV_PIPE - info: 4180 | 8
+time: 0.99 - pid: 2915 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68
+time: 1.02 - pid: 2915 - action: RECV_PIPE - info: 9558 | 12
+time: 0.68 - pid: 2908 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads
+time: 0.75 - pid: 2926 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57
+time: 0.77 - pid: 2926 - action: RECV_PIPE - info: 12191 | 12
+time: 0.63 - pid: 2919 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25
+time: 0.80 - pid: 2918 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac
+time: 0.68 - pid: 2920 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7
+time: 0.71 - pid: 2920 - action: RECV_PIPE - info: 9265 | 12
+time: 0.76 - pid: 2917 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc
+time: 0.78 - pid: 2921 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b
+time: 0.81 - pid: 2921 - action: RECV_PIPE - info: 4259 | 8
+time: 7.07 - pid: 2915 - action: EXIT - info: 0
+time: 7.11 - pid: 2916 - action: EXIT - info: 0
+time: 7.12 - pid: 2920 - action: EXIT - info: 0
+time: 7.14 - pid: 2926 - action: EXIT - info: 0
+time: 0.93 - pid: 2907 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin
+time: 0.74 - pid: 2908 - action: RECV_PIPE - info: 5959 | 12
+time: 1.00 - pid: 2907 - action: RECV_PIPE - info: 4169 | 12
+time: 1.18 - pid: 2908 - action: EXIT - info: 0
+time: 0.87 - pid: 2907 - action: EXIT - info: 0
+time: 0.90 - pid: 2875 - action: SEND_PIPE - info: 4169 | 12
+time: 0.97 - pid: 2875 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes
+time: 1.09 - pid: 2875 - action: RECV_PIPE - info: 9184 | 20
+time: 7.18 - pid: 2921 - action: EXIT - info: 0
+time: 1.38 - pid: 2875 - action: EXIT - info: 0
+time: 0.81 - pid: 2917 - action: RECV_PIPE - info: 4282 | 8
+time: 1.44 - pid: 2866 - action: SEND_PIPE - info: 4178 | 12
+time: 1.46 - pid: 2866 - action: SEND_PIPE - info: 4096 | 4
+time: 1.48 - pid: 2866 - action: SEND_PIPE - info: 9184 | 20
+time: 1.51 - pid: 2866 - action: ENTRY - info: 44 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs
+time: 1.52 - pid: 2866 - action: RECV_PIPE - info: 24311 | 44
+time: 7.21 - pid: 2917 - action: EXIT - info: 0
+time: 2.32 - pid: 2866 - action: EXIT - info: 0
+time: 0.73 - pid: 2919 - action: RECV_PIPE - info: 4284 | 8
+time: 7.25 - pid: 2919 - action: EXIT - info: 0
+time: 0.88 - pid: 2918 - action: RECV_PIPE - info: 12322 | 16
+time: 1.01 - pid: 2927 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16
+time: 1.03 - pid: 2927 - action: RECV_PIPE - info: 4180 | 8
+time: 0.88 - pid: 2914 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39
+time: 7.27 - pid: 2918 - action: EXIT - info: 0
+time: 7.29 - pid: 2927 - action: EXIT - info: 0
+time: 0.96 - pid: 2914 - action: RECV_PIPE - info: 4180 | 8
+time: 0.78 - pid: 2923 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e
+time: 0.82 - pid: 2923 - action: RECV_PIPE - info: 4246 | 8
+time: 0.84 - pid: 2913 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3
+time: 0.95 - pid: 2913 - action: RECV_PIPE - info: 4180 | 8
+time: 7.33 - pid: 2914 - action: EXIT - info: 0
+time: 7.40 - pid: 2923 - action: EXIT - info: 0
+time: 0.92 - pid: 2924 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e
+time: 7.43 - pid: 2913 - action: EXIT - info: 0
+time: 0.91 - pid: 2912 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2
+time: 0.98 - pid: 2924 - action: RECV_PIPE - info: 4209 | 8
+time: 0.97 - pid: 2912 - action: RECV_PIPE - info: 9342 | 12
+time: 0.90 - pid: 2911 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27
+time: 0.96 - pid: 2911 - action: RECV_PIPE - info: 9074 | 12
+time: 7.50 - pid: 2912 - action: EXIT - info: 0
+time: 7.52 - pid: 2924 - action: EXIT - info: 0
+time: 0.12 - pid: 2925 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 2864 | notOrig 
+time: 0.90 - pid: 2925 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin
+time: 7.58 - pid: 2911 - action: EXIT - info: 0
+time: 7.73 - pid: 2870 - action: SEND_PIPE - info: 12356 | 16
+time: 7.75 - pid: 2870 - action: SEND_PIPE - info: 4277 | 8
+time: 7.76 - pid: 2870 - action: SEND_PIPE - info: 14041 | 16
+time: 7.77 - pid: 2870 - action: SEND_PIPE - info: 110180 | 112
+time: 7.78 - pid: 2870 - action: SEND_PIPE - info: 4278 | 8
+time: 7.79 - pid: 2870 - action: SEND_PIPE - info: 4208 | 8
+time: 7.80 - pid: 2870 - action: SEND_PIPE - info: 10572 | 12
+time: 7.82 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 7.83 - pid: 2870 - action: SEND_PIPE - info: 4273 | 8
+time: 7.85 - pid: 2870 - action: SEND_PIPE - info: 8596 | 12
+time: 7.86 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 7.87 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 7.88 - pid: 2870 - action: SEND_PIPE - info: 9070 | 12
+time: 7.90 - pid: 2870 - action: SEND_PIPE - info: 12548 | 16
+time: 7.91 - pid: 2870 - action: SEND_PIPE - info: 10698 | 16
+time: 7.92 - pid: 2870 - action: SEND_PIPE - info: 4444 | 12
+time: 8.03 - pid: 2870 - action: SEND_PIPE - info: 4209 | 8
+time: 8.05 - pid: 2870 - action: SEND_PIPE - info: 10460 | 12
+time: 8.06 - pid: 2870 - action: SEND_PIPE - info: 9263 | 12
+time: 8.08 - pid: 2870 - action: SEND_PIPE - info: 9324 | 12
+time: 8.10 - pid: 2870 - action: SEND_PIPE - info: 4265 | 8
+time: 8.12 - pid: 2870 - action: SEND_PIPE - info: 4299 | 8
+time: 8.13 - pid: 2870 - action: SEND_PIPE - info: 12407 | 16
+time: 8.14 - pid: 2870 - action: SEND_PIPE - info: 4096 | 4
+time: 8.15 - pid: 2870 - action: SEND_PIPE - info: 4275 | 8
+time: 8.17 - pid: 2870 - action: SEND_PIPE - info: 13965 | 16
+time: 8.18 - pid: 2870 - action: SEND_PIPE - info: 12375 | 16
+time: 8.19 - pid: 2870 - action: SEND_PIPE - info: 9147 | 12
+time: 8.20 - pid: 2870 - action: SEND_PIPE - info: 21465 | 24
+time: 8.24 - pid: 2870 - action: SEND_PIPE - info: 4282 | 8
+time: 8.26 - pid: 2870 - action: SEND_PIPE - info: 12149 | 12
+time: 8.27 - pid: 2870 - action: SEND_PIPE - info: 13967 | 16
+time: 8.28 - pid: 2870 - action: SEND_PIPE - info: 10814 | 16
+time: 8.30 - pid: 2870 - action: SEND_PIPE - info: 4179 | 8
+time: 8.31 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 8.35 - pid: 2870 - action: SEND_PIPE - info: 9558 | 12
+time: 8.37 - pid: 2870 - action: SEND_PIPE - info: 12191 | 12
+time: 8.38 - pid: 2870 - action: SEND_PIPE - info: 9265 | 12
+time: 8.39 - pid: 2870 - action: SEND_PIPE - info: 4259 | 8
+time: 8.41 - pid: 2870 - action: SEND_PIPE - info: 4282 | 8
+time: 8.42 - pid: 2870 - action: SEND_PIPE - info: 4284 | 8
+time: 8.44 - pid: 2870 - action: SEND_PIPE - info: 12322 | 16
+time: 8.45 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 8.47 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 8.48 - pid: 2870 - action: SEND_PIPE - info: 4246 | 8
+time: 8.50 - pid: 2870 - action: SEND_PIPE - info: 4180 | 8
+time: 8.52 - pid: 2870 - action: SEND_PIPE - info: 4209 | 8
+time: 8.55 - pid: 2870 - action: SEND_PIPE - info: 9342 | 12
+time: 8.57 - pid: 2870 - action: SEND_PIPE - info: 9074 | 12
+time: 8.60 - pid: 2870 - action: ENTRY - info: 688 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects
+time: 8.64 - pid: 2870 - action: RECV_PIPE - info: 526711 | 688
+time: 1.01 - pid: 2925 - action: RECV_PIPE - info: 5748 | 12
+time: 0.98 - pid: 2925 - action: EXIT - info: 0
+time: 1.05 - pid: 2909 - action: SEND_PIPE - info: 5748 | 12
+time: 1.08 - pid: 2909 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes
+time: 1.10 - pid: 2909 - action: RECV_PIPE - info: 10763 | 20
+time: 2.39 - pid: 2870 - action: EXIT - info: 0
+time: 1.23 - pid: 2909 - action: EXIT - info: 0
+time: 1.29 - pid: 2871 - action: SEND_PIPE - info: 5959 | 12
+time: 1.33 - pid: 2871 - action: SEND_PIPE - info: 10763 | 20
+time: 1.38 - pid: 2871 - action: ENTRY - info: 40 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs
+time: 1.40 - pid: 2871 - action: RECV_PIPE - info: 22656 | 40
+time: 1.12 - pid: 2871 - action: EXIT - info: 0
+time: 1.23 - pid: 2869 - action: SEND_PIPE - info: 22656 | 40
+time: 1.28 - pid: 2869 - action: ENTRY - info: 56 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs
+time: 1.31 - pid: 2869 - action: RECV_PIPE - info: 34458 | 56
+time: 2.46 - pid: 2869 - action: EXIT - info: 0
+time: 2.54 - pid: 2864 - action: SEND_PIPE - info: 22944 | 52
+time: 2.55 - pid: 2864 - action: SEND_PIPE - info: 4096 | 4
+time: 2.56 - pid: 2864 - action: SEND_PIPE - info: 4336 | 8
+time: 2.57 - pid: 2864 - action: SEND_PIPE - info: 24311 | 44
+time: 2.58 - pid: 2864 - action: SEND_PIPE - info: 526711 | 688
+time: 2.59 - pid: 2864 - action: SEND_PIPE - info: 34458 | 56
+time: 2.62 - pid: 2864 - action: ENTRY - info: 896 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git
+time: 2.64 - pid: 2864 - action: RECV_PIPE - info: 627330 | 896
+time: 0.20 - pid: 2864 - action: EXIT - info: 0
+time: 0.28 - pid: 2863 - action: SEND_PIPE - info: 627330 | 896
+time: 0.32 - pid: 2863 - action: ENTRY - info: 1048 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1
+time: -0.75 - pid: 3039 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.14 - pid: 3040 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3045 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.07 - pid: 3040 - action: ENTRY - info: 52 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/hooks
+time: 1.14 - pid: 3040 - action: RECV_PIPE - info: 22944 | 52
+time: 1.52 - pid: 3040 - action: EXIT - info: 0
+time: 0.13 - pid: 3043 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3042 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.20 - pid: 3043 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/branches
+time: 0.08 - pid: 3044 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.37 - pid: 3043 - action: RECV_PIPE - info: 4096 | 4
+time: 1.59 - pid: 3043 - action: EXIT - info: 0
+time: 0.08 - pid: 3052 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3053 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.02 - pid: 3053 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/a9
+time: 1.29 - pid: 3042 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/info
+time: 1.32 - pid: 3042 - action: RECV_PIPE - info: 4336 | 8
+time: 1.64 - pid: 3042 - action: EXIT - info: 0
+time: 0.11 - pid: 3054 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3055 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3056 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3057 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3046 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3047 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.13 - pid: 3053 - action: RECV_PIPE - info: 4277 | 8
+time: 0.08 - pid: 3062 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3041 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3063 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.05 - pid: 3052 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/9f
+time: 1.10 - pid: 3052 - action: RECV_PIPE - info: 4180 | 8
+time: 0.16 - pid: 3051 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3050 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.11 - pid: 3065 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3066 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3068 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3069 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.05 - pid: 3070 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.12 - pid: 3067 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.17 - pid: 3064 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.94 - pid: 3064 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f9
+time: 0.97 - pid: 3064 - action: RECV_PIPE - info: 4444 | 12
+time: 0.09 - pid: 3071 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.09 - pid: 3059 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3058 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3060 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3049 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.07 - pid: 3046 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f5
+time: 1.13 - pid: 3046 - action: RECV_PIPE - info: 8596 | 12
+time: 1.12 - pid: 3047 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/67
+time: 1.19 - pid: 3047 - action: RECV_PIPE - info: 10814 | 16
+time: 1.10 - pid: 3063 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/66
+time: 1.19 - pid: 3063 - action: RECV_PIPE - info: 12375 | 16
+time: 0.76 - pid: 3056 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b0
+time: 0.80 - pid: 3056 - action: RECV_PIPE - info: 4180 | 8
+time: 0.94 - pid: 3062 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/82
+time: 1.00 - pid: 3062 - action: RECV_PIPE - info: 9147 | 12
+time: 0.08 - pid: 3048 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.98 - pid: 3055 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/93
+time: 1.02 - pid: 3055 - action: RECV_PIPE - info: 14041 | 16
+time: 1.20 - pid: 3054 - action: ENTRY - info: 112 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/pack
+time: 1.25 - pid: 3054 - action: RECV_PIPE - info: 110180 | 112
+time: 0.07 - pid: 3074 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3072 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.09 - pid: 3061 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3075 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.10 - pid: 3076 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3077 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3081 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3083 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3084 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3086 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.09 - pid: 3089 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.14 - pid: 3073 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.80 - pid: 3049 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/dc
+time: 0.84 - pid: 3049 - action: RECV_PIPE - info: 4180 | 8
+time: 0.94 - pid: 3066 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/da
+time: 0.97 - pid: 3066 - action: RECV_PIPE - info: 9070 | 12
+time: 1.22 - pid: 3071 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/8e
+time: 1.25 - pid: 3071 - action: RECV_PIPE - info: 10460 | 12
+time: 0.07 - pid: 3097 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3093 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.26 - pid: 3093 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/25
+time: 0.07 - pid: 3082 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.10 - pid: 3098 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.83 - pid: 3098 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes/origin
+time: 0.86 - pid: 3098 - action: RECV_PIPE - info: 4169 | 12
+time: 0.07 - pid: 3078 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3090 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.05 - pid: 3087 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.05 - pid: 3085 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3080 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.12 - pid: 3088 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3079 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.08 - pid: 3091 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 5.41 - pid: 3046 - action: EXIT - info: 0
+time: 5.46 - pid: 3047 - action: EXIT - info: 0
+time: 5.47 - pid: 3049 - action: EXIT - info: 0
+time: 5.49 - pid: 3052 - action: EXIT - info: 0
+time: 5.51 - pid: 3053 - action: EXIT - info: 0
+time: 5.53 - pid: 3054 - action: EXIT - info: 0
+time: 5.54 - pid: 3055 - action: EXIT - info: 0
+time: 5.56 - pid: 3056 - action: EXIT - info: 0
+time: 5.58 - pid: 3062 - action: EXIT - info: 0
+time: 5.60 - pid: 3063 - action: EXIT - info: 0
+time: 5.62 - pid: 3064 - action: EXIT - info: 0
+time: 5.64 - pid: 3066 - action: EXIT - info: 0
+time: 5.65 - pid: 3071 - action: EXIT - info: 0
+time: 1.38 - pid: 3091 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/fc
+time: 1.43 - pid: 3091 - action: RECV_PIPE - info: 4282 | 8
+time: 5.71 - pid: 3091 - action: EXIT - info: 0
+time: 0.09 - pid: 3099 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.13 - pid: 3101 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.06 - pid: 3100 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.87 - pid: 3101 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/16
+time: 0.90 - pid: 3101 - action: RECV_PIPE - info: 4180 | 8
+time: 5.76 - pid: 3101 - action: EXIT - info: 0
+time: 0.07 - pid: 3096 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3095 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.07 - pid: 3094 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7 | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 0.09 - pid: 3092 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.62 - pid: 3048 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4b
+time: 1.67 - pid: 3048 - action: RECV_PIPE - info: 12407 | 16
+time: 5.83 - pid: 3048 - action: EXIT - info: 0
+time: 1.22 - pid: 3073 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/heads
+time: 1.26 - pid: 3073 - action: RECV_PIPE - info: 5959 | 12
+time: 1.12 - pid: 3073 - action: EXIT - info: 0
+time: 0.07 - pid: 3102 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin | -1 | -1 | -1 | -1 | -1 | -2 | 3039 | notOrig 
+time: 1.00 - pid: 3094 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/f7
+time: 1.04 - pid: 3094 - action: RECV_PIPE - info: 9265 | 12
+time: 5.90 - pid: 3094 - action: EXIT - info: 0
+time: 1.12 - pid: 3095 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5b
+time: 1.17 - pid: 3095 - action: RECV_PIPE - info: 4259 | 8
+time: 2.09 - pid: 3102 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes/origin
+time: 2.13 - pid: 3102 - action: RECV_PIPE - info: 5748 | 12
+time: 5.98 - pid: 3095 - action: EXIT - info: 0
+time: 0.86 - pid: 3069 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c7
+time: 0.88 - pid: 3070 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/5a
+time: 0.93 - pid: 3070 - action: RECV_PIPE - info: 4209 | 8
+time: 0.93 - pid: 3050 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ad
+time: 0.97 - pid: 3050 - action: RECV_PIPE - info: 12356 | 16
+time: 1.42 - pid: 3065 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/info
+time: 1.46 - pid: 3065 - action: RECV_PIPE - info: 4096 | 4
+time: 0.90 - pid: 3077 - action: ENTRY - info: 4 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/tags
+time: 1.02 - pid: 3077 - action: RECV_PIPE - info: 4096 | 4
+time: 1.33 - pid: 3051 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b2
+time: 1.37 - pid: 3051 - action: RECV_PIPE - info: 4278 | 8
+time: 1.14 - pid: 3061 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/22
+time: 1.18 - pid: 3061 - action: RECV_PIPE - info: 4299 | 8
+time: 1.13 - pid: 3077 - action: EXIT - info: 0
+time: 0.91 - pid: 3068 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d4
+time: 1.08 - pid: 3075 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/heads
+time: 1.28 - pid: 3075 - action: RECV_PIPE - info: 4178 | 12
+time: 1.36 - pid: 3092 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ac
+time: 1.46 - pid: 3092 - action: RECV_PIPE - info: 12322 | 16
+time: 1.16 - pid: 3059 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c5
+time: 1.20 - pid: 3059 - action: RECV_PIPE - info: 10572 | 12
+time: 1.08 - pid: 3086 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d2
+time: 1.14 - pid: 3086 - action: RECV_PIPE - info: 9342 | 12
+time: 1.14 - pid: 3060 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d9
+time: 1.18 - pid: 3060 - action: RECV_PIPE - info: 4273 | 8
+time: 1.53 - pid: 3089 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/68
+time: 1.57 - pid: 3089 - action: RECV_PIPE - info: 9558 | 12
+time: 1.93 - pid: 3084 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/c1
+time: 2.03 - pid: 3084 - action: RECV_PIPE - info: 12149 | 12
+time: 3.23 - pid: 3087 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/d3
+time: 1.15 - pid: 3078 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/b9
+time: 1.20 - pid: 3078 - action: RECV_PIPE - info: 4282 | 8
+time: 0.97 - pid: 3083 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/98
+time: 1.06 - pid: 3083 - action: RECV_PIPE - info: 13965 | 16
+time: 1.04 - pid: 3081 - action: ENTRY - info: 24 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ba
+time: 1.10 - pid: 3081 - action: RECV_PIPE - info: 21465 | 24
+time: 1.35 - pid: 3079 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/e6
+time: 1.41 - pid: 3079 - action: RECV_PIPE - info: 9324 | 12
+time: 3.30 - pid: 3087 - action: RECV_PIPE - info: 4180 | 8
+time: 0.96 - pid: 3069 - action: RECV_PIPE - info: 10698 | 16
+time: 1.33 - pid: 3102 - action: EXIT - info: 0
+time: 1.47 - pid: 3074 - action: SEND_PIPE - info: 5748 | 12
+time: 1.53 - pid: 3074 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs/remotes
+time: 1.56 - pid: 3074 - action: RECV_PIPE - info: 10763 | 20
+time: 1.38 - pid: 3058 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/2c
+time: 1.43 - pid: 3058 - action: RECV_PIPE - info: 4208 | 8
+time: 1.25 - pid: 3075 - action: EXIT - info: 0
+time: 1.17 - pid: 3074 - action: EXIT - info: 0
+time: 1.22 - pid: 3057 - action: SEND_PIPE - info: 5959 | 12
+time: 1.25 - pid: 3057 - action: SEND_PIPE - info: 10763 | 20
+time: 1.29 - pid: 3057 - action: ENTRY - info: 40 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs/refs
+time: 1.32 - pid: 3057 - action: RECV_PIPE - info: 22656 | 40
+time: 1.01 - pid: 3098 - action: EXIT - info: 0
+time: 1.02 - pid: 3067 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/50
+time: 1.17 - pid: 3057 - action: EXIT - info: 0
+time: 1.16 - pid: 3067 - action: RECV_PIPE - info: 12548 | 16
+time: 1.23 - pid: 3044 - action: SEND_PIPE - info: 22656 | 40
+time: 1.28 - pid: 3044 - action: ENTRY - info: 56 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/logs
+time: 6.06 - pid: 3050 - action: EXIT - info: 0
+time: 6.09 - pid: 3051 - action: EXIT - info: 0
+time: 6.11 - pid: 3058 - action: EXIT - info: 0
+time: 6.13 - pid: 3059 - action: EXIT - info: 0
+time: 1.31 - pid: 3044 - action: RECV_PIPE - info: 34458 | 56
+time: 6.16 - pid: 3060 - action: EXIT - info: 0
+time: 6.18 - pid: 3061 - action: EXIT - info: 0
+time: 6.21 - pid: 3069 - action: EXIT - info: 0
+time: 6.23 - pid: 3070 - action: EXIT - info: 0
+time: 6.28 - pid: 3078 - action: EXIT - info: 0
+time: 6.30 - pid: 3079 - action: EXIT - info: 0
+time: 6.36 - pid: 3081 - action: EXIT - info: 0
+time: 6.38 - pid: 3083 - action: EXIT - info: 0
+time: 6.40 - pid: 3084 - action: EXIT - info: 0
+time: 6.42 - pid: 3086 - action: EXIT - info: 0
+time: 6.44 - pid: 3087 - action: EXIT - info: 0
+time: 6.46 - pid: 3089 - action: EXIT - info: 0
+time: 6.48 - pid: 3092 - action: EXIT - info: 0
+time: 1.69 - pid: 3044 - action: EXIT - info: 0
+time: 1.05 - pid: 3068 - action: RECV_PIPE - info: 4275 | 8
+time: 6.56 - pid: 3067 - action: EXIT - info: 0
+time: 6.58 - pid: 3068 - action: EXIT - info: 0
+time: 1.14 - pid: 3088 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/39
+time: 6.62 - pid: 3065 - action: EXIT - info: 0
+time: 0.85 - pid: 3100 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/57
+time: 0.88 - pid: 3100 - action: RECV_PIPE - info: 12191 | 12
+time: 1.34 - pid: 3099 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/0e
+time: 1.44 - pid: 3099 - action: RECV_PIPE - info: 4209 | 8
+time: 1.33 - pid: 3090 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/ea
+time: 1.41 - pid: 3090 - action: RECV_PIPE - info: 4180 | 8
+time: 1.13 - pid: 3096 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/55
+time: 6.69 - pid: 3090 - action: EXIT - info: 0
+time: 6.72 - pid: 3099 - action: EXIT - info: 0
+time: 6.75 - pid: 3100 - action: EXIT - info: 0
+time: 1.15 - pid: 3076 - action: SEND_PIPE - info: 4169 | 12
+time: 1.76 - pid: 3072 - action: ENTRY - info: 16 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/18
+time: 1.82 - pid: 3072 - action: RECV_PIPE - info: 13967 | 16
+time: 1.27 - pid: 3076 - action: ENTRY - info: 20 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs/remotes
+time: 1.36 - pid: 3076 - action: RECV_PIPE - info: 9184 | 20
+time: 1.33 - pid: 3088 - action: RECV_PIPE - info: 4180 | 8
+time: 1.27 - pid: 3096 - action: RECV_PIPE - info: 4179 | 8
+time: 1.39 - pid: 3093 - action: RECV_PIPE - info: 4284 | 8
+time: 3.18 - pid: 3082 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/65
+time: 3.23 - pid: 3082 - action: RECV_PIPE - info: 4265 | 8
+time: 1.32 - pid: 3076 - action: EXIT - info: 0
+time: 1.41 - pid: 3041 - action: SEND_PIPE - info: 4096 | 4
+time: 1.43 - pid: 3041 - action: SEND_PIPE - info: 4178 | 12
+time: 1.44 - pid: 3041 - action: SEND_PIPE - info: 9184 | 20
+time: 1.54 - pid: 3041 - action: ENTRY - info: 44 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/refs
+time: 1.58 - pid: 3041 - action: RECV_PIPE - info: 24311 | 44
+time: 1.75 - pid: 3041 - action: EXIT - info: 0
+time: 6.86 - pid: 3072 - action: EXIT - info: 0
+time: 6.89 - pid: 3082 - action: EXIT - info: 0
+time: 6.90 - pid: 3088 - action: EXIT - info: 0
+time: 6.92 - pid: 3093 - action: EXIT - info: 0
+time: 6.93 - pid: 3096 - action: EXIT - info: 0
+time: 1.33 - pid: 3097 - action: ENTRY - info: 8 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/4e
+time: 1.38 - pid: 3097 - action: RECV_PIPE - info: 4246 | 8
+time: 6.96 - pid: 3097 - action: EXIT - info: 0
+time: 2.83 - pid: 3080 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/6f
+time: 2.86 - pid: 3080 - action: RECV_PIPE - info: 9263 | 12
+time: 7.00 - pid: 3080 - action: EXIT - info: 0
+time: 1.15 - pid: 3085 - action: ENTRY - info: 12 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects/27
+time: 1.29 - pid: 3085 - action: RECV_PIPE - info: 9074 | 12
+time: 7.06 - pid: 3085 - action: EXIT - info: 0
+time: 7.23 - pid: 3045 - action: SEND_PIPE - info: 4277 | 8
+time: 7.26 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.27 - pid: 3045 - action: SEND_PIPE - info: 8596 | 12
+time: 7.28 - pid: 3045 - action: SEND_PIPE - info: 10814 | 16
+time: 7.30 - pid: 3045 - action: SEND_PIPE - info: 4444 | 12
+time: 7.32 - pid: 3045 - action: SEND_PIPE - info: 12375 | 16
+time: 7.33 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.34 - pid: 3045 - action: SEND_PIPE - info: 9147 | 12
+time: 7.35 - pid: 3045 - action: SEND_PIPE - info: 14041 | 16
+time: 7.36 - pid: 3045 - action: SEND_PIPE - info: 110180 | 112
+time: 7.38 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.39 - pid: 3045 - action: SEND_PIPE - info: 9070 | 12
+time: 7.40 - pid: 3045 - action: SEND_PIPE - info: 10460 | 12
+time: 7.41 - pid: 3045 - action: SEND_PIPE - info: 4282 | 8
+time: 7.42 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.43 - pid: 3045 - action: SEND_PIPE - info: 12407 | 16
+time: 7.45 - pid: 3045 - action: SEND_PIPE - info: 9265 | 12
+time: 7.46 - pid: 3045 - action: SEND_PIPE - info: 4259 | 8
+time: 7.47 - pid: 3045 - action: SEND_PIPE - info: 4209 | 8
+time: 7.48 - pid: 3045 - action: SEND_PIPE - info: 12356 | 16
+time: 7.49 - pid: 3045 - action: SEND_PIPE - info: 4096 | 4
+time: 7.50 - pid: 3045 - action: SEND_PIPE - info: 4278 | 8
+time: 7.52 - pid: 3045 - action: SEND_PIPE - info: 4299 | 8
+time: 7.53 - pid: 3045 - action: SEND_PIPE - info: 12322 | 16
+time: 7.54 - pid: 3045 - action: SEND_PIPE - info: 10572 | 12
+time: 7.55 - pid: 3045 - action: SEND_PIPE - info: 9342 | 12
+time: 7.56 - pid: 3045 - action: SEND_PIPE - info: 4273 | 8
+time: 7.63 - pid: 3045 - action: SEND_PIPE - info: 9558 | 12
+time: 7.64 - pid: 3045 - action: SEND_PIPE - info: 12149 | 12
+time: 7.66 - pid: 3045 - action: SEND_PIPE - info: 4282 | 8
+time: 7.67 - pid: 3045 - action: SEND_PIPE - info: 13965 | 16
+time: 7.68 - pid: 3045 - action: SEND_PIPE - info: 21465 | 24
+time: 7.69 - pid: 3045 - action: SEND_PIPE - info: 9324 | 12
+time: 7.70 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.71 - pid: 3045 - action: SEND_PIPE - info: 10698 | 16
+time: 7.73 - pid: 3045 - action: SEND_PIPE - info: 4208 | 8
+time: 7.74 - pid: 3045 - action: SEND_PIPE - info: 12548 | 16
+time: 7.75 - pid: 3045 - action: SEND_PIPE - info: 4275 | 8
+time: 7.76 - pid: 3045 - action: SEND_PIPE - info: 12191 | 12
+time: 7.77 - pid: 3045 - action: SEND_PIPE - info: 4209 | 8
+time: 7.78 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.80 - pid: 3045 - action: SEND_PIPE - info: 13967 | 16
+time: 7.81 - pid: 3045 - action: SEND_PIPE - info: 4180 | 8
+time: 7.82 - pid: 3045 - action: SEND_PIPE - info: 4179 | 8
+time: 7.83 - pid: 3045 - action: SEND_PIPE - info: 4284 | 8
+time: 7.84 - pid: 3045 - action: SEND_PIPE - info: 4265 | 8
+time: 7.85 - pid: 3045 - action: SEND_PIPE - info: 4246 | 8
+time: 7.86 - pid: 3045 - action: SEND_PIPE - info: 9263 | 12
+time: 7.88 - pid: 3045 - action: SEND_PIPE - info: 9074 | 12
+time: 7.90 - pid: 3045 - action: ENTRY - info: 688 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git/objects
+time: 7.93 - pid: 3045 - action: RECV_PIPE - info: 526711 | 688
+time: 1.80 - pid: 3045 - action: EXIT - info: 0
+time: 1.88 - pid: 3039 - action: SEND_PIPE - info: 22944 | 52
+time: 1.90 - pid: 3039 - action: SEND_PIPE - info: 4096 | 4
+time: 1.91 - pid: 3039 - action: SEND_PIPE - info: 4336 | 8
+time: 1.92 - pid: 3039 - action: SEND_PIPE - info: 34458 | 56
+time: 1.94 - pid: 3039 - action: SEND_PIPE - info: 24311 | 44
+time: 1.95 - pid: 3039 - action: SEND_PIPE - info: 526711 | 688
+time: 1.97 - pid: 3039 - action: ENTRY - info: 896 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1/.git
+time: 1.99 - pid: 3039 - action: RECV_PIPE - info: 627330 | 896
+time: 0.19 - pid: 3039 - action: EXIT - info: 0
+time: 0.30 - pid: 3038 - action: SEND_PIPE - info: 627330 | 896
+time: 0.34 - pid: 3038 - action: ENTRY - info: 1076 | /home/diogo/Documentos/SOPE/projetoSOPE1/projetoSOPE1
+time: -0.77 - pid: 3108 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3108 | notOrig 
+time: -0.84 - pid: 3109 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3108 | notOrig 
+time: 1.08 - pid: 3108 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.84 - pid: 3109 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.88 - pid: 3109 - action: RECV_PIPE - info: 4096 | 4
+time: 1.17 - pid: 3108 - action: RECV_PIPE - info: 4179 | 12
+time: 0.43 - pid: 3108 - action: EXIT - info: 0
+time: 0.46 - pid: 3109 - action: EXIT - info: 0
+time: 0.51 - pid: 3107 - action: SEND_PIPE - info: 4096 | 4
+time: 0.53 - pid: 3107 - action: SEND_PIPE - info: 4179 | 12
+time: 0.55 - pid: 3107 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
+time: -0.88 - pid: 3111 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | 1 | -1 | -2 | 3111 | notOrig 
+time: -0.91 - pid: 3112 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | 1 | -1 | -2 | 3111 | notOrig 
+time: 0.88 - pid: 3111 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.90 - pid: 3111 - action: RECV_PIPE - info: 4198 | 16
+time: 0.73 - pid: 3112 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.77 - pid: 3112 - action: RECV_PIPE - info: 4096 | 4
+time: 0.32 - pid: 3111 - action: EXIT - info: 0
+time: 0.34 - pid: 3112 - action: EXIT - info: 0
+time: 0.38 - pid: 3110 - action: SEND_PIPE - info: 4198 | 16
+time: 0.40 - pid: 3110 - action: SEND_PIPE - info: 4096 | 4
+time: 0.42 - pid: 3110 - action: ENTRY - info: 36 | /home/diogo/Documentos/Pasta/
+time: -0.78 - pid: 3125 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | 1 | -1 | -2 | 3125 | notOrig 
+time: 0.91 - pid: 3125 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 0.94 - pid: 3125 - action: RECV_PIPE - info: 4198 | 16
+time: 0.32 - pid: 3125 - action: EXIT - info: 0
+time: 0.37 - pid: 3126 - action: EXIT - info: 5
+time: 0.44 - pid: 3124 - action: SEND_PIPE - info: 4198 | 16
+time: 0.48 - pid: 3124 - action: SEND_PIPE - info: 0 | 0
+time: 0.51 - pid: 3124 - action: ENTRY - info: 32 | /home/diogo/Documentos/Pasta/
+time: -1.25 - pid: 3202 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | 1 | -1 | -2 | 3202 | notOrig 
+time: -1.34 - pid: 3203 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | 1 | -1 | -2 | 3202 | notOrig 
+time: 1.05 - pid: 3202 - action: ENTRY - info: 16 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.09 - pid: 3202 - action: RECV_PIPE - info: 4198 | 16
+time: 0.81 - pid: 3203 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 0.85 - pid: 3203 - action: RECV_PIPE - info: 4096 | 4
+time: 0.56 - pid: 3202 - action: EXIT - info: 0
+time: 0.60 - pid: 3203 - action: EXIT - info: 0
+time: 0.67 - pid: 3201 - action: SEND_PIPE - info: 4198 | 16
+time: 0.69 - pid: 3201 - action: SEND_PIPE - info: 4096 | 4
+time: 0.73 - pid: 3201 - action: ENTRY - info: 36 | /home/diogo/Documentos/Pasta/
+time: -1.88 - pid: 3205 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/SubPasta | -1 | -1 | -1 | -1 | -1 | -2 | 3205 | notOrig 
+time: -1.94 - pid: 3206 - action: CREATE - info: ./simpledu | /home/diogo/Documentos/Pasta/Ficheiro | -1 | -1 | -1 | -1 | -1 | -2 | 3205 | notOrig 
+time: 1.33 - pid: 3205 - action: ENTRY - info: 12 | /home/diogo/Documentos/Pasta/SubPasta
+time: 1.39 - pid: 3205 - action: RECV_PIPE - info: 4179 | 12
+time: 0.38 - pid: 3205 - action: EXIT - info: 0
+time: 1.10 - pid: 3206 - action: ENTRY - info: 4 | /home/diogo/Documentos/Pasta/Ficheiro
+time: 1.14 - pid: 3206 - action: RECV_PIPE - info: 4096 | 4
+time: 0.46 - pid: 3206 - action: EXIT - info: 0
+time: 0.52 - pid: 3204 - action: SEND_PIPE - info: 4179 | 12
+time: 0.54 - pid: 3204 - action: SEND_PIPE - info: 4096 | 4
+time: 0.56 - pid: 3204 - action: ENTRY - info: 24 | /home/diogo/Documentos/Pasta/
