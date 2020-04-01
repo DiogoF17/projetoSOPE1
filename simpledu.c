@@ -244,11 +244,11 @@ void create_file(char *arraPass[11], int pid){
     
     file_open();
     
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
-    
+    double time_spent = (((double) end - (double) begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+
     //os argumentos da linha de comandos
     char str_pid[PATH_MAX];
-    sprintf(str_pid, "time: %.2f - pid: %d - action: CREATE - info: %s | %s | %s | %s | %s | %s | %s | %s | %s | %s \n", 
+    sprintf(str_pid, "%.2f - %d - CREATE - %s %s %s %s %s %s %s %s %s %s \n",
             time_spent, pid, arraPass[0], arraPass[1], arraPass[2], arraPass[3], arraPass[4], 
             arraPass[5], arraPass[6], arraPass[7], arraPass[8], arraPass[9]);
 
@@ -261,13 +261,12 @@ void create_file(char *arraPass[11], int pid){
 }
 
 void exit_file(int exit_number, int pid){
-    //TODO:EXIT
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //o código de saída (exit status)
-    sprintf(str_pid, "time: %.2f - pid: %d - action: EXIT - info: %d\n", time_spent,pid, WEXITSTATUS(exit_number));
+    sprintf(str_pid, "%.2f - %d - EXIT - %d\n", time_spent,pid, WEXITSTATUS(exit_number));
     
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
@@ -278,13 +277,12 @@ void exit_file(int exit_number, int pid){
 }
 
 void recv_signal_file(int number){
-    //TODO:RECV_SIGNAL
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //sinal recebido(por exemplo, SIGINT)
-    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_SIGNAL - info: %d\n", time_spent,getpid(), number);
+    sprintf(str_pid, "%.2f - %d - RECV_SIGNAL - %d\n", time_spent,getpid(), number);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -294,14 +292,12 @@ void recv_signal_file(int number){
 }
 
 void send_signal_file(int number, int pid){
-    //TODO:SEND_SIGNAL
-    //TODO:RECV_SIGNAL
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //sinal recebido(por exemplo, SIGINT)
-    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_SIGNAL - info: %d | %d\n", time_spent,getpid(), number, pid);
+    sprintf(str_pid, "%.2f - %d - SEND_SIGNAL - %d %d\n", time_spent,getpid(), number, pid);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -311,13 +307,12 @@ void send_signal_file(int number, int pid){
 }
 
 void recv_pipe_file(int ms1, int ms2){
-    //TODO:RECV_PIPE
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem enviada
-    sprintf(str_pid, "time: %.2f - pid: %d - action: RECV_PIPE - info: %d | %d\n", time_spent,getpid(),ms1, ms2);
+    sprintf(str_pid, "%.2f - %d - RECV_PIPE - %d %d\n", time_spent,getpid(),ms1, ms2);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -327,13 +322,12 @@ void recv_pipe_file(int ms1, int ms2){
 }
 
 void send_pipe_file(int ms1, int ms2){
-    //TODO:SEND_PIPE
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem recebida
-    sprintf(str_pid, "time: %.2f - pid: %d - action: SEND_PIPE - info: %d | %d\n", time_spent,getpid(),ms1, ms2);
+    sprintf(str_pid, "%.2f - %d - SEND_PIPE - %d %d\n", time_spent,getpid(),ms1, ms2);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -343,13 +337,12 @@ void send_pipe_file(int ms1, int ms2){
 }
 
 void entry_file(char *d, int val){
-    //TODO:ENTRY
     file_open();
     char str_pid[PATH_MAX];
     clock_t end = clock();
     double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //número de bytes(ou blocos)seguido do caminho.
-    sprintf(str_pid, "time: %.2f - pid: %d - action: ENTRY - info: %d | %s\n", time_spent,getpid(), val, d);
+    sprintf(str_pid, "%.2f - %d - ENTRY - %d %s\n", time_spent,getpid(), val, d);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(6);
@@ -485,6 +478,7 @@ void printfArraPass(char *arraPass[]){
 
 int main(int argc, char *argv[], char *envp[]){
 
+
     DIR *dir;                  //
     struct dirent *dentry;          //   Usadas na leitura dos diretorios
     struct stat stat_entry;        //
@@ -546,12 +540,12 @@ int main(int argc, char *argv[], char *envp[]){
         perror(directory);
         return 2;
     }
-    
+
     //----------------------------------------------------
     // Ações a ser realizadas apenas pelo processo original
     if(notOrig == 0){
         original = 1;
-
+        //TOdo
         //file_open();
         begin = clock();
 
