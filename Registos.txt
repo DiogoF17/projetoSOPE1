@@ -1,0 +1,8 @@
+0.68 - 7188 - EXIT - 5
+-0.91 - 7187 - CREATE - ./simpledu /home/diogo/Documentos/Pasta/SubPasta 1 -1 -1 -1 -1 0 7187 notOrig 
+1.50 - 7187 - ENTRY - 12 /home/diogo/Documentos/Pasta/SubPasta
+1.56 - 7187 - RECV_PIPE - 4179 12
+0.85 - 7187 - EXIT - 0
+0.92 - 7186 - SEND_PIPE - 0 4179
+0.95 - 7186 - SEND_PIPE - 12 12
+0.98 - 7186 - ENTRY - 4199 /home/diogo/Documentos/Pasta/

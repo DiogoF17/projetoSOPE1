@@ -623,12 +623,12 @@ int main(int argc, char *argv[], char *envp[]){
         //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
         arraPass[DIRE] = directory;
-        arraPass[a] = verifyA(argc, argv);
-        arraPass[b] = verifyB(argc, argv);
-        arraPass[B] = verifyBlocks(argc, argv);
-        arraPass[L] = verifyL(argc, argv);
-        arraPass[S] = verifyS(argc, argv);
-        arraPass[m] = verifyMax(argc, argv);
+        arraPass[a] = a1;
+        arraPass[b] = b1;
+        arraPass[B] = B1;
+        arraPass[L] = L1;
+        arraPass[S] = S1;
+        arraPass[m] = m1;
         arraPass[g] = "-1";
         arraPass[ORIG] = "notOrig";
         arraPass[DIRSYMB] = "-1";
