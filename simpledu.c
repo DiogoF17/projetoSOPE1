@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <fcntl.h> 
 #include <math.h>
-#include <errno.h>
 
 #define READ 0
 #define WRITE 1
@@ -17,7 +16,7 @@
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
 //--------------------------------------------------------------
-char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size", "--max-depth"};
+char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size"};
 
 //zero- indica se inclui o zero ou nao
 int isValidNumber(char *string, int zero){
@@ -49,40 +48,42 @@ int inValidWords(char *string){
     return 0;
 }
 
-void validFormat(int argc, char *argv[]){
+void validFormat(int argc, char *argv[], int ind){
    for(int i = 1; i < argc; i++){
-        if(inValidWords(argv[i]) == 0){
-            if (strncmp(argv[i], "--max-depth=", 12) == 0) {
-                if (!isValidNumber(&(argv[i])[12], 1)) {
-                    printf("Invalid Format 0!\n");
-                    exit(1);
-                }
-            }
-            else {
-                if(!isValidNumber(argv[i], 1) && ((&argv[i])[0][0] != '/') && ((&argv[i])[0][0] != '~') && ((&argv[i])[0][0] != '.')){
-                    printf("Invalid Format!1\n");
-                    exit(1);
-                }
-                else if(isValidNumber(argv[i], 1) == 1){
-                    if(strcmp(argv[i-1], "--max-depth") != 0 && strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
-                        printf("Invalid Format!2\n");
+       if(i != ind){
+            if(inValidWords(argv[i]) == 0){
+                if (strncmp(argv[i], "--max-depth=", 12) == 0) {
+                    if (!isValidNumber(&(argv[i])[12], 1)) {
+                        printf("Invalid Format 0!\n");
                         exit(1);
                     }
                 }
-            }
+                else {
+                    if(!isValidNumber(argv[i], 1)){
+                        printf("Invalid Format!1\n");
+                        exit(1);
+                    }
+                    else if(isValidNumber(argv[i], 1) == 1){
+                        if(strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
+                            printf("Invalid Format!2\n");
+                            exit(1);
+                        }
+                    }
+                }
 
-        }
-        else if(strcmp(argv[i], "--max-depth") == 0 || strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
-            if(argv[i+1] == NULL){
-                printf("Invalid Format 3!\n");
-                exit(1);
             }
-            else if(!isValidNumber(argv[i + 1],1)){
-                printf("Invalid Format 4!\n");
-                exit(1);
+            else if(strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
+                if(argv[i+1] == NULL){
+                    printf("Invalid Format 3!\n");
+                    exit(1);
+                }
+                else if(!isValidNumber(argv[i + 1],1)){
+                    printf("Invalid Format 4!\n");
+                    exit(1);
+                }
             }
         }
-    }
+   }
 }
 
 int verifyA(int num, char *arg[]){
@@ -135,13 +136,7 @@ int verifyBlocks(int num, char *arg[]){
 
 int verifyMax(int num, char *arg[]){
      for(int i = 1; i < num; i++){
-        if(strcmp(arg[i], "--max-depth") == 0) {
-            if (isValidNumber(arg[i + 1], 1)) {
-                return atoi(arg[i + 1]);
-            }
-            else
-                printf("Next to --max-depth has to be a number!");
-        }else  if (strncmp(arg[i], "--max-depth=", 12) == 0) {
+        if (strncmp(arg[i], "--max-depth=", 12) == 0) {
             char size[10];
             strcpy(size, &(arg[i])[12]);
             if (isValidNumber(size, 1)) {
@@ -189,9 +184,7 @@ int makeArg(int ind, char *argv[], int argc, char *d, char *arraPass[], int grou
         if(i == ind)
             arraPass[i] = d;
         else if(i != argc){
-            if(strcmp(argv[i], "--max-depth") == 0)
-                ret = i + 1;
-            else if (strncmp(argv[i], "--max-depth=", 12) == 0)
+            if (strncmp(argv[i], "--max-depth=", 12) == 0)
             {
                 ret = i;
             }
@@ -304,7 +297,7 @@ int main(int argc, char *argv[], char *envp[]){
     //-------------------------------------------------------
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
-    char path[PATH_MAX];
+    char path[PATH_MAX];    //path onde se encontra o executavel "simpledu"
     //-------------------------------------------------------
     int a, b, S, B, L, m; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
@@ -360,12 +353,23 @@ int main(int argc, char *argv[], char *envp[]){
         strcat(fileName, getenv("LOG_FILENAME"));
     
     */
+
+    //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
+    if((ind = passDir(argc, argv, envp)) == -1)
+        strcpy(directory, getenv("PWD"));
+    else
+        strcpy(directory, argv[ind]);
+
+    if ((dir = opendir(directory)) == NULL) {
+        perror(directory);
+        return 2;
+    }
     
 
     // Ações a ser realizadas apenas pelo processo original
     if(group == -1){
         original = 1;
-        validFormat(argc, argv);
+        validFormat(argc, argv, ind);
         //regProg = fopen(fileName, "a");
         //fclose(regProg);
     }else
@@ -385,18 +389,6 @@ int main(int argc, char *argv[], char *envp[]){
     //1
     //validFormat(argc, argv);  //verifica se está num formato válido
 
-    //2
-    //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
-    if((ind = passDir(argc, argv, envp)) == -1)
-        strcpy(directory, getenv("PWD"));
-    else
-        strcpy(directory, argv[ind]);
-
-    if ((dir = opendir(directory)) == NULL) {
-        perror(directory);
-        return 2;
-    }
-
     //3
     //Verifica as opcoes do utilizador
     a = verifyA(argc, argv);  //verifica se colocou -a ou --all
@@ -404,7 +396,7 @@ int main(int argc, char *argv[], char *envp[]){
     S = verifyS(argc, argv);  //verifica se colocou -S ou --separate-dirs
     L = verifyL(argc, argv);  //verifica se colocou -L ou --deference
     B = verifyBlocks(argc, argv);  //verifica se colocou -B ou --block-size
-    m = verifyMax(argc, argv);  //verifica se colocou --max-depth
+    m = verifyMax(argc, argv);  //verifica se colocou --max-depth=
     //----------------------------------------------------
 
     chdir(directory);
@@ -453,10 +445,7 @@ int main(int argc, char *argv[], char *envp[]){
 
                 int num = findGroup(argc, argv);
                 int val = makeArg(ind, argv, argc, d, arraPass, num, group);
-                if(val != -1 && (m > -1) && (strcmp(argv[val-1], "--max-depth") == 0)){
-                    sprintf(string, "%d", (m - 1));
-                    arraPass[val] = string;
-                }else if (val!=-1 && m >-1){
+                if (val!=-1 && m >-1){
                     sprintf(string, "--max-depth=%d", (m - 1));
                     arraPass[val] = string;
                 }
@@ -506,16 +495,12 @@ int main(int argc, char *argv[], char *envp[]){
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
             }else{//Segue links simbolicos
-                char aux1[PATH_MAX], aux2[PATH_MAX];
-                readlink(d, aux1, sizeof(aux1));
-                strcpy(aux2, directory);
-                if(strcmp(&aux2[strlen(d)-1], "/") != 0)
-                    strcat(aux2, "/");
-                strcat(aux2, aux1);
-                lstat(aux2, &stat_entry);
+                char tmp[PATH_MAX]; // guarda o path que o symblink está a seguir
+                readlink(d, tmp, sizeof(tmp));
+                lstat(tmp, &stat_entry);
                 somaBlocks += ((int)stat_entry.st_blocks)/2;
                 somaSize += (int)stat_entry.st_size;
-                if((m == -2 || m > 0) &&  a==1){
+                if(m == -2 || m > 0){
                     if(B >= 1)
                         printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/B), d);
                     else if(b!= 1)
@@ -523,6 +508,7 @@ int main(int argc, char *argv[], char *envp[]){
                     else if(b == 1)
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
+                
             }
         }
         //----------------------------------------------------
