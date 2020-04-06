@@ -10,7 +10,6 @@
 #include <fcntl.h> 
 #include <math.h>
 #include <errno.h>
-#include <time.h>
 #include <sys/time.h>
 
 //----------------------------------------------------------------
@@ -22,8 +21,8 @@ Palavras que poderao ser introduzidas pelo utilizador mas falta aqui o --max-dep
 char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size"};
 
 //|||||||||||||||||||||||||||||||||||
-//arraPass = {..., ..., ..., ..., ..., ..., ..., ..., ..., ...,      ...}
-//            func, dir, -a, -b , -B , -L , -S, -max, groupS, Orig  , dirSymb
+//arraPass = {..., ..., ..., ..., ..., ..., ..., ..., ..., ...}
+//            func, dir, -a, -b , -B , -L , -S, -max, groupS, Orig
 //|||||||||||||||||||||||||||||||||||
 
 /*
@@ -39,7 +38,6 @@ Macros usadas na passagem do array.
 #define m 7      //--max-depth=x
 #define g 8      //contem o groupid necessario para fazer o set do group.   
 #define ORIG 9   //string que nos indica se e o processo original.
-#define DIRSYMB 10   //string que nos indica se e o processo original.
 
 /*
 Macros usadas nos pipes.
@@ -284,7 +282,6 @@ void create_file(char *arraPass[11], int pid){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -294,16 +291,14 @@ Para registar em ficheiro.
 void exit_file(int exit_number, int pid){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
     //o código de saída (exit status)
     sprintf(str_pid, "%.2f - %d - EXIT - %d\n", get_time(),pid, WEXITSTATUS(exit_number));
-    
+
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -313,7 +308,6 @@ Para registar em ficheiro.
 void recv_signal_file(int number){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
 
     //sinal recebido(por exemplo, SIGINT)
@@ -322,7 +316,6 @@ void recv_signal_file(int number){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -332,7 +325,6 @@ Para registar em ficheiro.
 void send_signal_file(int number, int pid){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
 
     //sinal recebido(por exemplo, SIGINT)
@@ -341,7 +333,6 @@ void send_signal_file(int number, int pid){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -351,7 +342,6 @@ Para registar em ficheiro.
 void recv_pipe_file(int ms1, int ms2){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
 
     //a mensagem enviada
@@ -360,7 +350,6 @@ void recv_pipe_file(int ms1, int ms2){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -370,16 +359,14 @@ Para registar em ficheiro.
 void send_pipe_file(int ms1, int ms2){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
-
     //a mensagem recebida
+
     sprintf(str_pid, "%.2f - %d - SEND_PIPE - %d %d\n", get_time(),getpid(),ms1, ms2);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -389,16 +376,15 @@ Para registar em ficheiro.
 void entry_file(char *d, int val){
 
     file_open_append();
-
     char str_pid[PATH_MAX];
 
     //número de bytes(ou blocos)seguido do caminho.
+
     sprintf(str_pid, "%.2f - %d - ENTRY - %d %s\n", get_time(),getpid(), val, d);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
             exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -534,7 +520,6 @@ int countBar(char *string){
     return count;
 }
 
-
 void printfArraPass(char *arraPass[]){
     printf("func: %s\n", arraPass[FUNC]);
     printf("dire: %s\n", arraPass[DIRE]);
@@ -563,7 +548,7 @@ int main(int argc, char *argv[], char *envp[]){
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
     char path[PATH_MAX];
-    char *arraPass[12];
+    char *arraPass[11];
     //-------------------------------------------------------
     char *a1, *b1, *S1, *B1, *L1, *m1; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
@@ -644,7 +629,9 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = m1;
         arraPass[g] = "-1";
         arraPass[ORIG] = "notOrig";
+
         arraPass[DIRSYMB] = "-1";
+
     }else{
         //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
@@ -657,7 +644,9 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = argv[7];
         arraPass[g] = argv[8];
         arraPass[ORIG] = argv[9];
+
         arraPass[DIRSYMB] = argv[10];
+
         pipeFather = dup(STDOUT_FILENO);
     }
 
@@ -751,11 +740,11 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b]) != 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
          //----------------------------------------------------
@@ -767,11 +756,11 @@ int main(int argc, char *argv[], char *envp[]){
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                     if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                     else if(atoi(arraPass[b])!= 1)
-                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                     else if(atoi(arraPass[b]) == 1)
-                        printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
             }
             //Segue links simbolicos
@@ -855,11 +844,11 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) && atoi(arraPass[a]) == 1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b])!= 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
     }
