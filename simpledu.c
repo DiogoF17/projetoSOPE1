@@ -38,6 +38,7 @@ Macros usadas na passagem do array.
 #define m 7      //--max-depth=x
 #define g 8      //contem o groupid necessario para fazer o set do group.   
 #define ORIG 9   //string que nos indica se e o processo original.
+#define DIRSYMB 10   
 
 /*
 Macros usadas nos pipes.
@@ -548,7 +549,7 @@ int main(int argc, char *argv[], char *envp[]){
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
     char path[PATH_MAX];
-    char *arraPass[11];
+    char *arraPass[12];
     //-------------------------------------------------------
     char *a1, *b1, *S1, *B1, *L1, *m1; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
