@@ -491,8 +491,7 @@ void sigIntHandler(int signal){
 
 }
 
-<<<<<<< HEAD
-=======
+
 char* printSymbolicDir(char *arraPass[], char *string, char *currentDir){
     if(strcmp(arraPass[DIRSYMB], "-1") != 0){
         char aux[PATH_MAX];
@@ -534,7 +533,7 @@ void printfArraPass(char *arraPass[]){
 
 }*/
 
->>>>>>> becddcd82263f0332b1d64b6e0511d7b8f303c47
+
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
