@@ -89,18 +89,18 @@ void validFormat(int argc, char *argv[], int ind){
             if(inValidWords(argv[i]) == 0){
                 if (strncmp(argv[i], "--max-depth=", 12) == 0) {
                     if (!isValidNumber(&(argv[i])[12], 1)) {
-                        printf("Invalid Format 0!\n");
+                        printf("Invalid Format!\n");
                         exit(1);
                     }
                 }
                 else {
                     if(!isValidNumber(argv[i], 1)){
-                        printf("Invalid Format!1\n");
+                        printf("Invalid Format!\n");
                         exit(1);
                     }
                     else if(isValidNumber(argv[i], 1) == 1){
                         if(strcmp(argv[i-1], "--block-size") != 0 && strcmp(argv[i-1], "-B") != 0){
-                            printf("Invalid Format!2\n");
+                            printf("Invalid Format!\n");
                             exit(1);
                         }
                     }
@@ -109,11 +109,11 @@ void validFormat(int argc, char *argv[], int ind){
             }
             else if(strcmp(argv[i], "--block-size") == 0 || strcmp(argv[i], "-B") == 0){
                 if(argv[i+1] == NULL){
-                    printf("Invalid Format 3!\n");
+                    printf("Invalid Format!\n");
                     exit(1);
                 }
                 else if(!isValidNumber(argv[i + 1],1)){
-                    printf("Invalid Format 4!\n");
+                    printf("Invalid Format!\n");
                     exit(1);
                 }
             }
@@ -904,7 +904,7 @@ int main(int argc, char *argv[], char *envp[]){
             
             if(atoi(arraPass[m]) != -1){
                 if(atoi(arraPass[B]) >= 1){
-                    printf("B%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
                     //entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
                 }
                 else if(atoi(arraPass[b]) != 1){
