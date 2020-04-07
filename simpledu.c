@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <fcntl.h> 
 #include <math.h>
-#include <errno.h>
 #include <sys/time.h>
 
 //----------------------------------------------------------------
@@ -496,6 +495,7 @@ void sigIntHandler(int signal){
 
 }
 
+
 char* printSymbolicDir(char *arraPass[], char *string, char *currentDir){
     if(strcmp(arraPass[DIRSYMB], "-1") != 0){
         char aux[PATH_MAX];
@@ -536,6 +536,7 @@ void printfArraPass(char *arraPass[]){
 
 }
 
+
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
@@ -557,7 +558,6 @@ int main(int argc, char *argv[], char *envp[]){
     pid_t pid;  // guarda o pid quando for executado o fork()
     int fd[2]; // array de inteiros utilizado para o pipe()
     int original = 0;
-    int pipeFather;
     //-------------------------------------------------------
     char buffer[50];  //Variavel auxiliar
     //-------------------------------------------------------
@@ -647,8 +647,6 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[ORIG] = argv[9];
 
         arraPass[DIRSYMB] = argv[10];
-
-        pipeFather = dup(STDOUT_FILENO);
     }
 
     //cria uma variavel de ambiente com o pid do group definido
@@ -688,7 +686,7 @@ int main(int argc, char *argv[], char *envp[]){
             if(pid == 0){
 
                 close(fd[READ]);
-                dup2(fd[WRITE],STDOUT_FILENO);
+                dup2(fd[WRITE],STDERR_FILENO);
 
                 if(atoi(arraPass[g]) == -1){
                     char string[PATH_MAX];
@@ -731,10 +729,9 @@ int main(int argc, char *argv[], char *envp[]){
 
             }
         }
-        if (!original){
-            dup2(STDERR_FILENO,STDOUT_FILENO);
-        }
-         //----------------------------------------------------
+       
+        //----------------------------------------------------
+
         //Ficheiros de um tipo tal que nao sao regulares nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
@@ -763,6 +760,7 @@ int main(int argc, char *argv[], char *envp[]){
                     else if(atoi(arraPass[b]) == 1)
                         printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
+
             }
             //Segue links simbolicos
             else{
@@ -781,7 +779,7 @@ int main(int argc, char *argv[], char *envp[]){
                     if(pid == 0){
 
                         close(fd[READ]);
-                        dup2(fd[WRITE],STDOUT_FILENO);
+                        dup2(fd[WRITE],STDERR_FILENO);
 
                         if(atoi(arraPass[g]) == -1){
                             char string[PATH_MAX];
@@ -836,6 +834,7 @@ int main(int argc, char *argv[], char *envp[]){
                             printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
                     }
                 }
+                
             }
         }
         //----------------------------------------------------
@@ -923,13 +922,12 @@ int main(int argc, char *argv[], char *envp[]){
     }
 
     if (!original){
-        dup2(pipeFather,STDOUT_FILENO);
         char msg[50];
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
         //recv_pipe_file(somaSize, somaBlocks);
-        write(STDOUT_FILENO,msg,len);
+        write(STDERR_FILENO,msg,len);
     }
 
     return 0; 
