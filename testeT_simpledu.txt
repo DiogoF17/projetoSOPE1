@@ -1,0 +1,3 @@
+24      /home/diogo/Documentos/Pasta
+4       /home/diogo/Documentos/Pasta/Ficheiro
+12      /home/diogo/Documentos/Pasta/SubPasta

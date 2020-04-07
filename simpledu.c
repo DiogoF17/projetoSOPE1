@@ -738,11 +738,11 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
+                    printf("%-8d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b]) != 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
+                    printf("%-8d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
+                    printf("%-8d%s\n",(int)stat_entry.st_size, d);
             }
         }
          //----------------------------------------------------
@@ -754,11 +754,11 @@ int main(int argc, char *argv[], char *envp[]){
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                     if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
+                        printf("%-8d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                     else if(atoi(arraPass[b])!= 1)
-                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
+                        printf("%-8d%s\n",((int)stat_entry.st_blocks)/2, d);
                     else if(atoi(arraPass[b]) == 1)
-                        printf("%-10d%s\n",(int)stat_entry.st_size, d);
+                        printf("%-8d%s\n",(int)stat_entry.st_size, d);
                 }
 
             }
@@ -827,11 +827,11 @@ int main(int argc, char *argv[], char *envp[]){
                     somaSize += (int)stat_entry.st_size;
                     if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                         if(atoi(arraPass[B]) >= 1)
-                            printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                            printf("%-8d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
                         else if(atoi(arraPass[b])!= 1)
-                            printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                            printf("%-8d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
                         else if(atoi(arraPass[b]) == 1)
-                            printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                            printf("%-8d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
                     }
                 }
                 
@@ -844,11 +844,11 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) && atoi(arraPass[a]) == 1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
+                    printf("%-8d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b])!= 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
+                    printf("%-8d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
+                    printf("%-8d%s\n",(int)stat_entry.st_size, d);
             }
         }
     }
@@ -904,15 +904,15 @@ int main(int argc, char *argv[], char *envp[]){
             
             if(atoi(arraPass[m]) != -1){
                 if(atoi(arraPass[B]) >= 1){
-                    printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-8d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
                     //entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
                 }
                 else if(atoi(arraPass[b]) != 1){
-                    printf("%-10d%s\n",somaBlocks, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-8d%s\n",somaBlocks, printSymbolicDir(arraPass, dentry->d_name, d));
                     //entry_file(directory, somaBlocks);
                 }
                 else if(atoi(arraPass[b]) == 1){
-                    printf("b%-10d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("b%-8d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
                     //entry_file(directory, somaSize);
                 }
             }
