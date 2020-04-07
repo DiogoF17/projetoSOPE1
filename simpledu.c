@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <fcntl.h> 
 #include <math.h>
-#include <time.h>
+#include <sys/time.h>
 
 //----------------------------------------------------------------
 //      FUNÇÕES DE VALIDAÇÃO
@@ -20,8 +20,8 @@ Palavras que poderao ser introduzidas pelo utilizador mas falta aqui o --max-dep
 char *validWords[] = {"-l", "--count-links", "-a", "--all", "-b", "--bytes", "-S", "--separate-dirs", "-L", "--dereference", "-B", "--block-size"};
 
 //|||||||||||||||||||||||||||||||||||
-//arraPass = {..., ..., ..., ..., ..., ..., ..., ..., ..., ...,      ...}
-//            func, dir, -a, -b , -B , -L , -S, -max, groupS, Orig  , dirSymb
+//arraPass = {..., ..., ..., ..., ..., ..., ..., ..., ..., ...}
+//            func, dir, -a, -b , -B , -L , -S, -max, groupS, Orig
 //|||||||||||||||||||||||||||||||||||
 
 /*
@@ -37,7 +37,7 @@ Macros usadas na passagem do array.
 #define m 7      //--max-depth=x
 #define g 8      //contem o groupid necessario para fazer o set do group.   
 #define ORIG 9   //string que nos indica se e o processo original.
-#define DIRSYMB 10   //string que nos indica se e o processo original.
+#define DIRSYMB 10   
 
 /*
 Macros usadas nos pipes.
@@ -223,8 +223,16 @@ int passDir(int num, char *arg[], char *envp[]){
 //------------------------------------------------------------------------
 
 FILE *regProg;
-clock_t begin;
+struct timeval start, stop;
 
+double get_time(){
+    gettimeofday(&stop,NULL);
+    return (double)(stop.tv_usec-start.tv_usec)/1000;
+}
+
+/*
+Limpa o ficheiro.
+*/
 int file_open_new_empty(){
     char fileName[PATH_MAX];
     if (getenv("LOG_FILENAME") == NULL){
@@ -234,12 +242,15 @@ int file_open_new_empty(){
         strcpy(fileName, getenv("LOG_FILENAME"));
     if((regProg = fopen(fileName, "w"))==NULL){
         perror("fopen");
-        exit(4);
+        exit(2);
     }
     fclose(regProg);
 
 }
 
+/*
+Abre ficheiro para registar info.
+*/
 int file_open_append(){
     char fileName[PATH_MAX];
     if (getenv("LOG_FILENAME") == NULL){
@@ -249,138 +260,131 @@ int file_open_append(){
         strcpy(fileName, getenv("LOG_FILENAME"));
     if((regProg = fopen(fileName, "a"))==NULL){
         perror("fopen");
-        exit(4);
+        exit(2);
     }
 
 }
 
+/*
+Para registar em ficheiro.
+*/
 void create_file(char *arraPass[11], int pid){
-    clock_t end = clock();
     
     file_open_append();
-    
-    double time_spent = (((double) end - (double) begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
 
     //os argumentos da linha de comandos
     char str_pid[PATH_MAX];
     sprintf(str_pid, "%.2f - %d - CREATE - %s %s %s %s %s %s %s %s %s %s \n",
-            time_spent, pid, arraPass[0], arraPass[1], arraPass[2], arraPass[3], arraPass[4], 
+            get_time(), pid, arraPass[0], arraPass[1], arraPass[2], arraPass[3], arraPass[4], 
             arraPass[5], arraPass[6], arraPass[7], arraPass[8], arraPass[9]);
 
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void exit_file(int exit_number, int pid){
 
-    //TODO:EXIT
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //o código de saída (exit status)
-    sprintf(str_pid, "%.2f - %d - EXIT - %d\n", time_spent,pid, WEXITSTATUS(exit_number));
-    
+    sprintf(str_pid, "%.2f - %d - EXIT - %d\n", get_time(),pid, WEXITSTATUS(exit_number));
+
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void recv_signal_file(int number){
 
-    //TODO:RECV_SIGNAL
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+
     //sinal recebido(por exemplo, SIGINT)
-    sprintf(str_pid, "%.2f - %d - RECV_SIGNAL - %d\n", time_spent,getpid(), number);
+    sprintf(str_pid, "%.2f - %d - RECV_SIGNAL - %d\n", get_time(),getpid(), number);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void send_signal_file(int number, int pid){
 
-    //TODO:SEND_SIGNAL
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+
     //sinal recebido(por exemplo, SIGINT)
-    sprintf(str_pid, "%.2f - %d - SEND_SIGNAL - %d %d\n", time_spent,getpid(), number, pid);
+    sprintf(str_pid, "%.2f - %d - SEND_SIGNAL - %d %d\n", get_time(),getpid(), number, pid);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void recv_pipe_file(int ms1, int ms2){
 
-    //TODO:RECV_PIPE
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+
     //a mensagem enviada
-    sprintf(str_pid, "%.2f - %d - RECV_PIPE - %d %d\n", time_spent,getpid(),ms1, ms2);
+    sprintf(str_pid, "%.2f - %d - RECV_PIPE - %d %d\n", get_time(),getpid(),ms1, ms2);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void send_pipe_file(int ms1, int ms2){
 
-    //TODO:SEND_PIPE
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
     //a mensagem recebida
-    sprintf(str_pid, "%.2f - %d - SEND_PIPE - %d %d\n", time_spent,getpid(),ms1, ms2);
+
+    sprintf(str_pid, "%.2f - %d - SEND_PIPE - %d %d\n", get_time(),getpid(),ms1, ms2);
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
+/*
+Para registar em ficheiro.
+*/
 void entry_file(char *d, int val){
 
-    //TODO:ENTRY
     file_open_append();
-
     char str_pid[PATH_MAX];
-    clock_t end = clock();
-    double time_spent = ((double)(end - begin) / CLOCKS_PER_SEC)*1000;//tempo em milissegundos
+
     //número de bytes(ou blocos)seguido do caminho.
-    sprintf(str_pid, "%.2f - %d - ENTRY - %d %s\n", time_spent,getpid(), val, d);
+
+    sprintf(str_pid, "%.2f - %d - ENTRY - %d %s\n", get_time(),getpid(), val, d);
      if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
-            exit(6);
+            exit(2);
     }
-
     fclose(regProg);
 }
 
@@ -415,8 +419,8 @@ void fazWait(){
         val = wait(&exit_status);
         if(val == -1 && errno == ECHILD)
             break;
-        else
-            exit_file(exit_status, val);
+        //else
+           // exit_file(exit_status, val);
     }
 
 }
@@ -443,21 +447,21 @@ void sigIntHandler(int signal){
     size_t len;
     int num;
 
-    recv_signal_file(SIGINT);
+    //recv_signal_file(SIGINT);
 
     if(getenv("PIDGROUP") == NULL){
         printf("Erro\n");
-        exit(7);
+        exit(3);
     }
 
     num = atoi(getenv("PIDGROUP"));
 
     if(num != -1){
         if(kill(-num, SIGSTOP) == -1){
-            printf("Error on Kill\n");
-            exit(7);
+            perror("Kill");
+            exit(3);
         }
-        send_signal_file(SIGSTOP, -num);
+        //send_signal_file(SIGSTOP, -num);
     }
 
     printf("\n\n######################################################\n\t\tMenu de Saida\n######################################################\n");
@@ -475,18 +479,18 @@ void sigIntHandler(int signal){
 
     if(res == 'n' && num != -1){
         if(kill(-num, SIGCONT) == -1){
-            printf("Error on Kill\n");
-            exit(7);
+            perror("Kill");
+            exit(3);
         }
-        send_signal_file(SIGCONT, -num);
+        //send_signal_file(SIGCONT, -num);
     }
     else if(num != 0){
          if(kill(-num, SIGTERM) == -1){
-            printf("Error on Kill\n");
-            exit(7);
+            perror("Kill");
+            exit(3);
         }
-        send_signal_file(SIGTERM, -num);
-        exit(5);
+        //send_signal_file(SIGTERM, -num);
+        exit(0);
     }
 
 }
@@ -517,7 +521,6 @@ int countBar(char *string){
     return count;
 }
 
-/*
 void printfArraPass(char *arraPass[]){
     printf("func: %s\n", arraPass[FUNC]);
     printf("dire: %s\n", arraPass[DIRE]);
@@ -531,14 +534,15 @@ void printfArraPass(char *arraPass[]){
     printf("Ori: %s\n", arraPass[ORIG]);
     printf("ultimo: %s\n", arraPass[10]);
 
-}*/
+}
 
 
 //-----------------------------------------------------------------------
 
 int main(int argc, char *argv[], char *envp[]){
-
-
+    //inicia contagem do tempo
+    gettimeofday(&start,NULL);
+    //............................................
     DIR *dir;                  //
     struct dirent *dentry;          //   Usadas na leitura dos diretorios
     struct stat stat_entry;        //
@@ -554,15 +558,11 @@ int main(int argc, char *argv[], char *envp[]){
     pid_t pid;  // guarda o pid quando for executado o fork()
     int fd[2]; // array de inteiros utilizado para o pipe()
     int original = 0;
-    int pipeFather;
     //-------------------------------------------------------
     char buffer[50];  //Variavel auxiliar
     //-------------------------------------------------------
 
     strcpy(path,getenv("PWD"));
-    //printf("Path: %s\n", path);
-
-    //printf("%s\n", path);
 
     setbuf(stdout, NULL);
 
@@ -570,7 +570,7 @@ int main(int argc, char *argv[], char *envp[]){
     // criar um pipe para comunicar com os filhos
     if (pipe(fd)<0){
         perror("Pipe");
-        exit(1);
+        exit(4);
     }
 
     //----------------------------------------------------
@@ -598,7 +598,7 @@ int main(int argc, char *argv[], char *envp[]){
 
     if ((dir = opendir(directory)) == NULL) {
         perror(directory);
-        return 2;
+        exit(5);
     }
 
     //----------------------------------------------------
@@ -606,9 +606,7 @@ int main(int argc, char *argv[], char *envp[]){
     if(notOrig == 0){
         original = 1;
 
-        file_open_new_empty();
-
-        begin = clock();
+        //file_open_new_empty();
 
         //Verifica se esta num formato valido
         validFormat(argc, argv, ind);
@@ -624,16 +622,17 @@ int main(int argc, char *argv[], char *envp[]){
         //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
         arraPass[DIRE] = directory;
-        arraPass[a] = verifyA(argc, argv);
-        arraPass[b] = verifyB(argc, argv);
-        arraPass[B] = verifyBlocks(argc, argv);
-        arraPass[L] = verifyL(argc, argv);
-        arraPass[S] = verifyS(argc, argv);
-        arraPass[m] = verifyMax(argc, argv);
+        arraPass[a] = a1;
+        arraPass[b] = b1;
+        arraPass[B] = B1;
+        arraPass[L] = L1;
+        arraPass[S] = S1;
+        arraPass[m] = m1;
         arraPass[g] = "-1";
         arraPass[ORIG] = "notOrig";
+
         arraPass[DIRSYMB] = "-1";
-        //arraPass[10] = NULL;
+
     }else{
         //inicializa um array que facilita a analise
         arraPass[FUNC] = argv[0];
@@ -646,14 +645,12 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = argv[7];
         arraPass[g] = argv[8];
         arraPass[ORIG] = argv[9];
+
         arraPass[DIRSYMB] = argv[10];
-        //arraPass[10] = NULL;
-        pipeFather = dup(STDOUT_FILENO);
     }
 
     //cria uma variavel de ambiente com o pid do group definido
     sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
-    //printf("Buffer: %s\n", buffer);
     putenv(buffer);
     //----------------------------------------------------
     
@@ -684,28 +681,26 @@ int main(int argc, char *argv[], char *envp[]){
 
             if(pid < 0){
                 perror("Fork");
-                exit(1);
+                exit(6);
             }
             if(pid == 0){
 
                 close(fd[READ]);
-                dup2(fd[WRITE],STDOUT_FILENO);
+                dup2(fd[WRITE],STDERR_FILENO);
 
                 if(atoi(arraPass[g]) == -1){
                     char string[PATH_MAX];
                     sprintf(string, "%d", getpid());
                     arraPass[g] = string;
                 }
-                
+
                 if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
-                    printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
-                    exit(5);
+                    perror("setpgid error");           //todos ao mesmo mas diferente do pai
+                    exit(7);
                 }
 
                 //coloca o novo diretorio na array
                 arraPass[DIRE] = d;
-
-                //printfArraPass(arraPass);
 
                 //se tiver sido passado --max-depthdecrementa
                 if(atoi(arraPass[m])>-1)
@@ -716,13 +711,11 @@ int main(int argc, char *argv[], char *envp[]){
                         arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
                 }
 
-                //printfArraPass(arraPass);
-
-                create_file(arraPass, getpid());
+                //create_file(arraPass, getpid());
 
                 execve(strcat(path,"/simpledu"), arraPass, envp);
                 perror("execvp");
-                exit(2);
+                exit(8);
             }
             else{
                 if(atoi(arraPass[g]) == -1){
@@ -734,24 +727,22 @@ int main(int argc, char *argv[], char *envp[]){
                 sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
                 putenv(buffer);
 
-                //create_file(arraPass);
             }
         }
-        if (!original){
-            dup2(STDERR_FILENO,STDOUT_FILENO);
-        }
-         //----------------------------------------------------
+       
+        //----------------------------------------------------
+
         //Ficheiros de um tipo tal que nao sao regulares nem links simbolicos
         if (!S_ISLNK(stat_entry.st_mode) && !S_ISREG(stat_entry.st_mode) && !S_ISDIR(stat_entry.st_mode)){
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             somaSize += (int)stat_entry.st_size;
-            if(atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0){
+            if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b]) != 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
          //----------------------------------------------------
@@ -763,11 +754,11 @@ int main(int argc, char *argv[], char *envp[]){
                 somaSize += (int)stat_entry.st_size;
                 if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) &&  atoi(arraPass[a])==1){
                     if(atoi(arraPass[B]) >= 1)
-                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                     else if(atoi(arraPass[b])!= 1)
-                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                     else if(atoi(arraPass[b]) == 1)
-                        printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                        printf("%-10d%s\n",(int)stat_entry.st_size, d);
                 }
 
             }
@@ -783,28 +774,26 @@ int main(int argc, char *argv[], char *envp[]){
 
                     if(pid < 0){
                         perror("Fork");
-                        exit(1);
+                        exit(6);
                     }
                     if(pid == 0){
 
                         close(fd[READ]);
-                        dup2(fd[WRITE],STDOUT_FILENO);
+                        dup2(fd[WRITE],STDERR_FILENO);
 
                         if(atoi(arraPass[g]) == -1){
                             char string[PATH_MAX];
                             sprintf(string, "%d", getpid());
                             arraPass[g] = string;
                         }
-                        
+
                         if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
-                            printf("setpgid error\n");           //todos ao mesmo mas diferente do pai
-                            exit(5);
+                            perror("setpgid error");          //todos ao mesmo mas diferente do pai
+                            exit(7);
                         }
 
                         //coloca o novo diretorio na array
                         arraPass[DIRE] = d;
-
-                        //printfArraPass(arraPass);
 
                         //se tiver sido passado --max-depthdecrementa
                         if(atoi(arraPass[m])>-1)
@@ -815,13 +804,11 @@ int main(int argc, char *argv[], char *envp[]){
                                 arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
                         }
 
-                        //printfArraPass(arraPass);
-
-                        create_file(arraPass, getpid());
+                        //create_file(arraPass, getpid());
 
                         execve(strcat(path,"/simpledu"), arraPass, envp);
                         perror("execvp");
-                        exit(2);
+                        exit(8);
                     }
                     else{
                         if(atoi(arraPass[g]) == -1){
@@ -833,7 +820,6 @@ int main(int argc, char *argv[], char *envp[]){
                         sprintf(buffer, "PIDGROUP=%d", atoi(arraPass[g])); //passo o group id dos processos
                         putenv(buffer);
 
-                        //create_file(arraPass);
                     }
                 }
                 else{
@@ -858,11 +844,11 @@ int main(int argc, char *argv[], char *envp[]){
             somaSize += (int)stat_entry.st_size;
             if((atoi(arraPass[m]) == -2 || atoi(arraPass[m]) > 0) && atoi(arraPass[a]) == 1){
                 if(atoi(arraPass[B]) >= 1)
-                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)ceil((((int)stat_entry.st_blocks)/2)*1024/atoi(arraPass[B])), d);
                 else if(atoi(arraPass[b])!= 1)
-                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",((int)stat_entry.st_blocks)/2, d);
                 else if(atoi(arraPass[b]) == 1)
-                    printf("%-10d%s\n",(int)stat_entry.st_size, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-10d%s\n",(int)stat_entry.st_size, d);
             }
         }
     }
@@ -900,7 +886,6 @@ int main(int argc, char *argv[], char *envp[]){
                 char *buffer[20];
                 size_t len;
                 receiver =fdopen(fd[READ],"r");
-                //send_pipe_file(receiver);
                 for (int i = 0; i < countChilds; i++)
                 {
                     int num1, num2;
@@ -910,24 +895,25 @@ int main(int argc, char *argv[], char *envp[]){
                     getline(buffer,&len,receiver);
                     num2 = atoi(buffer[0]);
                     somaBlocks += num2;
-                    send_pipe_file(num1, num2);
+                    //send_pipe_file(num1, num2);
                 }
+                close(fd[READ]);
             }
             somaSize += (int)stat_entry.st_size;
             somaBlocks += ((int)stat_entry.st_blocks)/2;
             
             if(atoi(arraPass[m]) != -1){
                 if(atoi(arraPass[B]) >= 1){
-                    printf("%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
-                    entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
+                    printf("B%-10d%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
+                    //entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
                 }
                 else if(atoi(arraPass[b]) != 1){
                     printf("%-10d%s\n",somaBlocks, printSymbolicDir(arraPass, dentry->d_name, d));
-                    entry_file(directory, somaBlocks);
+                    //entry_file(directory, somaBlocks);
                 }
                 else if(atoi(arraPass[b]) == 1){
-                    printf("%-10d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
-                    entry_file(directory, somaSize);
+                    printf("b%-10d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
+                    //entry_file(directory, somaSize);
                 }
             }
             
@@ -936,13 +922,12 @@ int main(int argc, char *argv[], char *envp[]){
     }
 
     if (!original){
-        dup2(pipeFather,STDOUT_FILENO);
         char msg[50];
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
-        recv_pipe_file(somaSize, somaBlocks);
-        write(STDOUT_FILENO,msg,len);
+        //recv_pipe_file(somaSize, somaBlocks);
+        write(STDERR_FILENO,msg,len);
     }
 
     return 0; 
