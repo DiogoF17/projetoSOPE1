@@ -60,9 +60,13 @@ int isValidNumber(char *string, int zero){
         return 1;
     }
 
+    if(zero == 0 && strcmp("0", string) == 0){
+        return 0;
+    }
+
     for(int i = 0; i < strlen( string ); i ++)
    {
-      if (string[i] < (49-zero) || string[i] > 57){
+      if (string[i] < 48 || string[i] > 57){
          return 0;
       }
    }
