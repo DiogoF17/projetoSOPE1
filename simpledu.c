@@ -210,7 +210,7 @@ Verifica se foi passado algum diretorio pelo utilizador.
 int passDir(int num, char *arg[], char *envp[], char *arraPass[]){
     for(int i = 1; i < num; i++){
         if((&arg[i])[0][0] == '/' || (&arg[i])[0][0] == '~'){
-            arraPass[PONTDIR] = "-1";
+            arraPass[PONTDIR] = arg[i];
             return i;
         }
         else if((&arg[i])[0][0] == '.'){
@@ -595,8 +595,10 @@ int main(int argc, char *argv[], char *envp[]){
 
     //----------------------------------------------------
     //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
-    if((ind = passDir(argc, argv, envp, arraPass)) == -1)
+    if((ind = passDir(argc, argv, envp, arraPass)) == -1){
         strcpy(directory, getenv("PWD"));
+        arraPass[PONTDIR] = ".";
+    }
     else
         strcpy(directory, argv[ind]);
 
@@ -668,7 +670,7 @@ int main(int argc, char *argv[], char *envp[]){
         //      Imprimir Diretorio 
         //------------------------------
         //Forma a string com o nome do diretorio
-        strcpy(d,directory);
+        strcpy(d,arraPass[PONTDIR]);
         if(!(strcmp(dentry->d_name, ".") == 0 || strcmp(dentry->d_name, "..") == 0)){
             if(strcmp(&d[strlen(d)-1], "/") != 0)
                 strcat(d, "/");
@@ -805,8 +807,7 @@ int main(int argc, char *argv[], char *envp[]){
                             if(countBar(d)>countBar(arraPass[DIRSYMB]))
                                 arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
                         }
-                        else
-                            arraPass[DIRSYMB] = d;
+
 
                         //create_file(arraPass, getpid());
 
@@ -873,7 +874,7 @@ int main(int argc, char *argv[], char *envp[]){
         //------------------------------
         //      Imprimir Diretorio 
         //------------------------------
-        strcpy(d, directory);
+        strcpy(d, arraPass[PONTDIR]);
         if(!(strcmp(dentry->d_name, ".") == 0 || strcmp(dentry->d_name, "..") == 0)){
             if(strcmp(&d[strlen(d)-1], "/") != 0)
                 strcat(d, "/");
