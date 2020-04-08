@@ -1,3 +1,8 @@
-24	/home/diogo/Documentos/Pasta
-4	/home/diogo/Documentos/Pasta/Ficheiro
-12	/home/diogo/Documentos/Pasta/SubPasta
+644	.
+576	./.git
+4	./.git/branches
+52	./.git/hooks
+8	./.git/info
+32	./.git/logs
+428	./.git/objects
+28	./.git/refs

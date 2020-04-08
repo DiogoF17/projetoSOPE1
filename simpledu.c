@@ -543,9 +543,9 @@ int main(int argc, char *argv[], char *envp[]){
     //inicia contagem do tempo
     gettimeofday(&start,NULL);
     //............................................
-    DIR *dir;                  //
-    struct dirent *dentry;          //   Usadas na leitura dos diretorios
-    struct stat stat_entry;        //
+    DIR *dir;                        //
+    struct dirent *dentry;           // Usadas na leitura dos diretorios
+    struct stat stat_entry;          //
     //-------------------------------------------------------
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
@@ -666,7 +666,7 @@ int main(int argc, char *argv[], char *envp[]){
         //      Imprimir Diretorio 
         //------------------------------
         //Forma a string com o nome do diretorio
-        strcpy(d, directory);
+        strcpy(d,".");
         if(!(strcmp(dentry->d_name, ".") == 0 || strcmp(dentry->d_name, "..") == 0)){
             if(strcmp(&d[strlen(d)-1], "/") != 0)
                 strcat(d, "/");
@@ -912,7 +912,7 @@ int main(int argc, char *argv[], char *envp[]){
                     //entry_file(directory, somaBlocks);
                 }
                 else if(atoi(arraPass[b]) == 1){
-                    printf("b%-8d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
+                    printf("%-8d%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
                     //entry_file(directory, somaSize);
                 }
             }
