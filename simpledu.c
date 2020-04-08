@@ -38,6 +38,7 @@ Macros usadas na passagem do array.
 #define g 8      //contem o groupid necessario para fazer o set do group.   
 #define ORIG 9   //string que nos indica se e o processo original.
 #define DIRSYMB 10   
+#define PONTDIR 11
 
 /*
 Macros usadas nos pipes.
@@ -206,16 +207,19 @@ char* verifyMax(int num, char *arg[]){
 /*
 Verifica se foi passado algum diretorio pelo utilizador.
 */
-int passDir(int num, char *arg[], char *envp[]){
+int passDir(int num, char *arg[], char *envp[], char *arraPass[]){
     for(int i = 1; i < num; i++){
-        if((&arg[i])[0][0] == '/' || (&arg[i])[0][0] == '~')
-            return i;
-        else if(strcmp(arg[i], ".") == 0){
-            arg[i] = getenv("PWD");
+        if((&arg[i])[0][0] == '/' || (&arg[i])[0][0] == '~'){
+            arraPass[PONTDIR] = "-1";
             return i;
         }
-        else if((&arg[i])[0][0] == '.')
+        else if((&arg[i])[0][0] == '.'){
+            arraPass[PONTDIR] = arg[i];
+            char string[100];
+            sprintf(string, "%s%s", getenv("PWD"), &(arg[i])[1]);
+            arg[i] = string;
             return i;
+        }
     }
     return -1;
 }
@@ -274,9 +278,9 @@ void create_file(char *arraPass[11], int pid){
 
     //os argumentos da linha de comandos
     char str_pid[PATH_MAX];
-    sprintf(str_pid, "%.2f - %d - CREATE - %s %s %s %s %s %s %s %s %s %s \n",
+    sprintf(str_pid, "%.2f - %d - CREATE - %s %s %s %s %s %s %s %s %s %s %s %s\n",
             get_time(), pid, arraPass[0], arraPass[1], arraPass[2], arraPass[3], arraPass[4], 
-            arraPass[5], arraPass[6], arraPass[7], arraPass[8], arraPass[9]);
+            arraPass[5], arraPass[6], arraPass[7], arraPass[8], arraPass[9], arraPass[10], arraPass[11]);
 
     if(fwrite(str_pid, sizeof(char), strlen(str_pid), regProg) != strlen(str_pid)){
             perror("fwrite");
@@ -550,7 +554,7 @@ int main(int argc, char *argv[], char *envp[]){
     char fileName[PATH_MAX];                //Nome do ficheiro onde vai ser mantida a informacao
     char d[PATH_MAX], directory[PATH_MAX];  //Usadas na impressao do nome dos diretorios
     char path[PATH_MAX];
-    char *arraPass[12];
+    char *arraPass[13];
     //-------------------------------------------------------
     char *a1, *b1, *S1, *B1, *L1, *m1; //opções do comando simpleDu
     int ind, somaBlocks = 0, somaSize = 0;   //Vai guardar o tamanho dos subdiretorios
@@ -591,7 +595,7 @@ int main(int argc, char *argv[], char *envp[]){
 
     //----------------------------------------------------
     //verifica se passou algum diretorio se nao vai buscar o atual as variaveis de ambiente
-    if((ind = passDir(argc, argv, envp)) == -1)
+    if((ind = passDir(argc, argv, envp, arraPass)) == -1)
         strcpy(directory, getenv("PWD"));
     else
         strcpy(directory, argv[ind]);
@@ -630,7 +634,6 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = m1;
         arraPass[g] = "-1";
         arraPass[ORIG] = "notOrig";
-
         arraPass[DIRSYMB] = "-1";
 
     }else{
@@ -645,7 +648,6 @@ int main(int argc, char *argv[], char *envp[]){
         arraPass[m] = argv[7];
         arraPass[g] = argv[8];
         arraPass[ORIG] = argv[9];
-
         arraPass[DIRSYMB] = argv[10];
     }
 
@@ -666,7 +668,7 @@ int main(int argc, char *argv[], char *envp[]){
         //      Imprimir Diretorio 
         //------------------------------
         //Forma a string com o nome do diretorio
-        strcpy(d,".");
+        strcpy(d,directory);
         if(!(strcmp(dentry->d_name, ".") == 0 || strcmp(dentry->d_name, "..") == 0)){
             if(strcmp(&d[strlen(d)-1], "/") != 0)
                 strcat(d, "/");
@@ -803,6 +805,8 @@ int main(int argc, char *argv[], char *envp[]){
                             if(countBar(d)>countBar(arraPass[DIRSYMB]))
                                 arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
                         }
+                        else
+                            arraPass[DIRSYMB] = d;
 
                         //create_file(arraPass, getpid());
 
