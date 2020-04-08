@@ -1,8 +1,0 @@
-4       ./branches
-576     ./.git
-640     /home/jessymireie/projetoSOPE1
-52      ./hooks
-8       ./info
-32      ./logs
-428     ./objects
-28      ./refs
