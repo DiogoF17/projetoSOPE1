@@ -427,8 +427,8 @@ void fazWait(){
         val = wait(&exit_status);
         if(val == -1 && errno == ECHILD)
             break;
-        //else
-           // exit_file(exit_status, val);
+        else
+            exit_file(exit_status, val);
     }
 
 }
@@ -455,7 +455,7 @@ void sigIntHandler(int signal){
     size_t len;
     int num;
 
-    //recv_signal_file(SIGINT);
+    recv_signal_file(SIGINT);
 
     if(getenv("PIDGROUP") == NULL){
         printf("Erro\n");
@@ -469,7 +469,7 @@ void sigIntHandler(int signal){
             perror("Kill");
             exit(3);
         }
-        //send_signal_file(SIGSTOP, -num);
+        send_signal_file(SIGSTOP, -num);
     }
 
     printf("\n\n######################################################\n\t\tMenu de Saida\n######################################################\n");
@@ -490,14 +490,14 @@ void sigIntHandler(int signal){
             perror("Kill");
             exit(3);
         }
-        //send_signal_file(SIGCONT, -num);
+        send_signal_file(SIGCONT, -num);
     }
     else if(num != 0){
          if(kill(-num, SIGTERM) == -1){
             perror("Kill");
             exit(3);
         }
-        //send_signal_file(SIGTERM, -num);
+        send_signal_file(SIGTERM, -num);
         exit(0);
     }
 
@@ -616,9 +616,7 @@ int main(int argc, char *argv[], char *envp[]){
     if(notOrig == 0){
         original = 1;
 
-        printf("groupPID: %d FatherPid: %d\n", getpgrp(), getpid());
-
-        //file_open_new_empty();
+        file_open_new_empty();
 
         //Verifica se esta num formato valido
         validFormat(argc, argv, ind);
@@ -699,9 +697,7 @@ int main(int argc, char *argv[], char *envp[]){
                 dup2(fd[WRITE],STDERR_FILENO);
 
                 if(atoi(arraPass[g]) == -1){
-                    printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid()); 
                     if(setpgid(getpid(), getpid()) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                        printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                         perror("setpgid error");           //todos ao mesmo mas diferente do pai
                         exit(7);
                     }
@@ -710,9 +706,7 @@ int main(int argc, char *argv[], char *envp[]){
                     arraPass[g] = string;
                 }
                 else{
-                    printf("2groupPIDout: %s PIDin: %d\n", arraPass[g], getpid());
                     if(setpgid(getpid(), atoi(arraPass[g])) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                        printf("2groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                         perror("setpgid error");           //todos ao mesmo mas diferente do pai
                         exit(7);
                     }
@@ -730,7 +724,7 @@ int main(int argc, char *argv[], char *envp[]){
                         arraPass[DIRSYMB] = printSymbolicDir(arraPass, dentry->d_name, d);
                 }
 
-                //create_file(arraPass, getpid());
+                create_file(arraPass, getpid());
 
                 execve(strcat(path,"/simpledu"), arraPass, envp);
                 perror("execvp");
@@ -802,7 +796,6 @@ int main(int argc, char *argv[], char *envp[]){
 
                         if(atoi(arraPass[g]) == -1){
                             if(setpgid(getpid(), getpid()) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                                printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                                 perror("setpgid error");           //todos ao mesmo mas diferente do pai
                                 exit(7);
                             }
@@ -811,9 +804,7 @@ int main(int argc, char *argv[], char *envp[]){
                             arraPass[g] = string;
                         }
                         else{
-                            printf("2groupPIDout: %s PIDin: %d\n", arraPass[g], getpid());
                             if(setpgid(getpid(), atoi(arraPass[g])) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                                printf("2groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                                 perror("setpgid error");           //todos ao mesmo mas diferente do pai
                                 exit(7);
                             }
@@ -832,7 +823,7 @@ int main(int argc, char *argv[], char *envp[]){
                         }
 
 
-                        //create_file(arraPass, getpid());
+                        create_file(arraPass, getpid());
 
                         execve(strcat(path,"/simpledu"), arraPass, envp);
                         perror("execvp");
@@ -923,7 +914,7 @@ int main(int argc, char *argv[], char *envp[]){
                     getline(buffer,&len,receiver);
                     num2 = atoi(buffer[0]);
                     somaBlocks += num2;
-                    //send_pipe_file(num1, num2);
+                    send_pipe_file(num1, num2);
                 }
                 close(fd[READ]);
             }
@@ -933,15 +924,15 @@ int main(int argc, char *argv[], char *envp[]){
             if(atoi(arraPass[m]) != -1){
                 if(atoi(arraPass[B]) >= 1){
                     printf("%d\t%s\n",(int)ceil(somaBlocks * 1024 / atoi(arraPass[B])), printSymbolicDir(arraPass, dentry->d_name, d));
-                    //entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
+                    entry_file(directory, (int)ceil(somaBlocks * 1024 / atoi(arraPass[B])));
                 }
                 else if(atoi(arraPass[b]) != 1){
                     printf("%d\t%s\n",somaBlocks, printSymbolicDir(arraPass, dentry->d_name, d));
-                    //entry_file(directory, somaBlocks);
+                    entry_file(directory, somaBlocks);
                 }
                 else if(atoi(arraPass[b]) == 1){
                     printf("%d\t%s\n",somaSize, printSymbolicDir(arraPass, dentry->d_name, d));
-                    //entry_file(directory, somaSize);
+                    entry_file(directory, somaSize);
                 }
             }
             
@@ -954,7 +945,7 @@ int main(int argc, char *argv[], char *envp[]){
         size_t len;
         sprintf(msg,"%d\n%d\n",somaSize,somaBlocks);
         len = strlen(msg);
-        //recv_pipe_file(somaSize, somaBlocks);
+        recv_pipe_file(somaSize, somaBlocks);
         write(STDERR_FILENO,msg,len);
     }
 

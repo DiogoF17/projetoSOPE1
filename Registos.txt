@@ -1,0 +1,116 @@
+0.47 - 2558 - CREATE - ./simpledu ./.git -1 -1 -1 -1 -1 -2 2558 notOrig -1 .
+0.33 - 2559 - CREATE - ./simpledu ./.git/branches -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+0.68 - 2563 - CREATE - ./simpledu ./.git/refs -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+0.80 - 2562 - CREATE - ./simpledu ./.git/objects -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+1.04 - 2560 - CREATE - ./simpledu ./.git/hooks -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+2.05 - 2561 - CREATE - ./simpledu ./.git/info -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+1.71 - 2559 - ENTRY - 4 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/branches
+1.74 - 2559 - RECV_PIPE - 4096 4
+1.22 - 2560 - ENTRY - 52 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/hooks
+1.25 - 2560 - RECV_PIPE - 22944 52
+2.75 - 2559 - EXIT - 0
+2.84 - 2560 - EXIT - 0
+2.89 - 2564 - CREATE - ./simpledu ./.git/logs -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git
+0.29 - 2561 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/info
+0.32 - 2561 - RECV_PIPE - 4336 8
+3.20 - 2561 - EXIT - 0
+1.21 - 2573 - CREATE - ./simpledu ./.git/refs/heads -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/refs
+1.37 - 2574 - CREATE - ./simpledu ./.git/refs/tags -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/refs
+2.25 - 2572 - CREATE - ./simpledu ./.git/objects/pack -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+2.38 - 2571 - CREATE - ./simpledu ./.git/objects/03 -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+0.54 - 2576 - CREATE - ./simpledu ./.git/logs/refs -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/logs
+2.62 - 2565 - CREATE - ./simpledu ./.git/objects/e1 -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+0.14 - 2573 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/refs/heads
+0.16 - 2573 - RECV_PIPE - 4137 8
+2.08 - 2573 - EXIT - 0
+2.87 - 2566 - CREATE - ./simpledu ./.git/objects/d3 -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+3.00 - 2568 - CREATE - ./simpledu ./.git/objects/a1 -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+3.15 - 2567 - CREATE - ./simpledu ./.git/objects/8f -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+2.52 - 2575 - CREATE - ./simpledu ./.git/refs/remotes -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/refs
+3.40 - 2569 - CREATE - ./simpledu ./.git/objects/info -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+0.13 - 2574 - ENTRY - 4 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/refs/tags
+0.15 - 2574 - RECV_PIPE - 4096 4
+2.91 - 2574 - EXIT - 0
+3.60 - 2570 - CREATE - ./simpledu ./.git/objects/ce -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/objects
+0.14 - 2572 - ENTRY - 456 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/pack
+0.17 - 2572 - RECV_PIPE - 463791 456
+4.43 - 2572 - EXIT - 0
+1.89 - 2571 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/03
+1.92 - 2571 - RECV_PIPE - 4636 8
+6.87 - 2571 - EXIT - 0
+1.63 - 2566 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/d3
+1.65 - 2566 - RECV_PIPE - 4261 8
+0.17 - 2568 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/a1
+0.19 - 2568 - RECV_PIPE - 4260 8
+7.23 - 2566 - EXIT - 0
+1.80 - 2570 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/ce
+1.82 - 2570 - RECV_PIPE - 4576 8
+7.35 - 2568 - EXIT - 0
+1.42 - 2567 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/8f
+1.44 - 2567 - RECV_PIPE - 4248 8
+7.48 - 2570 - EXIT - 0
+7.65 - 2567 - EXIT - 0
+1.26 - 2569 - ENTRY - 4 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/info
+1.28 - 2569 - RECV_PIPE - 4096 4
+1.34 - 2565 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects/e1
+1.36 - 2565 - RECV_PIPE - 4249 8
+1.82 - 2579 - CREATE - ./simpledu ./.git/logs/refs/remotes -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/logs/refs
+7.93 - 2569 - EXIT - 0
+8.01 - 2565 - EXIT - 0
+8.05 - 2562 - SEND_PIPE - 463791 456
+8.07 - 2562 - SEND_PIPE - 4636 8
+8.08 - 2562 - SEND_PIPE - 4261 8
+8.09 - 2562 - SEND_PIPE - 4260 8
+8.10 - 2562 - SEND_PIPE - 4576 8
+8.11 - 2562 - SEND_PIPE - 4248 8
+8.12 - 2562 - SEND_PIPE - 4096 4
+8.13 - 2562 - SEND_PIPE - 4249 8
+8.31 - 2562 - ENTRY - 512 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/objects
+8.34 - 2562 - RECV_PIPE - 498213 512
+9.78 - 2562 - EXIT - 0
+3.71 - 2577 - CREATE - ./simpledu ./.git/refs/remotes/origin -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/refs/remotes
+0.31 - 2580 - CREATE - ./simpledu ./.git/logs/refs/remotes/origin -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/logs/refs/remotes
+2.76 - 2578 - CREATE - ./simpledu ./.git/logs/refs/heads -1 -1 -1 -1 -1 -2 2558 notOrig -1 ./.git/logs/refs
+0.59 - 2578 - ENTRY - 8 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/logs/refs/heads
+0.51 - 2577 - ENTRY - 12 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/refs/remotes/origin
+0.54 - 2577 - RECV_PIPE - 4169 12
+5.51 - 2577 - EXIT - 0
+5.55 - 2575 - SEND_PIPE - 4169 12
+5.59 - 2575 - ENTRY - 16 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/refs/remotes
+5.60 - 2575 - RECV_PIPE - 8265 16
+9.75 - 2575 - EXIT - 0
+9.79 - 2563 - SEND_PIPE - 4137 8
+9.81 - 2563 - SEND_PIPE - 4096 4
+9.82 - 2563 - SEND_PIPE - 8265 16
+9.85 - 2563 - ENTRY - 32 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/refs
+9.86 - 2563 - RECV_PIPE - 20594 32
+1.66 - 2580 - ENTRY - 12 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/logs/refs/remotes/origin
+1.69 - 2580 - RECV_PIPE - 4456 12
+2.60 - 2580 - EXIT - 0
+2.65 - 2579 - SEND_PIPE - 4456 12
+2.68 - 2579 - ENTRY - 16 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/logs/refs/remotes
+2.69 - 2579 - RECV_PIPE - 8552 16
+5.67 - 2579 - EXIT - 0
+0.62 - 2578 - RECV_PIPE - 4456 8
+15.90 - 2563 - EXIT - 0
+9.84 - 2578 - EXIT - 0
+9.89 - 2576 - SEND_PIPE - 8552 16
+9.91 - 2576 - SEND_PIPE - 4456 8
+9.94 - 2576 - ENTRY - 28 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/logs/refs
+9.96 - 2576 - RECV_PIPE - 17104 28
+14.17 - 2576 - EXIT - 0
+14.21 - 2564 - SEND_PIPE - 17104 28
+14.25 - 2564 - ENTRY - 36 /home/diogo/Documentos/SOPE/projetoSOPE1/.git/logs
+14.27 - 2564 - RECV_PIPE - 21560 36
+17.66 - 2564 - EXIT - 0
+17.71 - 2558 - SEND_PIPE - 4096 4
+17.73 - 2558 - SEND_PIPE - 22944 52
+17.73 - 2558 - SEND_PIPE - 4336 8
+17.75 - 2558 - SEND_PIPE - 498213 512
+17.76 - 2558 - SEND_PIPE - 20594 32
+17.77 - 2558 - SEND_PIPE - 21560 36
+17.80 - 2558 - ENTRY - 676 /home/diogo/Documentos/SOPE/projetoSOPE1/.git
+17.83 - 2558 - RECV_PIPE - 576818 676
+18.84 - 2558 - EXIT - 0
+18.89 - 2557 - SEND_PIPE - 576818 676
+18.93 - 2557 - ENTRY - 760 /home/diogo/Documentos/SOPE/projetoSOPE1
