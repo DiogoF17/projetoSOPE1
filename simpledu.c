@@ -699,8 +699,8 @@ int main(int argc, char *argv[], char *envp[]){
                 dup2(fd[WRITE],STDERR_FILENO);
 
                 if(atoi(arraPass[g]) == -1){
-                    if(setpgid(0, 0) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                        //printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
+                    if(setpgid(getpid(), getpid()) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
+                        printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                         perror("setpgid error");           //todos ao mesmo mas diferente do pai
                         exit(7);
                     }
@@ -709,9 +709,9 @@ int main(int argc, char *argv[], char *envp[]){
                     arraPass[g] = string;
                 }
                 else{
-                    //printf("2groupPIDout: %s PIDin: %d\n", arraPass[g], getpid());
+                    printf("2groupPIDout: %s PIDin: %d\n", arraPass[g], getpid());
                     if(setpgid(getpid(), atoi(arraPass[g])) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
-                        //printf("2groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
+                        printf("2groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                         perror("setpgid error");           //todos ao mesmo mas diferente do pai
                         exit(7);
                     }
