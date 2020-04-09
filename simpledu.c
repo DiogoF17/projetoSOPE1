@@ -699,6 +699,7 @@ int main(int argc, char *argv[], char *envp[]){
                 dup2(fd[WRITE],STDERR_FILENO);
 
                 if(atoi(arraPass[g]) == -1){
+                    printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid()); 
                     if(setpgid(getpid(), getpid()) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
                         printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
                         perror("setpgid error");           //todos ao mesmo mas diferente do pai
@@ -800,14 +801,22 @@ int main(int argc, char *argv[], char *envp[]){
                         dup2(fd[WRITE],STDERR_FILENO);
 
                         if(atoi(arraPass[g]) == -1){
+                            if(setpgid(getpid(), getpid()) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
+                                printf("1groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
+                                perror("setpgid error");           //todos ao mesmo mas diferente do pai
+                                exit(7);
+                            }
                             char string[PATH_MAX];
                             sprintf(string, "%d", getpid());
                             arraPass[g] = string;
                         }
-
-                        if(setpgid(getpid(), atoi(arraPass[g])) == -1){ //altero o groupid dos processos que vao surgir para pertencerem
-                            perror("setpgid error");          //todos ao mesmo mas diferente do pai
-                            exit(7);
+                        else{
+                            printf("2groupPIDout: %s PIDin: %d\n", arraPass[g], getpid());
+                            if(setpgid(getpid(), atoi(arraPass[g])) == -1 && errno == EPERM){ //altero o groupid dos processos que vao surgir para pertencerem
+                                printf("2groupPIDin: %s PIDin: %d\n", arraPass[g], getpid());
+                                perror("setpgid error");           //todos ao mesmo mas diferente do pai
+                                exit(7);
+                            }
                         }
 
                         //coloca o novo diretorio na array
