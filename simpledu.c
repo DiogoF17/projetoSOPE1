@@ -529,21 +529,6 @@ int countBar(char *string){
     return count;
 }
 
-void printfArraPass(char *arraPass[]){
-    printf("func: %s\n", arraPass[FUNC]);
-    printf("dire: %s\n", arraPass[DIRE]);
-    printf("a: %s\n", arraPass[a]);
-    printf("b: %s\n", arraPass[b]);
-    printf("B: %s\n", arraPass[B]);
-    printf("L: %s\n", arraPass[L]);
-    printf("S: %s\n", arraPass[S]);
-    printf("m: %s\n", arraPass[m]);
-    printf("g: %s\n", arraPass[g]);
-    printf("Ori: %s\n", arraPass[ORIG]);
-    printf("ultimo: %s\n", arraPass[10]);
-
-}
-
 
 //-----------------------------------------------------------------------
 
